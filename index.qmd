@@ -1,0 +1,8 @@
+---
+title: "Home"
+format: 
+  html:
+    toc: false
+---
+
+This repository contains examples and documentation for accessing and applying existing research computing resources available to NOAA Fisheries staff. Example code and documentation were presented as a part of the National Stock Assessment Seminar series ([slides](https://moshima-pifsc.github.io/NSASS-HTC-HPC-Computing/assets/web-slides.html)).

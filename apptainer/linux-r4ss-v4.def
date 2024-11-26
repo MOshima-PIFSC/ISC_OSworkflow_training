@@ -1,0 +1,66 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    TZ=Etc/UTC && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    echo $TZ > /etc/timezone
+    apt update -y
+    apt install -y \
+        tzdata \
+        curl \
+        dos2unix
+
+    apt-get update -y
+    apt-get install -y \
+            build-essential \
+            cmake \
+            g++ \
+            libssl-dev \
+            libssh2-1-dev \
+            libcurl4-openssl-dev \
+            libfontconfig1-dev \
+            libxml2-dev \
+            libgit2-dev \
+            wget \
+            tar \
+            coreutils \
+            gzip \
+            findutils \
+            sed \
+            gdebi-core \
+            locales \
+            nano
+    
+    locale-gen en_US.UTF-8
+
+    export R_VERSION=4.4.0
+    curl -O https://cdn.rstudio.com/r/ubuntu-2004/pkgs/r-${R_VERSION}_1_amd64.deb
+    gdebi -n r-${R_VERSION}_1_amd64.deb
+
+    ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
+    ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
+
+    R -e "install.packages('remotes', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+    R -e "install.packages('data.table', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+    R -e "install.packages('magrittr', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+    R -e "install.packages('mvtnorm', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+    R -e "remotes::install_github('r4ss/r4ss')"
+    R -e "remotes::install_github('PIFSCstockassessments/ss3diags')"
+
+    NOW=`date`
+    echo 'export build_date=$NOW' >> $SINGULARITY_ENVIRONMENT
+
+    mkdir -p /ss_exe
+    curl -L -o /ss_exe/ss3_linux https://github.com/nmfs-ost/ss3-source-code/releases/download/v3.30.22.1/ss3_linux
+    chmod 755 /ss_exe/ss3_linux
+
+%environment
+    export PATH=/ss_exe:$PATH
+    
+%labels
+    Author nicholas.ducharme-barth@noaa.gov
+    Version v0.0.4
+
+%help
+    This is a Linux (Ubuntu 20.04) container containing Stock Synthesis (version 3.30.22.1), R (version 4.4.0) and the R packages r4ss, ss3diags, data.table, magrittr, and mvtnorm.

@@ -1,0 +1,152 @@
+// Ideas from Slidecraft 101: Colors and Fonts
+// https://emilhvitfeldt.com/post/slidecraft-colors-fonts/
+/*-- scss:defaults --*/
+// NOAA colors from 2023 Fisheries Palette
+// Check contrast: https://colourcontrast.cc/
+// define colors
+$theme-background: #e9f3f6;
+$theme-whale-gray: #323C46;
+$theme-midnight-sky: #001743;
+$theme-twilight-sky: #002364;
+$theme-noaa-sky: #003087;
+$theme-noaa-sea: #0085CA;
+$theme-pale-sea: #C6E6F0;
+$theme-dove-gray: #A5AAAF;
+$theme-posit-orange: #ED5E2B;
+$theme-moby-blue: #1D63ED;
+$theme-black: #000000;
+
+// Get fonts: https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+// define theme colors
+$body-bg: $theme-background;
+$body-color: $theme-whale-gray;
+$link-color: $theme-noaa-sea;
+$presentation-heading-color: $theme-midnight-sky;
+
+// define theme fonts
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$presentation-heading-font: 'Roboto Serif', serif;
+$presentation-heading-font-weight: 400;
+$presentation-h1-font-size: 2em;
+
+/*-- scss:rules --*/
+
+.titlebox {
+  padding: 0.2em 0.4em;
+  background-color: rgba(255, 255, 255, .20);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .2);
+  border-radius: 30px;
+}
+
+// add a shortcut for emphasizing text
+.blue-title {
+  color: $theme-noaa-sky;
+  font-weight: bold;
+  font-family: $presentation-heading-font;
+}
+
+.blue {
+  color: $theme-noaa-sky;
+  font-weight: bold;
+}
+
+.font-small {
+  font-size: smaller;
+}
+
+.bg {
+  color: $theme-background;
+}
+
+.moby-blue {
+  color: #1D63ED;
+  font-weight: bold;
+}
+
+.hide-text {
+    color: $theme-dove-gray;
+  }
+
+// add underline for hyperlinks
+.reveal .slide a {
+  text-decoration: underline;
+}
+
+.highlight-last  {
+  color: rgba($theme-whale-gray, .5);
+  .current-fragment {
+    color: $theme-whale-gray;
+  }
+}
+
+// emphasize fragment; define colors
+$colors: (
+  "blue": $theme-noaa-sky,
+  "mb-blue": $theme-moby-blue,
+  "pc-orange": $theme-posit-orange,
+  "black": $theme-black
+);
+// loop over defined colors
+@each $name, $color in $colors {
+  .reveal .slides section .fragment.hl-#{$name} {
+    opacity: unset;
+    visibility: unset;
+
+    &.visible {
+      color: $color;
+      font-weight: bold;
+    }
+
+    // do something to emphasize current fragment
+    // &.current-fragment {
+    //   background-color: lighten($color, 50%);
+    //   color: $color;
+    //   font-weight: bold;
+    // }
+  }
+}
+// emphasize current fragment; define colors
+$colors: (
+  "blue": $theme-noaa-sky,
+  "mb-blue": $theme-moby-blue,
+  "pc-orange": $theme-posit-orange,
+  "black": $theme-black
+);
+// loop over defined colors
+@each $name, $color in $colors {
+  .reveal .slides section .fragment.hl-cur-#{$name} {
+    opacity: unset;
+    visibility: unset;
+
+    // do something to emphasize current fragment
+    &.current-fragment {
+      // background-color: lighten($color, 50%);
+      color: $color;
+      font-weight: bold;
+    }
+  }
+}
+
+// fade text; define colors
+$colors: (
+  "blue": $theme-noaa-sky,
+  "mb-blue": $theme-moby-blue,
+  "pc-orange": $theme-posit-orange,
+  "black": $theme-black,
+  "body": $body-color
+);
+// loop over defined colors
+@each $name, $color in $colors {
+  .reveal .slides section .fragment.fade-#{$name} {
+    opacity: unset;
+    visibility: unset;
+
+    &.visible {
+      color: rgba($color, .5);
+    }
+  }
+}

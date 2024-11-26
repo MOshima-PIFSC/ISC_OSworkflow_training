@@ -1,0 +1,8 @@
+---
+title: "Seminar slides"
+---
+
+Seminar slides from the NOAA National Stock Assessment Science Seminar Series presentation.
+
+{{< revealjs file="presentation.html" height="500px" class="ratio ratio-16x9" >}}
+

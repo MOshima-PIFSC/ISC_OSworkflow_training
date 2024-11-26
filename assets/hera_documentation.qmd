@@ -1,0 +1,138 @@
+---
+title: "Working with NOAA HPC Hera"
+date: last-modified
+date-format: iso
+published-title: "Last updated"
+author: 
+  - Nicholas Ducharme-Barth
+  - Megumi Oshima
+engine: knitr
+execute:
+    eval: false
+    echo: true
+    output: false
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-location: right
+    number-sections: true
+    code-overflow: wrap
+---
+
+## Hera
+
+Hera is one of NOAA's high performance computing resources available to NMFS scientists where jobs are run and scheduled with [SLURM](https://docs.rdhpcs.noaa.gov/slurm/overview.html#){target="_blank"}. In order to access the system, you must first have a [RDHPCS user account](https://docs.rdhpcs.noaa.gov/accounts/index.html){target="_blank"} and request access to a project. For all of the examples in this documentation, we will be working in the `htc4sa` project. For complete documentation about Hera and other RDHPCS resources, see the NOAA RDHPCS [website](https://docs.rdhpcs.noaa.gov/index.html){target="_blank"}.
+
+::: {.callout-important}
+### Coding alert!
+In the following code you will need to, where necessary:
+
+1. Replace `User.Name` with your RDHPCS user name.
+
+2. Replace `bastion` with either `boulder` or `princeton` depending on which bastion you wish to login in through.
+
+3. Replace `project_name` with your RDHPCS project name. 
+
+:::
+
+
+## Connecting to Hera via ssh
+
+Open a terminal window (.e.g, command prompt or PowerShell), then open an ssh tunnel to Hera by using the following command:
+
+```{bash}
+ssh -m hmac-sha2-256-etm@openssh.com User.Name@hera-rsa.bastion.rdhpcs.noaa.gov -p22
+```
+
+Note that the flag `-p22` specifies opening port 22 and is optional. 
+When prompted, put in your password followed by the [RSA authentication code](https://docs.rdhpcs.noaa.gov/accounts/rsa_token.html){target="_blank"}: 
+```{bash}
+XXXXXXXXRSACODE
+```
+
+
+If you see the following then you have connected successfully:
+
+```{bash} 
+________________________________________________________
+|                                                        |
+|                                                        |
+|  Welcome to the Hera High Performance Computing system |
+|                                                        |
+|        This system is located in Fairmont, WV          |
+|                                                        |
+|          Please Submit Helpdesk Requests to:           |
+|               rdhpcs.hera.help@noaa.gov                |
+|                                                        |
+|________________________________________________________|
+```
+Note that you will also see the following terminal output upon connecting:
+```{bash}
+Local port XXXXX forwarded to remote host.
+Remote port YYYYY forwarded to local host.
+```
+Where `XXXXX` and `YYYYY` are your 4-5 digit port forwarding numbers. Make note of what your local port number (`XXXXX`) is since this will be used for scp file transfer using an ssh tunnel.
+
+## Transferring files to/from Hera 
+
+### via scp using data transfer node (DTN)
+
+Information in this section is largely based on [this wiki](https://docs.rdhpcs.noaa.gov/data/index.html){target="_blank"}. File transfer using a DTN is only possible from machines within the noaa.gov domain (VPN ok), and can only transfer files to the *scratch* directory. However, this is ok since it is recommended that input/output data files are stored in the *scratch* directory. Using a DTN is faster than using the [ssh tunnel](#via-scp-using-an-ssh-tunnel). 
+
+::: {.callout-note}
+# Note
+The `scratch1/NMFS/project_name/` directory is a shared space (shared access and shared disk space) for all users of a project. Rather than dumping files into the *root* project directory (e.g., `project_name/`) it is better to place them in your own sub-directory. Since this sub-directory structure does not already exist you will need to log into Hera and create it:
+
+```{bash}
+mkdir scratch1/NMFS/project_name/User.Name/
+```
+This will avoid over-writing other users' work.
+:::
+
+File transfer takes place via *scp* and you need to specify the source file (and path to the file if your terminal is not in that directory) and destination path as shown:
+```{bash}
+## format is scp <source> <destination> 
+scp /path/to/local/file User.Name@dtn-hera.fairmont.rdhpcs.noaa.gov:/scratch1/NMFS/project_name/User.Name/
+```
+
+If trying to transfer from a machine not within the NOAA domain (or on the VPN) you can use *scp* with an *untrusted* DTN:
+```{bash}
+scp /path/to/local/file User.Name@udtn-hera.fairmont.rdhpcs.noaa.gov:/scratch1/data_untrusted/User.Name/
+```
+Note that `dtn-hera` was changed to `udtn-hera`. Since files cannot stay in the `data_untrusted` directory we will need to [log in to Hera](#connecting-to-hera-via-ssh) and move it to the correct project directory on scratch. Once logged in, moving the files can be done with [*rsync*](https://docs.rdhpcs.noaa.gov/data/local_migration.html){target="_blank"}, and then they can be deleted from `data_untrusted` by:
+```{bash}
+rsync -axv /scratch1/data_untrusted/User.Name/file /scratch1/NMFS/project_name/User.Name/
+rm /scratch1/data_untrusted/User.Name/file
+```
+
+Files can be downloaded back to your local machine using *scp* from either the trusted (`dtn`) or untrusted (`udtn`) DTN:
+```{bash}
+scp User.Name@dtn-hera.fairmont.rdhpcs.noaa.gov:/scratch1/NMFS/project_name/User.Name/file /path/to/local/file 
+```
+
+### via scp using an ssh tunnel
+
+Information in this section is largely based on [this wiki](https://docs.rdhpcs.noaa.gov/data/transferring_data.html){target="_blank"}. File transfer using an ssh tunnel is possible from all locations. Using the ssh tunnel for file transfer requires a two-step process with two active terminal windows (we suggest using PowerShell):
+
+1. In the first terminal window, open an ssh connection to Hera with port forwarding:
+```{bash}
+ssh -m hmac-sha2-256-etm@openssh.com -LXXXXX:localhost:XXXXX User.Name@hera-rsa.bastion.rdhpcs.noaa.gov
+```
+Replace `XXXXX` with your local port number. 
+
+2. In the second terminal window you can check to see if the tunnel was properly created:
+```{bash}
+ssh -p XXXXX User.Name@localhost
+```
+if you get prompted for your password then success! Press `CONTROL+C` to ignore this prompt. Staying within this 2nd terminal window use *scp* to transfer your file:
+```{bash}
+scp -P XXXXX /path/to/local/file User.Name@localhost:/home/User.Name/
+```
+This will copy your file from your local machine into your home directory on Hera. Simply append additional directory structure to `/home/User.Name/` to copy it into a sub-directory that you have created on Hera (e.g., `/home/User.Name/sub/dir/`). To transfer files into your *scratch* directory, specify the proper destination path (e.g., `/scratch1/NMFS/project_name/User.Name/`). 
+
+To download a file from Hera using *scp* and the ssh tunnel use the following:
+
+```{bash}
+scp -P XXXXX User.Name@localhost:/home/User.Name/file_name /path/to/local/file 
+```

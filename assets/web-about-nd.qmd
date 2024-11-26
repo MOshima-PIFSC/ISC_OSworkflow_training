@@ -1,0 +1,18 @@
+---
+title: "Nicholas Ducharme-Barth"
+about:
+  template: jolla
+  image: static/nd.jpg
+  links:
+    - icon: person-workspace
+      text: Contact
+      href: https://www.fisheries.noaa.gov/contact/nicholas-ducharme-barth-phd
+    - icon: github
+      text: Github
+      href: https://github.com/N-DucharmeBarth-NOAA
+---
+
+Nicholas Ducharme-Barth joined the [Pacific Islands Fisheries Science Center](https://www.fisheries.noaa.gov/about/pacific-islands-fisheries-science-center) in 2021. Previously, Nicholas worked at the Pacific Community ([SPC](https://fame.spc.int/)) conducting pelagic stock assessments for the Western and Central Pacific Fisheries Commission ([WCPFC](https://www.wcpfc.int/)). He received his B.S. in Mathematics from the College of William & Mary and his Ph. D. in Fisheries and Aquatic Sciences from the University of Florida.
+
+
+

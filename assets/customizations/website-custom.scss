@@ -1,0 +1,46 @@
+// Ideas from Slidecraft 101: Colors and Fonts
+// https://emilhvitfeldt.com/post/slidecraft-colors-fonts/
+/*-- scss:defaults --*/
+// NOAA colors from 2023 Fisheries Palette
+// Check contrast: https://colourcontrast.cc/
+// define colors
+$website-background: #fafafa;
+$theme-whale-gray: #323C46;
+$theme-midnight-sky: #001743;
+$theme-twilight-sky: #002364;
+$theme-noaa-sky: #003087;
+$theme-noaa-sea: #0085CA;
+$theme-pale-sea: #C6E6F0;
+$theme-dove-gray: #A5AAAF;
+
+// Get fonts: https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+// define theme colors
+$body-bg: $website-background;
+$body-color: $theme-whale-gray;
+$link-color: $theme-noaa-sea;
+$headings-color: $theme-midnight-sky;
+
+// define theme fonts
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$headings-font-family: 'Roboto Serif', serif;
+$headings-font-weight: 400;
+
+/*-- scss:rules --*/
+
+// add a shortcut for emphasizing text
+.blue {
+  color: $theme-noaa-sky;
+  font-weight: bold;
+}
+
+.hide-text {
+    color: $theme-dove-gray;
+  }
+
+// add underline for hyperlinks
+.reveal .slide a {
+  text-decoration: underline;
+}

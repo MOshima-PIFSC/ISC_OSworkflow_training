@@ -1,0 +1,18 @@
+---
+title: "Megumi Oshima"
+about:
+  template: jolla
+  image: static/mo.jpeg
+  links:
+    - icon: person-workspace
+      text: Contact
+      href: https://www.fisheries.noaa.gov/contact/megumi-oshima-phd
+    - icon: github
+      text: Github
+      href: https://github.com/MOshima-PIFSC
+---
+
+
+Megumi Oshima has been working at the [Pacific Islands Fisheries Science Center](https://www.fisheries.noaa.gov/about/pacific-islands-fisheries-science-center) since 2021. She works mostly on domestic and territorial bottomfish stocks and is interested in Openscience and creating reproducible and transparent workflows. Before joining PIFSC, she was a graduate student at University of Southern Mississippi where she got her PhD in Coastal Sciences.
+
+

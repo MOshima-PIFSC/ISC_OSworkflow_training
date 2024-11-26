@@ -1,0 +1,49 @@
+project:
+  type: website
+  resources:
+   - assets/*
+
+
+website:
+  title: "Open Science Workflow Training for ISC"
+  reader-mode: true
+  site-url: "https://moshima-pifsc.github.io/ISC_OSworkflow_training" 
+  repo-url: "https://github.com/MOshima-PIFSC/ISC_OSworkflow_training"
+  repo-actions: [source, issue]
+  search: true
+  back-to-top-navigation: true
+  bread-crumbs: false
+  sidebar:
+    collapse-level: 1
+    style: "floating"
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training
+    contents: 
+      - text: "Home"
+        file: index.qmd
+      - text: "Seminar slides"
+        file: assets/web-slides.qmd
+      - section: "Documentation"
+        contents: 
+        - text: "Working with NOAA HPC Hera"
+          file: "assets/hera_documentation.qmd"
+      - section: "Contact us"
+        contents:
+        - text: "Nicholas Ducharme-Barth"
+          file: assets/web-about-nd.qmd
+        - text: "Megumi Oshima"
+          file: assets/web-about-mo.qmd
+      - section: "Support"
+        contents:
+        - text: "Submit an issue"
+          href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/issues/new/choose
+
+format: 
+  html:
+    toc: true
+    toc-expand: false
+    theme:
+      - default
+      - assets/customizations/website-custom.scss
