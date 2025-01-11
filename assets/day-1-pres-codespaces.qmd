@@ -1,0 +1,130 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Workflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+#bibliography: customizations/osg.bib
+---
+
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Codespaces]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+::: 
+
+## What is Codespaces?  
+
+::: {.fragment .fade-in fragment-index=1}
+*  Development environment that is hosted in the cloud on GitHub.com  
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+*  You control the specs of the machine!  
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+*  Connected to your repository  
+:::   
+
+## Why use it?  
+
+::: {.r-stack}
+::: {.incremental}
+- Containerized environment  
+- Anyone using it is working in the same environment  
+    - Same OS  
+    - Same software  
+    - Same package versions
+:::
+
+::: {.fragment .fade-in}
+["It works on my computer!"]{.blue .fragment .strike .absolute left="20%" bottom="45%" style="font-size:0.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, 1); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+:::
+:::
+
+## Set Up  
+
+::: {.incremental}
+To set up a Codespace,   
+
+1. Create a [`.devcontainer`]{.blue} folder inside your repository  
+2. Add a [`devcontainer.json`]{.blue} file to that folder   
+3. Set up [`devcontainer.json`]{.blue} how you like (packages, software, extensions, etc.)   
+4. Add a [`setup.r`]{.blue} file if needed  
+5. On main page of repository, "Code" -> "Create codespace on main"  
+:::  
+
+## Devcontainer File  
+
+::: {.absolute left=90% right=2% top=0% bottom=95%}
+[`devcontainer.json`]{.blue}
+:::
+
+```{.json code-line-numbers="2-3|5-26|27-36|43|48-50"}
+{
+    "name": "Quarto Codespaces",
+    "image": "ghcr.io/mcanouil/quarto-codespaces:latest", //pre-built image that includes quarto 
+    "remoteUser": "vscode",
+    "features": { //options that you add in as needed
+        "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {},
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+            "packages": "libglpk-dev,libxml2-dev" // needed for igraph
+        },
+        "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+        	"version": "1.6.37", //specific version of quarto
+        	"installTinyTex": "false", // TinyTex is already installed
+        	"installChromium": "false" // needed for screen capture of htmlwidgets
+        },
+        "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+			"version": "4.4.2", // specific version of R
+			"vscodeRSupport": "none",
+			"installDevTools": "false",
+			"installREnv": "true", //install renv for later
+			"installRMarkdown": "false"
+		},
+        "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+			"packages": "languageserver,jsonlite,rlang", //r packages, can install packages from GitHub as well
+			"installSystemRequirements": true
+		}
+    },
+    "customizations": {
+        "vscode": { //setting up VSCode how we like it
+            "extensions": [
+                "quarto.quarto",
+                "REditorSupport.r",
+                "GitHub.codespaces",
+                "mathematic.vscode-pdf",
+                "ms-vscode.live-server",
+                "mechatroner.rainbow-csv"
+            ],
+            "settings": {
+                "r.rterm.option": [
+                    "--no-save",
+                    "--no-restore-data",
+                    "--quiet"
+                ],
+                "r.useRenvLibPath": true //use renv files to build container
+            }
+        }
+    },
+    "forwardPorts": [3000],	  
+    // Use 'postCreateCommand' to run commands after the container is created.
+    //run an R script to call renv and restore the packages needed into the container
+    "postCreateCommand": "Rscript .devcontainer/setup.r"
+}
+```
+
+# Let's build our codespaces!  

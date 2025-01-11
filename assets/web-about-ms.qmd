@@ -1,0 +1,16 @@
+---
+title: "Michelle Sculley"
+about:
+  template: jolla
+  image: static/ms.png
+  links:
+    - icon: person-workspace
+      text: Contact
+      href: https://www.fisheries.noaa.gov/contact/michelle-sculley-phd
+    - icon: github
+      text: Github
+      href: https://github.com/michellesculley
+---
+
+
+Michelle Sculley has a PhD in Marine Biology and Fisheries from the Rosensteil School of Marine and Atmospheric Sciences, University of Miami and a MS in Biological Oceanography from Texas A&M University. She joined the [Pacific Islands Fisheries Science Center](https://www.fisheries.noaa.gov/about/pacific-islands-fisheries-science-center) in 2017 as a research fish biologist focusing on pelagic highly migratory species stock assessments. She is the lead modeler for the ISC Billfish Working Group and collaborates with scientists from Japan, Taiwan, Korea, Mexico, IATTC, WCPFC, and SPC. She has experience in stock assessment models, spatio-temporal modeling, Bayesian modeling, tagging studies, simulation work, tunas, billfish, and marine mammals. She is interested in exploring how climate change may impact pelagic fish population dynamics.
