@@ -1,0 +1,343 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Workflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+#bibliography: customizations/osg.bib
+---
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[GitHub for Collaborative Workflows]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+## Version Control  
+![](static/version-control.jpg){.absolute top="20%" left="20%" height="75%" style="max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+[The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807]{.absolute bottom="0%" left="0%" style="font-size:0.3em;"}
+
+::: {.notes}
+All of us are probably familiar with some sort of version control, think of like Google Docs or track changes for a word document. It's basically a history of all of the changes that have been made to the document you're working on. With software like Google Docs that happens passively for you, it will automatically create backups every few minutes so you don't have to think about saving a file. Today we're going to be using software that we can apply the same idea but on a much larger and more controlled way. We are going to see how we can use those softwares to back up our work, share our work, and provide a clear, documented map of the developement of a project. So hopefully by the end of the next few days you will feel comfortable using GitHub for projects to make them more organized, transparent and colllaborative.  
+:::
+
+## Git and GitHub
+
+::: columns
+::: {.column width="45%"}
+
+{{< fa brands git-alt size=3x >}}  
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=4}
+{{<fa computer>}} installed on local computer 
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=4}
+{{<fa file-pen>}} tracks changes to files 
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .semi-fade-out fragment-index=4}
+{{<fa user-group>}} separate versions  
+:::
+:::
+:::
+:::
+:::
+
+::: {.column width="45%"}  
+
+{{< fa brands github size=3x >}}     
+
+::: {.fragment .fade-in fragment-index=4}
+::: {.fragment .semi-fade-out fragment-index=7}
+{{<fa cloud>}} central, remote storage of files        
+:::
+
+::: {.fragment .fade-in fragment-index=5}
+::: {.fragment .semi-fade-out fragment-index=7}
+{{<fa arrows-to-circle>}} everyone can contribute changes    
+:::
+
+::: {.fragment .fade-in fragment-index=6}
+::: {.fragment .semi-fade-out fragment-index=7}
+{{<fa object-group>}} changes can be combined and shared    
+:::
+:::
+:::
+:::
+
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=7}
+::: {.absolute left="5%" bottom="45%" right="5%" style="font-size:0.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, 1); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+[We can leverage the interplay between both to help us share code and collaborate with others!]{.blue}
+:::
+:::
+
+
+::: {.notes}
+Git is the version control software that is installed on your computer. It tracks changes you make to files within a project. It has features that allow you to work collaboratively with others without overwriting each other's work, and then combine everything when each part is ready.
+
+GitHub is an online platform to host the tracked files and share your code with others. Within GitHub, you can create repositories that acts as a centralized "remote" storage of files associated with a project. This allows anyone that has access to the repository to download the files onto their local computer, make changes to the code, and then share those changes with everyone else working on the project. 
+:::
+
+
+## Basic Git/Github Workflow 
+::: {.fragment .fade-in fragment-index=1}
+```{mermaid}
+%%{init: {
+    "flowchart": {"htmlLabels": false},
+    "theme": "base",
+    "themeVariables": {
+      "background": "#f4f4f4",
+      "primaryColor": "#0085CA",
+      "primaryTextColor": "#e9f3f6",
+      "primaryBorderColor": "#003087",
+      "secondaryColor": "black",
+      "lineColor": "#002364",
+      "clusterBkg": "#e9f3f6",
+      "clusterBorder": "#323C46",
+      "titleColor": "#002364"
+    }
+  }
+}%%
+flowchart TD
+    A["`*Remote* repository on GitHub`"] --> B("`*Local* repository`")
+    B --> C("`Create new files and <br> make changes *locally*`")
+    C --"Commit changes"--> B
+    B --"Sync remote <br> and local repositories" --> A
+```
+:::
+
+## Remote repository on Github
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=2}
+* Where all of your code and related files lives online   
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=3}
+* Central location where everyone is sharing their changes
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+* Connect the remote repository to the files on your local computer
+
+::: {.fragment .fade-in fragment-index=4}
+  * `git clone`
+:::
+
+::: {.fragment .fade-in fragment-index=5}
+  * `git init`
+:::
+:::
+
+## Local repository  
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=2}
+* Files kept on your local computer  
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=3}
+* Includes branches from the remote repository    
+  * allows for different versions of the same file
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+* Different from local working directory 
+:::
+
+## Making changes locally  
+
+::: {.fragment .fade-in fragment-index=1}
+```{mermaid}
+
+flowchart LR 
+  A(Save) --> B(Stage)
+  B --> C(Commit) 
+  C --> D(Push)
+
+```
+:::
+
+## Commits 
+ 
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=2}
+* groups of small, meaningful changes 
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=3}
+* snapshots of your repository at that time 
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+* tell a story of the history of your repository  
+:::
+
+## Commits  
+Make a commit in 2 stages:  
+
+::: {.fragment .fade-in fragment-index=1}
+1. save your changes locally and then **stage** the files you want to commit    
+
+    `git add <FILENAME>`  
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+2. **commit** your changes  
+
+    `git commit -m "descriptive commit message"`  
+:::
+
+## Push 
+
+To sync the changes you've made locally with the remote repository, you need to **"PUSH"** your commits 
+
+`git push`
+
+## Pull
+
+To sync any changes that were made to the remote repository onto your local computer you need to **"PULL"** commits
+
+:::{.fragment .fade-in fragment-index=1}
+2 ways:  
+1. `git pull` 
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+2. `git fetch`, then eventually `git merge` 
+:::
+
+:::{.notes}
+git pull copies the changes from a remote directory directly into your working directory. 
+the benefit of this is your local repo and local files are synced up with what is online. 
+con is that you can't do this if you are actively editing untracked files that conflict with what is on the remote server. 
+git fetch only copies changes into your local git repo. You will later need to merge them into your working directory. 
+the benefit is that you can continue editing files in your local working directory without having to merge your code with updates from the remote. Once you finished editing the files you are working on you can commit your changes and then use git merge to sync everything.  
+:::
+
+## Branches  
+::: {.absolute bottom="5%" top="15%" width="100%" style="max-height: unset; max-width: unset;"}
+
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=2}
+The default for all repositories is `main`
+```{mermaid}
+
+gitGraph
+  commit id: "Add initial files"
+  commit id: "Code for model development"
+  commit id: "Finalize model"
+  commit id: "Create Shiny app"
+  commit id: "Add report"
+  commit id: "Finish"
+
+
+```
+:::
+:::
+:::
+
+::: {.absolute bottom="5%" top="15%" width="100%" style="max-height: unset; max-width: unset;"}
+
+:::{.fragment .fade-in fragment-index=2}
+```{mermaid}
+
+gitGraph
+  commit id: "Add initial files"
+  branch build_model 
+  checkout build_model
+  commit id: "Develop base model"
+  commit id: "Finalize base model"
+  checkout main
+  branch growth_curve
+  checkout growth_curve
+  commit id: "Change growth curve"
+  checkout build_model
+  merge growth_curve
+  commit id: "Check new growth curve"
+  checkout main
+  merge build_model
+  commit id: "Final model report"  
+
+
+```
+:::
+:::
+
+:::{.notes}
+A really useful feature of github is branches. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained section of the project. 
+You can make changes that don't affect the main branch and once you are ready to add them to the main project you can merge them in.  
+If you are working on a project by yourself, your commit history might look something like this. Since it's only you working on the code and you don't need to worry about doing something that can break code someone else might be using, then all of your changes you could just commit to the main branch.    
+
+:::
+
+## Pull Requests  
+Once you have finished development on your branch and want to add your changes to the main branch, you can submit a **pull request**  
+
+![](static/gh_pr.PNG){style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+# Live Demo 
+
+Let's make our first commit!
+
+::: {.notes}
+Meg walks through making a change to the README.md file first. 
+Then let them do the activity in a group. 
+:::
+
+
+## Activity 1  {.scrollable .smaller}
+1. Following the template provided [here]("https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev/modules"), create a new Markdown document with: 
+
+  * A list of everyone in your group, including:   
+
+    * their affiliation 
+
+    * their GitHub name 
+
+  * a picture of a species you work on  
+
+  * a code chunk with your most used function  
+
+  * a task list of three things you would like to learn from the workshop
+
+2. Save the file with a new name. 
+
+3. Commit your file, and push to the repository. 
+
+## Activity 2: Branches  
+1. Create a new branch from the main branch 
+
+2. Add your name to the list of participants. 
+
+3. Save your change, commit, and push to your branch.   
+
+4. Submit a Pull Request to merge your changes into `main` branch. 

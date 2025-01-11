@@ -1,0 +1,51 @@
+{
+    "name": "Quarto Codespaces",
+    "image": "ghcr.io/mcanouil/quarto-codespaces:latest",
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {},
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			//"packages": "fonts-liberation,libvulkan1,libglpk-dev,libxml2-dev,libgtk-3-dev,libnotify-dev,libgconf-2-4,libnss3,libxss1,libasound2" // needed for igraph and chromium
+            "packages": "libglpk-dev,libxml2-dev" // needed for igraph
+        },
+        "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+        	"version": "1.6.37", // To install the latest version use "prerelease".
+        	"installTinyTex": "false", // TinyTex is already installed
+        	"installChromium": "false" // needed for screen capture of htmlwidgets
+        },
+        "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+			"version": "4.4.2", // To install the latest R version use "release".
+			"vscodeRSupport": "none",
+			"installDevTools": "false",
+			"installREnv": "true",
+			"installRMarkdown": "false"
+		},
+        "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+			"packages": "languageserver,jsonlite,rlang",
+			"installSystemRequirements": true
+		}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "quarto.quarto",
+                "REditorSupport.r",
+                "GitHub.codespaces",
+                "mathematic.vscode-pdf",
+                "ms-vscode.live-server",
+                "mechatroner.rainbow-csv"
+            ],
+            "settings": {
+                "r.rterm.option": [
+                    "--no-save",
+                    "--no-restore-data",
+                    "--quiet"
+                ],
+                "r.useRenvLibPath": true
+            }
+        }
+    },
+    "forwardPorts": [3000],	  
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "Rscript .devcontainer/setup.r"
+}

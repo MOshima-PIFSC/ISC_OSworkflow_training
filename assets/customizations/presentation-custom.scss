@@ -76,6 +76,12 @@ $presentation-h1-font-size: 2em;
   text-decoration: underline;
 }
 
+// make a hidden hyperlink
+.reveal .slide a.hiddenlink {
+  text-decoration: none;
+  color: $theme-dove-gray;
+}
+
 .highlight-last  {
   color: rgba($theme-whale-gray, .5);
   .current-fragment {
