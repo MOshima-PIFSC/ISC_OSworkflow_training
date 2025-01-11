@@ -38,7 +38,7 @@ embed-resources: true
 
 ## Workshop Materials  
 
-*   All presentations can be found on the [workshop website](https://github.com/MOshima-PIFSC/ISC_OSworkflow_training).   
+*   All presentations can be found on the [workshop website](https://moshima-pifsc.github.io/ISC_OSworkflow_training/).   
 
 *   Code can be found in the [workshop repository](https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/r-code).   
 
@@ -49,4 +49,50 @@ Make sure you have created a GitHub account before we start.
 
 ## Why Open Science?  
 
+::: {.fragment .fade-in fragment-index=1}
+*  Standardized workflows and efficiency  
+::: 
 
+::: {.fragment .fade-in fragment-index=2}
+*  Improve and support collaboration  
+::: 
+
+::: {.fragment .fade-in fragment-index=3}
+*  Ensure our science is truly reproducible  
+::: 
+
+::: {.fragment .fade-in fragment-index=4}
+*  Provide tools for sharing and communicating our work
+::: 
+
+## Topics we will cover  {.smaller}
+
+::: {.fragment .fade-in fragment-index=1}
+*  GitHub for collaboration
+::: 
+
+::: {.fragment .fade-in fragment-index=2}
+*  Codespaces and reproducible environments
+::: 
+
+::: {.fragment .fade-in fragment-index=3}
+*  Script-based model development
+::: 
+
+::: {.fragment .fade-in fragment-index=4}
+*  Creating Shiny apps
+::: 
+
+::: {.fragment .fade-in fragment-index=5}
+*  Code review with GitHub
+::: 
+
+::: {.fragment .fade-in fragment-index=6}
+*  Creating reproducible reports and presentations
+::: 
+
+::: {.fragment .fade-in fragment-index=7}
+*  Creating websites to share results 
+::: 
+
+# Let's get started!

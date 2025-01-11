@@ -9,6 +9,8 @@ This repository contains materials for the ISC Open Science Workflows workshops 
 
 {{< revealjs file="assets/day-1-welcome.html" height="500px" class="ratio ratio-16x9" >}}
 
+
+## Workshop Schedule  
 The schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day) 
 
 ### Day 1  

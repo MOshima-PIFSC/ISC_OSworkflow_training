@@ -1,0 +1,169 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Workflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+#bibliography: customizations/osg.bib
+---
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Reproducible Environments]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+::: 
+
+## What is a reproducible environment?  
+
+::: {.incremental}
+-  A computing setup where all the necessary components are explicitly defined  
+    -  OS, package versions, software, etc.  
+-  Anyone can replicate that exact coding environment and the results will be the same across different machines
+:::  
+
+## Signs you want to use a reproducible environment  
+
+::: {.incremental}
+*   Code that used to run no longer runs even though you haven't changed the code itself  
+*   If you upgrade to a new version of a package or software and things break  
+*   You want to share your code with a colloaborator and ensure they get the same results you get  
+*   You want to run your code in some other environment besides your local computer 
+:::  
+
+## How can we do this?  
+
+[`renv`](https://rstudio.github.io/renv/){preview-link="true"} is an R package to help create [r]{.blue}eproducible [env]{.blue}ironments 
+
+![](static/renv_logo.png){.absolute top="40%" left="20%" height="45%" style="max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+## renv  
+
+::: {.incremental}
+*   Isloated - each project has it's own library  
+*   Portable - easy to install on different computers (even OS)  
+*   Reproducible - ensures you are using the exact package versions  
+:::
+
+## renv Workflow  
+
+```{mermaid}
+flowchart LR  
+    A(New project) --"renv::init()"--> B(Project library)
+    B --"renv::snapshot()"--> C(Lockfile)
+    C --"renv::restore()"--> B
+    E(CRAN/GitHub) --"renv::install()"--> B
+
+```
+
+## Initalize project    
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=3}
+*  When you first start a project, you will want to initialize an renv project 
+::: 
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=3}
+
+{{<fa folder-plus>}} `renv::init()`
+
+:::
+::: 
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+*  Creates 3 items:  
+:::
+
+::: {.fragment .fade-in fragment-index=4}
+{{<fa folder-open>}} `renv/library/` 
+:::
+
+::: {.fragment .fade-in fragment-index=5}
+{{<fa lock-open>}} `renv.lock`  
+:::
+
+::: {.fragment .fade-in fragment-index=6}
+{{<fa fingerprint>}} `.Rprofile` 
+:::
+
+
+::: {.notes}
+renv library is a library that is specific for that project and has the specific version of the packages that are being used in the project.
+
+lockfile holds the metadata for each package that specifies which version to install when run on a new computer.
+
+rprofile what tells the R session to use the renv files for the project library
+
+:::
+
+## Installing new packages  
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left=0% top=20%}
+{{<fa download>}} `renv::install()` - can specify the location and version you want  
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.absolute left=0% top=40%}
+{{<fa lock-open>}}  As you install new packages you will need to update the lockfile  
+:::
+:::
+
+## Using the lockfile for collaboration  
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left=0% top=20%}
+{{<fa camera>}} `renv::snapshot()` - updates lockfile with metadata about all currently-used packages
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.absolute left=0% top=40%}  
+{{<fa file-arrow-down>}} `renv::restore()` - reproduces the environment specified in the lockfile 
+:::
+:::
+
+::: {.notes}
+The lockfile is what has all the information about the packages you're using. It can be shared between people/computers and recreate the same environment you are using.  
+:::
+
+## Another use for renv  
+::: {.fragment .fade-in fragment-index=1}
+*  Can use a lockfile for GitHub Actions (or other continuous integration systems)  
+:::  
+
+::: {.fragment .fade-in fragment-index=2}
+*  Use the r-lib  `setup-renv` action in your workflow  
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+```{.yml}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install packages using renv
+      uses: r-lib/actions/setup-renv@v2
+```
+:::
+
+# Questions  
+
+## Resources  
+
+*  [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)  
+*  [Using renv in GitHub Actions](https://rstudio.github.io/renv/articles/ci.html)

@@ -10,7 +10,11 @@ Presentation slides for the GitHub for Collaborative Workflows presentation.
 
 Presentation slides for the Codespaces presentation.
 
-{{< revealjs file="day-1-pres-codespaces.html" height="500px" class="ratio ratio-16x9" >}}
+{{< revealjs file="day-1-pres-codespaces.html" height="500px" class="ratio ratio-16x9" >}}  
+
+Presentation slides for the Reproducible Environments presentation.
+
+{{< revealjs file="day-1-pres-reproducible_environments.html" height="500px" class="ratio ratio-16x9" >}}  
 
 Presentation slides for the presentation on modifying and running stock synthesis models.
 

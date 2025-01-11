@@ -30,7 +30,7 @@ website:
           - text: "Codespaces"
             file: assets/day-1-pres-codespaces.qmd
           - text: "Reproducible environments"
-            file: assets/day-1-reproducible_environments.qmd
+            file: assets/day-1-pres-reproducible_environments.qmd
           - text: "Modifying Stock Synthesis files"
             file: assets/day-1-pres-modify-stock-synthesis.qmd
           - text: "Modifying Stock Synthesis files: Part 2"

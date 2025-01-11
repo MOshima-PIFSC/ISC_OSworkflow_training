@@ -315,7 +315,7 @@ Then let them do the activity in a group.
 
 
 ## Activity 1  {.scrollable .smaller}
-1. Following the template provided [here]("https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev/modules"), create a new Markdown document with: 
+1. Following the template provided [here]("https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev/r-code/Group_info_template.qmd"), create a new Markdown document with: 
 
   * A list of everyone in your group, including:   
 
