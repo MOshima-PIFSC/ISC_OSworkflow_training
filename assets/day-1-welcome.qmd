@@ -1,0 +1,52 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Worflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+#bibliography: customizations/osg.bib
+---
+
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Welcome to ISC BILLWG Open Science Workshop]{.blue-title}
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+
+## Introductions  
+
+
+![](static/nd.jpg){.absolute top="20%" left="0%" width="25%" style="max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+[Nicholas <br> Ducharme-Barth]{.absolute bottom="25%" left="0%" style="font-size:0.75em;"}
+
+![](static/mo2.jpeg){.absolute top="20%" left="40%" width="25%" style="max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+[Meg Oshima]{.absolute bottom="30%" left="43%" style="font-size:0.75em;"}
+
+![](static/ms.png){.absolute top="20%" right="0%" width="25%" style="max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+[Michelle Sculley]{.absolute bottom="30%" right="0%" style="font-size:0.75em;"}
+
+
+## Workshop Materials  
+
+*   All presentations can be found on the [workshop website](https://github.com/MOshima-PIFSC/ISC_OSworkflow_training).   
+
+*   Code can be found in the [workshop repository](https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/r-code).   
+
+:::{.callout-important}
+Make sure you have created a GitHub account before we start. 
+:::
+
+
+## Why Open Science?  
+
+

@@ -1,0 +1,254 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Worflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  mermaid-format: svg
+  scrollable: true
+embed-resources: true
+#bibliography: customizations/osg.bib
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+##  {.center}
+
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+[Modifying and running stock synthesis models: part 2]{.blue-title}
+
+[Michelle Sculley]{.blue style="font-size:0.5em;"}
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+## Script based workflow
+
+</br>
+
+Next we will cover editing and running stock assessments using a script
+based workflow developed for the BILLWG.
+
+This code is available for the BILLWG in the [SS_Intl_Auto](https://github.com/michellesculley/SS_Intl_auto) repository. It is still in development - but can be run for NP Swordfish and WCNPO striped marlin.
+
+## Why use this specific workflow? {.smaller}
+
+This was developed specifically to run BILLWG assessments to better
+distribute the workload during assessment meetings.
+
+-   Editing raw text files can lead to mistakes - its better to write a
+    clean file each run.
+
+    -   Forgetting to change a parameter line
+
+    -   Missing a value in a parameter line
+
+-   It can be time consuming to run diagnostics by hand
+
+    -   Automating retrospectives, jitters, and likelihood profiles
+        means we can run them in parallel
+
+-   We are set up to run large numbers of models on super computers
+
+-   We can run models on codespaces (no need to install software!)
+
+-   Keeps workflows consistent between WG members for ease of
+    collaboration
+
+-   Keeps science transparent - easy to replicate your results
+
+## What can this code do? {.smaller}
+
+-   Write SS files
+
+-   Run SS models
+
+    -   Including sensitivity runs
+
+-   Run diagnostics
+
+-   Print summary reports (with Quarto)
+
+-   Print r4ss plots
+
+-   Run projections (in development)
+
+## Data inputs {.smaller}
+
+Some external data files are needed to run this code:
+
+-   These are stored in the /Data folder in the repository
+
+    -   Catch (csv)
+
+    -   CPUE (csv)
+
+    -   Length Composition (csv)
+
+    -   CTL_Inputs (xlsx)
+
+    -   CTL_Parameters (xlsx)
+
+    -   Any other csv files for other input data - such as age comp or
+        generalize size comp (in development)
+
+## CTL_parameters {.smaller}
+
+-   This file contains all the long and short line parameters used in
+    the control file.
+
+-   Each species is its own sheet
+
+-   We will be editing the sheet for our species "EXM"
+
+-   Each line is a parameter
+
+    -   category tells R which parameter group it belongs to
+
+    -   OPTION tells R which option to use if more than one set of
+        parameters in a particular type is used (i.e. alternative growth
+        parameters)
+
+    -   The subsequent colmns are the parameters lines from the SS
+        control file
+
+-   To run alternative models add a new set of parameters for your
+    parameter of choice - do NOT change the "Base" option parameters
+
+-   Which parameters we use in the SS model is determined by the
+    PARAM_option inputs in the Build_All_SS function
+
+## CTL_inputs {.smaller}
+
+This file contains all the additional information needed to populate the
+control file
+
+-   Each sheet is a model run
+
+-   You will need to add a new sheet if you need to change any of the
+    parameters in this sheet
+
+::: {.codewindow .r .absolute top="50%" left="10%" right="0%" bottom="40%" style="font-size: 0.9em;"}
+``` r
+model.info<-list(
+  "scenario"="Base",  ## which sheet in CTL_inputs.xlsx
+  "Species"="EXM", ...)
+```
+:::
+
+## Diagnostics {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   ASPM - no additional inputs needed
+
+-   Runs test (CPUE and Size Data) – No additional inputs
+
+-   Stock status quantities – no additional inputs
+
+-   Jitter
+
+    -   Njitter = number of jitter models to run
+
+    -   jitterFraction = how much to change initial parameters for each
+        run
+
+-   Retrospectives/Hindcasting
+
+    -   retro_years = vector of years you want to run retrospectives on
+:::
+
+::: {.column width="50%"}
+-   Likelihood Profiles
+
+    -   profile_name = name of parameter you want to profile on
+
+        -   must match name of parameter in report file (i.e. SR_LN(R0)
+            or NatM_uniform_Fem_GP_1)
+
+    -   profile.vec = vector with two values:
+
+        -   \[1\] number of models you want run (excluding MLE)
+
+        -   \[2\] increment value between parameters (i.e. c(4,0.1) for
+            a model where SR_LN(R0) = 8 would run - profile models at
+            7.8, 7.9, 8.0, 8.1, and 8.2)
+:::
+:::
+
+## To Run
+
+You should only modify the file Run_SS_Model.R
+
+1.  Set the base directory you are working in
+
+2.  Provide a vector of your fleet names
+
+3.  Modify model.info to the options you want to use while running the
+    model
+
+4.  Source 01_Build_All_SS.r
+
+5.  Run Build_All_SS with appropriate inputs
+
+## A warning about running in parallel {.smaller}
+
+You are able to run jitters, retrospectives, and profiles in parallel
+with this code.
+
+[**BUT,**]{.underline} The built in functions do this in r4ss are not
+set up to run in parallel.
+
+If you choose to set run_parallel = TRUE the code will use bespoke
+functions based upon their r4ss equivalents, written to run in parallel,
+which are contained within this repository:
+
+-   parallel_jitter.R
+
+-   parallel_profile.R
+
+-   parallel_retro.R
+
+-   parallel_SS_parlines.R (supporting function)
+
+If you set run_parallel = FALSE the r4ss functions will be used by
+default
+
+## Group activity! {.smaller}
+
+Using the Run_SS_Model.R script, run a sensitivity analysis on the base
+model for species "EXM"
+
+Options for runs:
+
+::: columns
+::: {.column width = "50%"}
+
+-   GROWTH – increase L~amax~ by 10%
+
+-   GROWTH – decrease L~amax~ by 10%
+
+-   MORT – increase by 10%
+
+-   MORT – decrease by 10%
+
+-   MAT – increase L~50~ by 10%
+:::
+
+::: {.column width = "50%"}
+
+-   MAT – decrease L~50~ by 10%
+
+-   SEL – change F1 to option 24 – logistic
+
+-   SR – increase [sigma]{.smallcaps}R to 0.9
+
+-   SR – decrease [sigma]{.smallcaps}R to 0.3
+
+-   Steepness – change to 0.8
+
+::: 
+:::

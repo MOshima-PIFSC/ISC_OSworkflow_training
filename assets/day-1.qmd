@@ -1,0 +1,35 @@
+---
+title: "Day 1"
+---
+
+## Presentation files
+
+Presentation slides for the GitHub for Collaborative Workflows presentation.
+
+{{< revealjs file="day-1-pres-github_basics.html" height="500px" class="ratio ratio-16x9" >}}
+
+Presentation slides for the Codespaces presentation.
+
+{{< revealjs file="day-1-pres-codespaces.html" height="500px" class="ratio ratio-16x9" >}}
+
+Presentation slides for the presentation on modifying and running stock synthesis models.
+
+{{< revealjs file="day-1-pres-modify-stock-synthesis.html" height="500px" class="ratio ratio-16x9" >}}
+
+Presentation slides for the Part 2 presentation on modifying and running stock synthesis models.
+
+{{< revealjs file="day-1-pres-modify-stock-synthesis_BILLWG.html" height="500px" class="ratio ratio-16x9" >}}
+
+## Resources
+
+Example code for modifying a [Stock Synthesis](https://nmfs-ost.github.io/ss3-website/) input model file and running the modified model through [R](https://www.r-project.org/) using the [r4ss](https://r4ss.github.io/r4ss/index.html) package can be found in the `r-code/` directory on the course [GitHub repo](https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/tree/main/r-code).
+
+Briefly the `r-code/01-modify-stock-synthesis.r` file takes you through the steps of:
+
+::: {}
+- reading in the [Stock Synthesis](https://nmfs-ost.github.io/ss3-website/) input file (e.g., `control.ss`) using the [r4ss](https://r4ss.github.io/r4ss/index.html) package
+- modifying this file, in this case changing the [steepness](https://www.iss-foundation.org/glossary/steepness/) value $h$ and thus modifying the shape of the [stock-recruitment relationship](https://edis.ifas.ufl.edu/publication/FA234) (SRR)
+- running the newly modified model
+:::
+
+There is also code at the end of the file that wraps all three of those steps in a `for` loop in case multiple alternate model configurations want to be explored.

@@ -5,4 +5,48 @@ format:
     toc: false
 ---
 
-This repository contains examples and documentation for accessing and applying existing research computing resources available to NOAA Fisheries staff. Example code and documentation were presented as a part of the National Stock Assessment Seminar series ([slides](https://moshima-pifsc.github.io/NSASS-HTC-HPC-Computing/assets/web-slides.html)).
+This repository contains materials for the ISC Open Science Workflows workshops held in Honolulu, HI and Yokohama, Japan in January 2025. 
+
+{{< revealjs file="assets/day-1-welcome.html" height="500px" class="ratio ratio-16x9" >}}
+
+The schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day) 
+
+### Day 1  
+
+|Time    |Module  |
+|--------|--------|
+|8:30-8:45| Welcome and introductions|
+|8:45-9:30| GitHub for Collaborative Workflows|  
+|9:30-9:45|Codespaces|
+|9:45-10:00|Break|  
+|10:00-10:15|Reproducible Environments|  
+|10:15-11:30|Modifying Stock Synthesis Files|  
+|11:30-12:00|Group work, wrap up|  
+
+### Day 2  
+
+|Time    |Module  |
+|--------|--------|
+|8:30-9:45|Group work|
+|9:45-10:00|Break|  
+|10:00-10:30|Pull Requests and Code Review|
+|10:30-11:00|Shiny App|  
+|11:00-12:00|Group work, wrap up|  
+
+### Day 3  
+
+|Time    |Module  |
+|--------|--------|
+|8:30-9:45|Review group work|
+|9:45-10:00|Break| 
+|10:00-10:30|Quarto Reports and Presentations|  
+|10:30-11:00|Quarto Website|    
+|11:00-12:00|Group work, wrap up|  
+
+
+### Day 4  
+
+|Time    |Module  |
+|--------|--------|
+|8:30-9:30|Review group work|  
+|9:30-12:00|Discussion, wrap up|  
