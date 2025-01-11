@@ -1,67 +1,169 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "r-code/Group_info_template.html",
+    "href": "r-code/Group_info_template.html",
+    "title": "Group",
     "section": "",
-    "text": "This repository contains materials for the ISC Open Science Workflows workshops held in Honolulu, HI and Yokohama, Japan in January 2025.\n    View slides in full screen\n       \n      \n    \n  \nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nGroup work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nPull Requests and Code Review\n\n\n10:30-11:00\nShiny App\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nReview group work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nQuarto Reports and Presentations\n\n\n10:30-11:00\nQuarto Website\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:30\nReview group work\n\n\n9:30-12:00\nDiscussion, wrap up\n\n\n\n\n\n\n\n Back to top",
+    "text": "(add list of members and their affiliations)\n\n\n\n(insert figure here)\n\n\n\n(insert a code chunk here)\n\n\n\n(insert task list (with check boxes) of at least 3 things)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#members",
+    "href": "r-code/Group_info_template.html#members",
+    "title": "Group",
+    "section": "",
+    "text": "(add list of members and their affiliations)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#species-of-interest",
+    "href": "r-code/Group_info_template.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "(insert figure here)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#most-used-function",
+    "href": "r-code/Group_info_template.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "(insert a code chunk here)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "(insert task list (with check boxes) of at least 3 things)"
+  },
+  {
+    "objectID": "assets/web-about-ms.html",
+    "href": "assets/web-about-ms.html",
+    "title": "Michelle Sculley",
+    "section": "",
+    "text": "Michelle Sculley has a PhD in Marine Biology and Fisheries from the Rosensteil School of Marine and Atmospheric Sciences, University of Miami and a MS in Biological Oceanography from Texas A&M University. She joined the Pacific Islands Fisheries Science Center in 2017 as a research fish biologist focusing on pelagic highly migratory species stock assessments. She is the lead modeler for the ISC Billfish Working Group and collaborates with scientists from Japan, Taiwan, Korea, Mexico, IATTC, WCPFC, and SPC. She has experience in stock assessment models, spatio-temporal modeling, Bayesian modeling, tagging studies, simulation work, tunas, billfish, and marine mammals. She is interested in exploring how climate change may impact pelagic fish population dynamics.\n\n\n Back to top",
     "crumbs": [
-      "Home"
+      "Contact us",
+      "Michelle Sculley"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#section",
-    "href": "assets/day-1-pres-codespaces.html#section",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#section",
+    "href": "assets/day-1-pres-reproducible_environments.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Codespaces\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "Reproducible Environments\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#what-is-codespaces",
-    "href": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
+    "href": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
     "title": "Open Science Workflow Training for ISC",
-    "section": "What is Codespaces?",
-    "text": "What is Codespaces?\n\n\nDevelopment environment that is hosted in the cloud on GitHub.com\n\n\n\n\n\nYou control the specs of the machine!\n\n\n\n\n\nConnected to your repository",
+    "section": "What is a reproducible environment?",
+    "text": "What is a reproducible environment?\n\n\nA computing setup where all the necessary components are explicitly defined\n\nOS, package versions, software, etc.\n\n\nAnyone can replicate that exact coding environment and the results will be the same across different machines",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#why-use-it",
-    "href": "assets/day-1-pres-codespaces.html#why-use-it",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
+    "href": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Why use it?",
-    "text": "Why use it?\n\n\n\nContainerized environment\n\nAnyone using it is working in the same environment\n\nSame OS\n\nSame software\n\nSame package versions\n\n\n\n\n“It works on my computer!”",
+    "section": "Signs you want to use a reproducible environment",
+    "text": "Signs you want to use a reproducible environment\n\n\nCode that used to run no longer runs even though you haven’t changed the code itself\n\nIf you upgrade to a new version of a package or software and things break\n\nYou want to share your code with a colloaborator and ensure they get the same results you get\n\nYou want to run your code in some other environment besides your local computer",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#set-up",
-    "href": "assets/day-1-pres-codespaces.html#set-up",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
+    "href": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Set Up",
-    "text": "Set Up\n\nTo set up a Codespace,\n\nCreate a .devcontainer folder inside your repository\n\nAdd a devcontainer.json file to that folder\n\nSet up devcontainer.json how you like (packages, software, extensions, etc.)\n\nAdd a setup.r file if needed\n\nOn main page of repository, “Code” -&gt; “Create codespace on main”",
+    "section": "How can we do this?",
+    "text": "How can we do this?\nrenv is an R package to help create reproducible environments",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#devcontainer-file",
-    "href": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#renv",
+    "href": "assets/day-1-pres-reproducible_environments.html#renv",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Devcontainer File",
-    "text": "Devcontainer File\n\ndevcontainer.json\n\n{\n    \"name\": \"Quarto Codespaces\",\n    \"image\": \"ghcr.io/mcanouil/quarto-codespaces:latest\", //pre-built image that includes quarto \n    \"remoteUser\": \"vscode\",\n    \"features\": { //options that you add in as needed\n        \"ghcr.io/rocker-org/devcontainer-features/r-apt:latest\": {},\n        \"ghcr.io/rocker-org/devcontainer-features/apt-packages:1\": {\n            \"packages\": \"libglpk-dev,libxml2-dev\" // needed for igraph\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1\": {\n            \"version\": \"1.6.37\", //specific version of quarto\n            \"installTinyTex\": \"false\", // TinyTex is already installed\n            \"installChromium\": \"false\" // needed for screen capture of htmlwidgets\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-rig:1\": {\n            \"version\": \"4.4.2\", // specific version of R\n            \"vscodeRSupport\": \"none\",\n            \"installDevTools\": \"false\",\n            \"installREnv\": \"true\", //install renv for later\n            \"installRMarkdown\": \"false\"\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-packages:1\": {\n            \"packages\": \"languageserver,jsonlite,rlang\", //r packages, can install packages from GitHub as well\n            \"installSystemRequirements\": true\n        }\n    },\n    \"customizations\": {\n        \"vscode\": { //setting up VSCode how we like it\n            \"extensions\": [\n                \"quarto.quarto\",\n                \"REditorSupport.r\",\n                \"GitHub.codespaces\",\n                \"mathematic.vscode-pdf\",\n                \"ms-vscode.live-server\",\n                \"mechatroner.rainbow-csv\"\n            ],\n            \"settings\": {\n                \"r.rterm.option\": [\n                    \"--no-save\",\n                    \"--no-restore-data\",\n                    \"--quiet\"\n                ],\n                \"r.useRenvLibPath\": true //use renv files to build container\n            }\n        }\n    },\n    \"forwardPorts\": [3000],   \n    // Use 'postCreateCommand' to run commands after the container is created.\n    //run an R script to call renv and restore the packages needed into the container\n    \"postCreateCommand\": \"Rscript .devcontainer/setup.r\"\n}",
+    "section": "renv",
+    "text": "renv\n\n\nIsloated - each project has it’s own library\n\nPortable - easy to install on different computers (even OS)\n\nReproducible - ensures you are using the exact package versions",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
+    "href": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "renv Workflow",
+    "text": "renv Workflow\n\n\n\n\n\n\n\n\n\n\n\nrenv::init()\n\n\n\n\n\n\n\nrenv::snapshot()\n\n\n\n\n\n\n\nrenv::restore()\n\n\n\n\n\n\n\nrenv::install()\n\n\n\n\n\n\n\nNew project\n\n\n\n\n\n\n\nProject library\n\n\n\n\n\n\n\nLockfile\n\n\n\n\n\n\n\nCRAN/GitHub",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#initalize-project",
+    "href": "assets/day-1-pres-reproducible_environments.html#initalize-project",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Initalize project",
+    "text": "Initalize project\n\n\n\nWhen you first start a project, you will want to initialize an renv project\n\n\n\n\n renv::init()\n\n\n\n\n\nCreates 3 items:\n\n\n\n\n renv/library/\n\n\n renv.lock\n\n\n .Rprofile\n\n\nrenv library is a library that is specific for that project and has the specific version of the packages that are being used in the project.\nlockfile holds the metadata for each package that specifies which version to install when run on a new computer.\nrprofile what tells the R session to use the renv files for the project library",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
+    "href": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Installing new packages",
+    "text": "Installing new packages\n\n\n renv::install() - can specify the location and version you want\n\n\n\n\n As you install new packages you will need to update the lockfile",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
+    "href": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Using the lockfile for collaboration",
+    "text": "Using the lockfile for collaboration\n\n\n renv::snapshot() - updates lockfile with metadata about all currently-used packages\n\n\n\n\n renv::restore() - reproduces the environment specified in the lockfile\n\n\n\nThe lockfile is what has all the information about the packages you’re using. It can be shared between people/computers and recreate the same environment you are using.",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
+    "href": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Another use for renv",
+    "text": "Another use for renv\n\n\nCan use a lockfile for GitHub Actions (or other continuous integration systems)\n\n\n\n\n\nUse the r-lib setup-renv action in your workflow\n\n\n\n\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n    - name: Install packages using renv\n      uses: r-lib/actions/setup-renv@v2",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-reproducible_environments.html#resources",
+    "href": "assets/day-1-pres-reproducible_environments.html#resources",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Resources",
+    "text": "Resources\n\nIntroduction to renv\n\nUsing renv in GitHub Actions",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
     ]
   },
   {
@@ -355,7 +457,7 @@
     "href": "assets/day-1.html",
     "title": "Day 1",
     "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
     "crumbs": [
       "Day 1"
     ]
@@ -365,7 +467,7 @@
     "href": "assets/day-1.html#presentation-files",
     "title": "Day 1",
     "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
     "crumbs": [
       "Day 1"
     ]
@@ -407,11 +509,7 @@
     "href": "assets/day-1-reproducible_environments.html",
     "title": "Reproducible environments",
     "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
+    "text": "Back to top"
   },
   {
     "objectID": "assets/day-1-modify-stock-synthesis.html",
@@ -446,7 +544,14 @@
     "href": "assets/day-1-welcome.html#why-open-science",
     "title": "Open Science Workflow Training for ISC",
     "section": "Why Open Science?",
-    "text": "Why Open Science?"
+    "text": "Why Open Science?\n\n\nStandardized workflows and efficiency\n\n\n\n\n\nImprove and support collaboration\n\n\n\n\n\nEnsure our science is truly reproducible\n\n\n\n\n\nProvide tools for sharing and communicating our work"
+  },
+  {
+    "objectID": "assets/day-1-welcome.html#topics-we-will-cover",
+    "href": "assets/day-1-welcome.html#topics-we-will-cover",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Topics we will cover",
+    "text": "Topics we will cover\n\n\nGitHub for collaboration\n\n\n\n\nCodespaces and reproducible environments\n\n\n\n\nScript-based model development\n\n\n\n\nCreating Shiny apps\n\n\n\n\nCode review with GitHub\n\n\n\n\nCreating reproducible reports and presentations\n\n\n\n\nCreating websites to share results"
   },
   {
     "objectID": "assets/day-1-pres-modify-stock-synthesis.html#section",
@@ -548,14 +653,78 @@
     ]
   },
   {
-    "objectID": "assets/web-about-ms.html",
-    "href": "assets/web-about-ms.html",
-    "title": "Michelle Sculley",
+    "objectID": "assets/day-1-pres-codespaces.html#section",
+    "href": "assets/day-1-pres-codespaces.html#section",
+    "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Michelle Sculley has a PhD in Marine Biology and Fisheries from the Rosensteil School of Marine and Atmospheric Sciences, University of Miami and a MS in Biological Oceanography from Texas A&M University. She joined the Pacific Islands Fisheries Science Center in 2017 as a research fish biologist focusing on pelagic highly migratory species stock assessments. She is the lead modeler for the ISC Billfish Working Group and collaborates with scientists from Japan, Taiwan, Korea, Mexico, IATTC, WCPFC, and SPC. She has experience in stock assessment models, spatio-temporal modeling, Bayesian modeling, tagging studies, simulation work, tunas, billfish, and marine mammals. She is interested in exploring how climate change may impact pelagic fish population dynamics.\n\n\n Back to top",
+    "text": "Codespaces\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
-      "Contact us",
-      "Michelle Sculley"
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "href": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "What is Codespaces?",
+    "text": "What is Codespaces?\n\n\nDevelopment environment that is hosted in the cloud on GitHub.com\n\n\n\n\n\nYou control the specs of the machine!\n\n\n\n\n\nConnected to your repository",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#why-use-it",
+    "href": "assets/day-1-pres-codespaces.html#why-use-it",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Why use it?",
+    "text": "Why use it?\n\n\n\nContainerized environment\n\nAnyone using it is working in the same environment\n\nSame OS\n\nSame software\n\nSame package versions\n\n\n\n\n“It works on my computer!”",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#set-up",
+    "href": "assets/day-1-pres-codespaces.html#set-up",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Set Up",
+    "text": "Set Up\n\nTo set up a Codespace,\n\nCreate a .devcontainer folder inside your repository\n\nAdd a devcontainer.json file to that folder\n\nSet up devcontainer.json how you like (packages, software, extensions, etc.)\n\nAdd a setup.r file if needed\n\nOn main page of repository, “Code” -&gt; “Create codespace on main”",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "href": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Devcontainer File",
+    "text": "Devcontainer File\n\ndevcontainer.json\n\n{\n    \"name\": \"Quarto Codespaces\",\n    \"image\": \"ghcr.io/mcanouil/quarto-codespaces:latest\", //pre-built image that includes quarto \n    \"remoteUser\": \"vscode\",\n    \"features\": { //options that you add in as needed\n        \"ghcr.io/rocker-org/devcontainer-features/r-apt:latest\": {},\n        \"ghcr.io/rocker-org/devcontainer-features/apt-packages:1\": {\n            \"packages\": \"libglpk-dev,libxml2-dev\" // needed for igraph\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1\": {\n            \"version\": \"1.6.37\", //specific version of quarto\n            \"installTinyTex\": \"false\", // TinyTex is already installed\n            \"installChromium\": \"false\" // needed for screen capture of htmlwidgets\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-rig:1\": {\n            \"version\": \"4.4.2\", // specific version of R\n            \"vscodeRSupport\": \"none\",\n            \"installDevTools\": \"false\",\n            \"installREnv\": \"true\", //install renv for later\n            \"installRMarkdown\": \"false\"\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-packages:1\": {\n            \"packages\": \"languageserver,jsonlite,rlang\", //r packages, can install packages from GitHub as well\n            \"installSystemRequirements\": true\n        }\n    },\n    \"customizations\": {\n        \"vscode\": { //setting up VSCode how we like it\n            \"extensions\": [\n                \"quarto.quarto\",\n                \"REditorSupport.r\",\n                \"GitHub.codespaces\",\n                \"mathematic.vscode-pdf\",\n                \"ms-vscode.live-server\",\n                \"mechatroner.rainbow-csv\"\n            ],\n            \"settings\": {\n                \"r.rterm.option\": [\n                    \"--no-save\",\n                    \"--no-restore-data\",\n                    \"--quiet\"\n                ],\n                \"r.useRenvLibPath\": true //use renv files to build container\n            }\n        }\n    },\n    \"forwardPorts\": [3000],   \n    // Use 'postCreateCommand' to run commands after the container is created.\n    //run an R script to call renv and restore the packages needed into the container\n    \"postCreateCommand\": \"Rscript .devcontainer/setup.r\"\n}",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This repository contains materials for the ISC Open Science Workflows workshops held in Honolulu, HI and Yokohama, Japan in January 2025.\nView slides in full screen",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-schedule",
+    "href": "index.html#workshop-schedule",
+    "title": "Home",
+    "section": "Workshop Schedule",
+    "text": "Workshop Schedule\nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nGroup work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nPull Requests and Code Review\n\n\n10:30-11:00\nShiny App\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nReview group work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nQuarto Reports and Presentations\n\n\n10:30-11:00\nQuarto Website\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:30\nReview group work\n\n\n9:30-12:00\nDiscussion, wrap up",
+    "crumbs": [
+      "Home"
     ]
   }
 ]
