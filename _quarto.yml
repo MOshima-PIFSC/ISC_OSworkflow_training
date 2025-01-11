@@ -6,8 +6,8 @@ project:
 website:
   title: "Open Science Workflow Training for ISC"
   reader-mode: true
-  site-url: "https://moshima-pifsc.github.io/ISC_OSworkflow_training_dev" 
-  repo-url: "https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev"
+  site-url: "https://moshima-pifsc.github.io/ISC_OSworkflow_training" 
+  repo-url: "https://github.com/MOshima-PIFSC/ISC_OSworkflow_training"
   repo-actions: [source, issue]
   search: true
   back-to-top-navigation: true
@@ -18,7 +18,7 @@ website:
     search: true
     tools:
       - icon: github
-        href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev
+        href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training
     contents: 
       - text: "Home"
         file: index.qmd
@@ -46,7 +46,7 @@ website:
       - section: "Support"
         contents:
         - text: "Submit an issue"
-          href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training_dev/issues/new/choose
+          href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/issues/new/choose
 
 format: 
   html:
