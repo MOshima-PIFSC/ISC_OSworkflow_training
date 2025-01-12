@@ -276,7 +276,6 @@ gitGraph
   checkout build_model
   commit id: "Develop base model"
   commit id: "Finalize base model"
-  checkout main
   branch growth_curve
   checkout growth_curve
   commit id: "Change growth curve"
