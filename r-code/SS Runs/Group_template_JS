@@ -1,0 +1,18 @@
+# Electronic Monitoring (EM) and reporting
+
+## Jennifer Stahl - PIFSC NOAA, EM & reporting
+## Andrew Lawson - PIFSC CIMAR, EM 
+## Joshua Tucker - PIFSC CIMAR, EM 
+## Chloe ("Pixie") Moore - PIFSC CIMAR, EM
+
+## Species of interest  
+
+[oceanic whitetip shark](https://www.pewtrusts.org/-/media/post-launch-images/2021/04/istock000020820329large--oceanic-whitetipjpgmaster/16x9_m.jpg?mw=1290&hash=C675D92933D58B792A90149EBFE00A16)
+
+## read.csv("Cool_tag_data.csv")
+
+(insert a code chunk here)
+
+[] How to do create reports from code that can be updated easily annually with new data.
+[] General understanding of coding environment could use for python. 
+[] Familar now with git using R but have a better understanding with other GUIs or command line.
