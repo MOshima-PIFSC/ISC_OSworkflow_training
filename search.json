@@ -4,7 +4,7 @@
     "href": "r-code/Group_info_juicethemodeller.html",
     "title": "Group",
     "section": "",
-    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan\n\n\n\n\n\n\n\nBluefin Tuna\n\n\n\n\n\n```r # Example function: Calculate mean size calculate_mean_size &lt;- function(lengths) { mean(lengths, na.rm = TRUE) } # Usage fish_lengths &lt;- c(30, 40, 35, 50, NA) mean_size &lt;- calculate_mean_size(fish_lengths) print(mean_size)\n\n\n\n\nRun Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
+    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan\n\n\n\n\n\n\n\nBluefin Tuna\n\n\n\n\n\n```r ### Example function: Calculate mean size calculate_mean_size &lt;- function(lengths) { mean(lengths, na.rm = TRUE) } ### Usage fish_lengths &lt;- c(30, 40, 35, 50, NA) mean_size &lt;- calculate_mean_size(fish_lengths) print(mean_size)\n\n\n\n\nRun Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
   },
   {
     "objectID": "r-code/Group_info_juicethemodeller.html#members",
@@ -25,7 +25,7 @@
     "href": "r-code/Group_info_juicethemodeller.html#most-used-function",
     "title": "Group",
     "section": "",
-    "text": "```r # Example function: Calculate mean size calculate_mean_size &lt;- function(lengths) { mean(lengths, na.rm = TRUE) } # Usage fish_lengths &lt;- c(30, 40, 35, 50, NA) mean_size &lt;- calculate_mean_size(fish_lengths) print(mean_size)"
+    "text": "```r ### Example function: Calculate mean size calculate_mean_size &lt;- function(lengths) { mean(lengths, na.rm = TRUE) } ### Usage fish_lengths &lt;- c(30, 40, 35, 50, NA) mean_size &lt;- calculate_mean_size(fish_lengths) print(mean_size)"
   },
   {
     "objectID": "r-code/Group_info_juicethemodeller.html#three-things-we-want-to-learn-from-this-workshop",
