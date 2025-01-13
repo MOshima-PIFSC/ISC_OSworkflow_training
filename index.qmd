@@ -29,11 +29,12 @@ The schedule for the 4-day workshop is: (note this is flexible and will be updat
 
 |Time    |Module  |
 |--------|--------|
-|8:30-9:45|Group work|
-|9:45-10:00|Break|  
-|10:00-10:30|Pull Requests and Code Review|
-|10:30-11:00|Shiny App|  
-|11:00-12:00|Group work, wrap up|  
+|8:30-9:00|Modifying Stock Synthesis Files|  
+|9:00-10:00|Group work|  
+|10:00-10:15|Break|  
+|10:15-11:00|Pull Requests and Code Review|
+|11:0-11:30|Shiny App|  
+|11:30-12:00|Group work, wrap up|  
 
 ### Day 3  
 
