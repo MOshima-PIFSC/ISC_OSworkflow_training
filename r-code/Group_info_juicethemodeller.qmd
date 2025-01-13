@@ -13,11 +13,11 @@
 ## Most used function  
 
 ```r
-# Example function: Calculate mean size
+### Example function: Calculate mean size
 calculate_mean_size <- function(lengths) {
   mean(lengths, na.rm = TRUE)
 }
-# Usage
+### Usage
 fish_lengths <- c(30, 40, 35, 50, NA)
 mean_size <- calculate_mean_size(fish_lengths)
 print(mean_size)
