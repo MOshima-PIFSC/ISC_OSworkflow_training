@@ -26,4 +26,4 @@ print(mean_size)
 
 - [ ] Run Stock Synthesis on a remote machine  
 - [ ] Improve parameter estimation for growth models  
-- [ ] Develop tools for visualizing spatial fishery data  
+- [ ] Develop tools for visualizing spatial fishery data 
