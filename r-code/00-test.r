@@ -22,15 +22,15 @@
     tmp_ctl$SR_parms["SR_BH_steep","INIT"] = 0.7
 
 # write out file using r4ss functions
-    tmp_dir = paste0(dir_model,"test-new-version/")
+    tmp_dir = paste0(dir_model,"group-a-test/")
     dir.create(tmp_dir,recursive=TRUE)
     SS_writectl(tmp_ctl,outfile=paste0(tmp_dir,"control.ss"),overwrite=TRUE)
 
 # copy over executable
     dir_exec = paste0(proj_dir,"/executables/stock-synthesis/3.30.22.1/")
     ss3_exec = "ss3_linux"
-    file.copy(from=paste0(dir_exec,ss3_exec),to=tmp_dir)
-    file.copy(from=paste0(dir_base_stock_synthesis,c("starter.ss","data.ss","forecast.ss")),to=paste0(tmp_dir,c("starter.ss","data.ss","forecast.ss")))
+    file.copy(from=paste0(dir_exec,ss3_exec),to=tmp_dir,overwrite = TRUE)
+    file.copy(from=paste0(dir_base_stock_synthesis,c("starter.ss","data.ss","forecast.ss")),to=paste0(tmp_dir,c("starter.ss","data.ss","forecast.ss")),overwrite = TRUE)
 
     
 # run the model

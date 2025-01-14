@@ -1,7 +1,7 @@
 #C growth parameters are estimated
 #C spawner-recruitment bias adjustment Not tuned For optimality
 #C file created using an r4ss function
-#C file write time: 2025-01-14  20:02:10
+#C file write time: 2025-01-14  20:30:42
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns

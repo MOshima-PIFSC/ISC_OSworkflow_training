@@ -5,8 +5,8 @@
 #_User_info_available_at:https://vlab.noaa.gov/group/stock-synthesis
 #_Source_code_at:_https://github.com/nmfs-ost/ss3-source-code
 
-StartTime: Tue Jan 14 20:02:46 2025
-EndTime: Tue Jan 14 20:03:11 2025
+StartTime: Tue Jan 14 20:30:43 2025
+EndTime: Tue Jan 14 20:31:08 2025
 This run took: 0 hours, 0 minutes, 25 seconds.
 Data_File: data.ss
 Control_File: control.ss
@@ -27,7 +27,7 @@ Control_Comments
 #C growth parameters are estimated
 #C spawner-recruitment bias adjustment Not tuned For optimality
 #C file created using an r4ss function
-#C file write time: 2025-01-14  20:02:10
+#C file write time: 2025-01-14  20:30:42
 
 Forecast_Comments
 #C generic forecast file
