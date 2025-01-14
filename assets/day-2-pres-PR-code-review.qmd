@@ -1,0 +1,209 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Workflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+#bibliography: customizations/osg.bib
+---
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Pull Requests and Code Review]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+# Let's review!  
+
+##  
+
+::: columns
+::: {.column width="45%"}
+
+
+[So far we have:]{.blue}
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .semi-fade-out fragment-index=6}
+*   Created branches for each group to work separately  
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .semi-fade-out fragment-index=6}
+*   Each group has modified the Stock Synthesis models  
+:::
+:::
+:::
+
+::: {.column width="45%"}
+
+::: {.fragment .fade-in fragment-index=3} 
+[Next we want to:]{.blue}  
+:::
+
+::: {.fragment .fade-in fragment-index=4}
+* Aggregate all of the model runs into the main branch
+:::
+
+::: {.fragment .fade-in fragment-index=5}
+::: {.fragment .semi-fade-out fragment-index=6}
+* Produce some visualizations of the results
+:::
+:::
+
+:::
+:::
+
+## Pull Requests  
+
+::: {.absolute left="5%" top="20%"}
+```{mermaid}
+
+gitGraph
+  commit id: "Add initial files"
+  branch build_model 
+  checkout build_model
+  commit id: "Develop base model"
+  commit id: "Finalize base model"
+  branch growth_curve
+  checkout growth_curve
+  commit id: "Change growth curve"
+  checkout build_model
+  merge growth_curve
+  commit id: "Check new growth curve"
+  checkout main
+  merge build_model
+  commit id: "Final model report"  
+
+
+```
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left="74%" top="20%" right="15%" bottom="69%" style="border: 4px solid #ED5E2B; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+::: 
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left="59%" top="42%" right="31%" bottom="48%" style="border: 4px solid #ED5E2B; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+##  Pull Requests  
+
+![](static/gh_pr2.PNG){.absolute top="20%" left="0%" style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left=0% top=60% style="font-size:0.8em;"}
+In the repository go to ["Pull requests"]{.blue} and select which branches you want to merge
+::: 
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left="2%" top="26%" right="75%" bottom="60%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+## Pull Requests  
+
+![](static/gh_pr_files_changed.PNG){.absolute top="20%" left="0%" style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left="0%" top="26%" right="70%" bottom="65%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left=0% bottom=5% style="font-size:0.8em;"}
+Can see the dif view of changes in the file, if the code passes checks and tests set up, what commits are associated with this PR, add comments to the PR
+::: 
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .fade-out fragment-index=3}
+::: {.absolute left="10%" top="30%" right="0%" bottom="30%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .fade-out fragment-index=3}
+::: {.absolute left=0% bottom=5% style="font-size:0.8em;"}
+[Red]{style="color:red;"} lines show deleted code  
+[Green]{style="color:green"} lines show added code
+::: 
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.absolute left="87%" top="30%" right="5%" bottom="63%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.absolute left=0% bottom=20% style="font-size:0.8em;"}
+Can add a review of the changes
+::: 
+:::
+
+## More complicated situation: Merge Conflicts    
+
+Merge conflicts happen when you merge 2 branches that have competing commits
+
+![](static/gh_merge_conflict.PNG){.absolute top="50%" left="10%" style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+## Merge Conflicts  
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=4}
+2 ways to resolve them 
+:::  
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+1. GitHub
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .fade-out fragment-index=4}
+2. Locally  
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=4}
+![](static/gh_merge_conflict_editor.PNG){.absolute top="20%" left="10%" style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+:::
+
+::: {.fragment .fade-in fragment-index=5}
+::: {.absolute left="10%" top="65%" right="35%" bottom="15%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+
+# Let's try it!  
+

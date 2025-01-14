@@ -1,0 +1,500 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Worflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+---
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Building a Shiny app]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+## What is Shiny?
+
+</br> 
+
+[Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/){preview-link="true"} is a package that can be used to build interactive web apps in either R or Python.
+
+![](static/shiny-logo.png){.absolute top=40% left=25% height=20% style="max-height: unset; max-width: unset;"}
+
+::: {.fragment .fade-in}
+::: {.absolute left=20% top=65% style="font-size:1em;"}
+Let's look at an [example](https://shiny.posit.co/r/gallery/start-simple/kmeans-example/){preview-link="true"}!
+:::
+:::
+
+## Why?
+
+</br>
+
+::: {.incremental} 
+- Interactive dashboards can [help with communicating science]{.blue}, and making it more accessible
+- Useful for analysts to [visualize data]{.blue} or model outputs
+- [Facilitates multi-model comparisons]{.blue} which can assist in model development and building intuition about the model.
+:::
+
+## How to build?
+
+</br>
+
+All [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/){preview-link="true"} apps need three components:
+
+::: {.incremental}
+- a user interface ([`ui.R`]{.blue}): this is the *interactive* part
+- a server ([`server.R`]{.blue}): this is the *computation/plotting* engine
+- a call to `shiny::shinyApp()` ([`app.R`]{.blue}): this ties everything together and *launches* the app
+:::
+
+::: {.fragment .fade-in}
+::: {.absolute left=15% top=77.5% style="font-size:1em;"}
+Let's look closer at each component.
+:::
+:::
+
+## User interface
+
+::: {.absolute left=90% right=0% top=0% bottom=95%}
+[`ui.R`]{.blue}
+:::
+
+::: {.fragment .fade-out fragment-index=2}
+![](static/shiny-kmeans-full.png){.absolute top=15% left=0% height=50% style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+:::
+
+::: {.fragment .fade-out fragment-index=1}
+::: {.absolute left=15% top=70% style="font-size:0.8em;"}
+App appearance (GUI & plot window) controlled by [`ui.R`]{.blue}, specifically `pageWithSidebar()`.
+:::
+:::
+
+::: {.fragment .fade-out fragment-index=2}
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left="0%" top="15%" right="67.5%" bottom="30%" style="border: 3px solid #002364; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+::: 
+:::
+
+::: {.fragment .fade-out fragment-index=2}
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute left=15% top=70% style="font-size:0.8em;"}
+Let's focus on the GUI panel.
+:::
+:::
+:::
+
+
+::: {.fragment .fade-in fragment-index=2}
+![](static/shiny-kmeans-ui.png){.absolute top=15% left=0% height=50% style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.absolute top="15%" left="40%" right="0%" style="font-size: 0.5em;"}
+```{.r code-line-numbers="|3-13|4|5-8|6|7|8|10-12"}
+vars <- setdiff(names(iris), "Species")
+
+pageWithSidebar(
+  headerPanel('Iris k-means clustering'),
+  sidebarPanel(
+    selectInput('xcol', 'X Variable', vars),
+    selectInput('ycol', 'Y Variable', vars, selected = vars[[2]]),
+    numericInput('clusters', 'Cluster count', 3, min = 1, max = 9)
+  ),
+  mainPanel(
+    plotOutput('plot1')
+  )
+)
+```
+:::
+:::
+
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.absolute left=0% top=75% style="font-size:0.75em;"}
+- GUI defined by `headerPanel()` and `sidebarPanel()`.
+- Plot panel defined by `plotOutput()` within `mainPanel()`.
+:::
+:::
+
+
+## Server
+
+::: {.absolute left=85% right=0% top=0% bottom=95%}
+[`server.R`]{.blue}
+:::
+
+![](static/shiny-kmeans-server.png){.absolute top=15% left=0% width=35% style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.absolute left=0% top=50% right=65% style="font-size:0.75em;"}
+- `reactive()` captures the inputs from the GUI.
+- `renderPlot()` produces the output.
+:::
+
+
+::: {.absolute top="15%" left="40%" right="0%" bottom="0%" style="font-size: 0.5em;"}
+```{.r code-line-numbers="|4-10|4-6|8-10|12-21|17|18|20"}
+function(input, output) {
+
+  # Combine the selected variables into a new data frame
+  selectedData <- reactive({
+    iris[, c(input$xcol, input$ycol)]
+  })
+
+  clusters <- reactive({
+    kmeans(selectedData(), input$clusters)
+  })
+
+  output$plot1 <- renderPlot({
+    palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
+      "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
+
+    par(mar = c(5.1, 4.1, 0, 1))
+    plot(selectedData(),
+         col = clusters()$cluster,
+         pch = 20, cex = 3)
+    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+  })
+
+}
+```
+:::
+
+## Running the app
+
+::: {.absolute left=90% right=0% top=0% bottom=95%}
+[`app.R`]{.blue}
+:::
+
+::: {.absolute left=0% top=15% right=65% style="font-size:0.8em;"}
+Running the app is straightforward.
+
+</br>
+
+Package all code and data in the same directory, this will make publishing the app easier.
+:::
+
+::: {.absolute top="15%" left="40%" right="0%" style="font-size: 0.5em;"}
+```{.r code-line-numbers="|1-2|4-6|9|10"}
+# load packages
+  library(shiny)
+
+# source ui/server
+  source("./ui.R")
+  source("./server.R")
+
+# Run the app
+  app = shinyApp(ui=ui,server=server)
+  runApp(app)
+```
+:::
+
+## Publishing
+
+::: {.fragment .fade-out fragment-index=1}
+::: {.absolute top="15%" left="0%" right="0%" style="font-size: 1em;"}
+
+Once your app is built it can hosted online via [shinyapps.io](https://www.shinyapps.io/){preview-link="true"} (individuals) or [Posit Connect](https://posit.co/products/enterprise/connect/){preview-link="true"} (enterprise users).
+
+</br>
+
+In both cases, publishing can be done in a couple steps using the [`rsconnect`](https://rstudio.github.io/rsconnect/){preview-link="true"} R package.
+:::
+
+![](dynamic/rsconnect-logo.svg){.absolute top=65% left=40% height=25% style="max-height: unset; max-width: unset;"}
+
+:::
+
+
+::: {.absolute top="15%" left="0%" right="0%" style="font-size: 1em;"}
+
+::: {.fragment .fade-in fragment-index=1}
+- Connect your account and add your server of choice ([shinyapps.io](https://docs.posit.co/shinyapps.io/guide/getting_started/#configure-rsconnect){preview-link="true"}/[Posit Connect](https://docs.posit.co/connect/user/publishing-r/#connect-your-account){preview-link="true"})
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+- Deploy your app `rsconnect::deployApp(appDir = '<project-dir>')`!
+:::
+
+:::
+
+##
+
+::: {.fragment .fade-out fragment-index=1}
+::: {.absolute top="45%" left="30%" style="font-size: 2em;"}
+[Questions?]{.blue}
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.absolute top="35%" left="0%" style="font-size: 1em;"}
+Let's go back to our Stock Synthesis example and build a Shiny app to explore how changing the steepness impacted recruitment estimates.
+:::
+:::
+
+## Summarize model outputs
+
+```{.r code-line-numbers="|3-5|9-10|13-17|20-22|24-25|27-37|29|30-35|31|32|33|34|36|37|39-49|52-54"}
+#_____________________________________________________________________________________________________________________________
+# load packages
+library(data.table)
+library(magrittr)
+library(r4ss)
+
+#_____________________________________________________________________________________________________________________________
+# define paths
+	proj_dir = this.path::this.proj()
+	dir_model = paste0(proj_dir,"/stock-synthesis-models/")
+
+#_____________________________________________________________________________________________________________________________
+# get a vector of directories for models that have produced stock synthesis output
+    all_dirs = list.files(dir_model,recursive = TRUE)
+    # only keep model directories that contain a Report.sso file
+    all_dirs = all_dirs[grep("/Report.sso",all_dirs,fixed=TRUE)]
+    all_dirs = gsub("Report.sso","",all_dirs,fixed=TRUE)
+
+#_____________________________________________________________________________________________________________________________
+# extract output from models
+  output = SSgetoutput(dirvec=paste0(dir_model,all_dirs))
+  names(output) = gsub("/","",all_dirs)
+
+  # since we ran models with different steepness values lets get the steepness value that corresponds to each model
+  model_steepness = sapply(output,function(x)x[["parameters"]]["SR_BH_steep","Value"])
+
+  # we want to build a shiny app that shows the stock recruit curve for each model so we will need to extract the corresponding data
+  # expected stock recruit relationship (srr)
+  expected_srr_dt.list = as.list(rep(NA,length(all_dirs)))
+  for(i in seq_along(expected_srr_dt.list)){
+    expected_srr_dt.list[[i]] = as.data.table(output[[i]]$SPAWN_RECR_CURVE) %>%
+                       .[,model_name:=names(output[i])] %>%
+                       .[,.(model_name,SSB,Recruitment)] %>%
+                       setnames(.,c("SSB","Recruitment"),c("ssb","rec_actual"))
+  }
+  expected_srr_dt = rbindlist(expected_srr_dt.list)
+  fwrite(expected_srr_dt,file=paste0(proj_dir,"shiny/shiny-data/expected_srr.csv"))
+
+  # annual estimated recruitments and corresponding spawning biomass
+  est_recruit_dt.list = as.list(rep(NA,length(all_dirs)))
+  for(i in seq_along(est_recruit_dt.list)){
+    est_recruit_dt.list[[i]] = as.data.table(output[[i]]$recruit) %>%
+                       .[,model_name:=names(output[i])] %>%
+                       .[era=="Main"] %>%
+                       .[,.(model_name,Yr,SpawnBio,pred_recr)] %>%
+                       setnames(.,c("Yr","SpawnBio","pred_recr"),c("yr","ssb","rec_estimated"))
+  }
+  est_recruit_dt = rbindlist(est_recruit_dt.list)
+  fwrite(est_recruit_dt,file=paste0(proj_dir,"shiny/shiny-data/est_recruit.csv"))
+  
+#_____________________________________________________________________________________________________________________________
+# make summary files to run the shiny app from
+  summary_dt = data.table(model_name=names(output),steepness=model_steepness)
+  fwrite(summary_dt,file=paste0(proj_dir,"shiny/shiny-data/summary.csv"))
+```
+
+## User interface
+
+::: {.absolute left=90% right=0% top=0% bottom=95%}
+[`ui.R`]{.blue}
+:::
+
+```{.r code-line-numbers="|1-2|4-11|13-22|18-22|19|20|21|25-41|27-34|28|29|36-40|37|38|39|40|52|56|57-60|63-66|69-75"}
+library(shinydashboard)
+library(shinyWidgets)
+
+css <- htmltools::HTML(
+    "#summarytable > .dataTables_wrapper.no-footer > .dataTables_scroll > .dataTables_scrollBody {
+        transform:rotateX(180deg);
+    }
+    #summarytable > .dataTables_wrapper.no-footer > .dataTables_scroll > .dataTables_scrollBody table{
+        transform:rotateX(180deg);
+    }"
+)
+
+ui = shinydashboard::dashboardPage(
+  header = shinydashboard::dashboardHeader(title="Shiny demo"),
+  sidebar = shinydashboard::dashboardSidebar(
+    br(),
+    br(),
+    sidebarMenu(id="sidebarmenu",
+      menuItem("Introduction", tabName="introduction"),
+      menuItem("Summary table", tabName="table"),
+      menuItem("Stock-recruit relationship (SRR)", tabName="srr_plots")
+    ),
+
+    # Only show these on the plotting tabs - not Introduction and Summary table tabs
+    conditionalPanel(condition="input.sidebarmenu == 'srr_plots'",
+      # srr-show-est
+      switchInput(
+      inputId = "srr_show_est",  
+      label = "Show estimated recruitment",
+      value=TRUE,
+      onLabel = "TRUE",
+      offLabel = "FALSE",
+      onStatus = "success", 
+      offStatus = "danger"),
+      # srr-est-type
+      awesomeRadio(
+      inputId = "srr_est_type",  
+      label = "Plot estimated recruitment as:",
+      choices=c("Path","Points","Both"),
+      selected = "Path")
+    ),
+    br(),
+    br(),
+    tags$footer(
+      div(style="text-align:center",
+        tags$p("version 0.0.1"),
+        tags$p(paste("Copyright", format(Sys.time(),"%Y"), "NOAA Fisheries, PIFSC Stock Assessment Group"))
+      )
+    )
+  ), # End of sidebar
+
+  body = shinydashboard::dashboardBody(
+    tags$head(tags$style(HTML('.wrapper {height: auto !important; position:relative; overflow-x:hidden; overflow-y:hidden}') )),
+    tags$head(tags$style(css)),
+    # Start of main tab stuff
+    tabItems(
+      # **** Introduction ****
+      tabItem(tabName="introduction", h2("Introduction"),
+        fluidRow(column(12, includeMarkdown("./introduction_index.md")))
+      ), # End of introduction tab
+
+      # **** Summary table ****
+      tabItem(tabName="table", h2("Summary table"),
+        fluidRow(box(title="Model metrics", collapsed=FALSE, solidHeader=TRUE, collapsible=TRUE, status="primary", width=12,
+         DT::dataTableOutput("summarytable")))
+      ), # End of table tab
+
+      # **** Stock recruitment plots ****
+      tabItem(tabName="srr_plots", h2("Stock-recruitment plots"),
+        fluidRow(
+          box(title="Stock-recruitment relationship (SRR)", solidHeader=TRUE, collapsible=TRUE, collapsed=FALSE, status="primary", width=12,
+            p("Select at least one model."),
+            plotOutput("srr_plots", height="auto"))
+        )
+      ) # End of srr_plots tab
+    ) # End of tabItems
+  ) # End of dashboardBody
+)
+```
+
+## Server
+
+::: {.absolute left=85% right=0% top=0% bottom=95%}
+[`server.R`]{.blue}
+:::
+
+```{.r code-line-numbers="|1-4|10-23|25-29|32|33-36|38-41|43-48|50-60|52-53|54-55|56-59|63-69|71|73-74"}
+library(data.table)
+library(magrittr)
+library(ggplot2)
+library(viridis)
+
+server = function(input, output){
+  # pixel height for each panel. i.e row height when plotting by species
+  height_per_panel = 350
+
+  # load data needed for shiny app
+    summary_dt = fread(file="./shiny-data/summary.csv")
+
+  ref_table_reduced = summary_dt %>%
+                as.data.frame(.)
+
+  output$summarytable = DT::renderDataTable({
+    summary_df = summary_dt %>%
+                 as.data.frame(.,stringsAsFactors=FALSE)
+    summary_DT = DT::datatable(summary_df, filter = 'top',rownames=FALSE,
+    options = list(scrollX = TRUE, search = list(regex = TRUE, caseInsensitive = FALSE),pageLength = 25))
+    return(summary_DT)
+  })
+  outputOptions(output, "summarytable", suspendWhenHidden = FALSE)
+
+  filtered_id = reactive({
+    req(input$summarytable_rows_selected)
+    keep_models = c(ref_table_reduced[input$summarytable_rows_selected, ]$model_name)
+    return(keep_models)  
+  })
+
+  # define plots
+  output$srr_plots = renderPlot({
+    input_models = unique(filtered_id())
+    if(length(input_models) < 1 ){
+      return(warning("Please select at least one model."))
+    }
+
+    expected_srr_dt = fread(file="./shiny-data/expected_srr.csv") %>%
+                      .[model_name %in% input_models]
+    est_recruit_dt = fread(file="./shiny-data/est_recruit.csv") %>%
+                      .[model_name %in% input_models]
+
+    p = expected_srr_dt %>%
+      ggplot() +
+			ylim(0,NA) +
+			xlab("Spawning biomass (SSB)") +
+            ylab("Recruitment") +
+            geom_path(aes(x=ssb,y=rec_actual,group=model_name,color=model_name),linewidth=1.5)
+
+      if(input$srr_show_est == "TRUE")
+      {
+        if(input$srr_est_type == "Path"){
+            p = p + geom_line(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,color=model_name),alpha=0.5)
+        } else if(input$srr_est_type == "Points"){
+            p = p + geom_point(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,fill=model_name),shape=21,cex=3)
+        } else {
+            p = p + geom_line(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,color=model_name),alpha=0.5)
+            p = p + geom_point(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,fill=model_name),shape=21,cex=3)
+        }
+      }
+	  
+    
+      p = p + viridis::scale_color_viridis("Model",begin = 0.1,end = 0.8,direction = 1,option = "H",discrete=TRUE) +
+			viridis::scale_fill_viridis("Model",begin = 0.1,end = 0.8,direction = 1,option = "H",discrete=TRUE) +
+			theme(panel.background = element_rect(fill = "white", color = "black", linetype = "solid"),
+							panel.grid.major = element_line(color = 'gray70',linetype = "dotted"), 
+							panel.grid.minor = element_line(color = 'gray70',linetype = "dotted"),
+							strip.background =element_rect(fill="white"),
+							legend.key = element_rect(fill = "white"))
+			
+    return(p)
+  },
+  height=function(){
+    return((height_per_panel*1.5))
+  })
+}
+```
+
+##
+
+::: {.absolute top="25%" left="15%" style="font-size: 2em;"}
+Let's check out the [app](https://connect.fisheries.noaa.gov/isc-openscience-workflows-shiny-demo/){preview-link="true"}!
+:::
+
+## Group activity! {.smaller}
+
+</br>
+
+Using the Stock Synthesis model runs from the previous activity and building off of the Shiny code provided in the GitHub repo:
+
+::: {.incremental}
+- summarize the model runs according to the feature that your group added (e.g., if you modified growth extract the length at age from each model).
+- add a new tab to the existing Shiny app that plots the data you summarized (e.g., plot length at age for all models)  
+:::
+
+## Resources
+
+</br>
+
+- [Shiny widgets](https://dreamrs.github.io/shinyWidgets/){preview-link="true"}
