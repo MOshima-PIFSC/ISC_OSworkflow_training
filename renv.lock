@@ -1270,6 +1270,35 @@
       ],
       "Hash": "af456d7a181750812bd8b2bfedb3ea4e"
     },
+    "r4ss": {
+      "Package": "r4ss",
+      "Version": "1.51.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteUsername": "r4ss",
+      "RemoteRepo": "r4ss",
+      "RemoteRef": "main",
+      "RemoteSha": "7f97860e8d4f7ce9976265b991e63147770f4f0d",
+      "RemoteHost": "api.github.com",
+      "Requirements": [
+        "R",
+        "coda",
+        "corpcor",
+        "dplyr",
+        "forcats",
+        "furrr",
+        "future",
+        "ggplot2",
+        "gh",
+        "kableExtra",
+        "lifecycle",
+        "purrr",
+        "stringr",
+        "tidyr",
+        "viridis"
+      ],
+      "Hash": "e3803082667f1692e69e03f673f0babb"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
