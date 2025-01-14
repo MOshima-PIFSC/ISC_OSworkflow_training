@@ -1,0 +1,116 @@
+#C data file for EXM
+#C file created using an r4ss function
+#C file write time: 2025-01-14  20:42:33
+#
+1971 #_styr
+2001 #_endyr
+1 #_nseas
+12 #_months_per_seas
+2 #_Nsubseasons
+1 #_spawn_month
+2 #_Nsexes
+40 #_Nages
+1 #_N_areas
+3 #_Nfleets
+#_fleetinfo
+#_type	surveytiming	area	units	need_catch_mult	fleetname
+1	-1	1	1	0	FISHERY	#_1
+3	 1	1	2	0	SURVEY1	#_2
+3	 1	1	2	0	SURVEY2	#_3
+#_Catch data
+#_year	season	fleet	catch	catch_se
+ -999	1	1	      0	0.01	#_1         
+ 1971	1	1	      0	 0.2	#_2         
+ 1972	1	1	168.234	 0.2	#_3         
+ 1973	1	1	1027.69	 0.2	#_4         
+ 1974	1	1	 1238.9	 0.2	#_5         
+ 1975	1	1	2346.55	 0.2	#_6         
+ 1976	1	1	3090.62	 0.2	#_7         
+ 1977	1	1	5280.69	 0.2	#_8         
+ 1978	1	1	5294.63	 0.2	#_9         
+ 1979	1	1	5696.77	 0.2	#_10        
+ 1980	1	1	6549.98	 0.2	#_11        
+ 1981	1	1	11124.5	 0.2	#_12        
+ 1982	1	1	10829.7	 0.2	#_13        
+ 1983	1	1	9141.23	 0.2	#_14        
+ 1984	1	1	10176.9	 0.2	#_15        
+ 1985	1	1	12899.9	 0.2	#_16        
+ 1986	1	1	10157.2	 0.2	#_17        
+ 1987	1	1	5955.09	 0.2	#_18        
+ 1988	1	1	6216.55	 0.2	#_19        
+ 1989	1	1	9293.98	 0.2	#_20        
+ 1990	1	1	 7257.9	 0.2	#_21        
+ 1991	1	1	4322.24	 0.2	#_22        
+ 1992	1	1	3137.72	 0.2	#_23        
+ 1993	1	1	4715.74	 0.2	#_24        
+ 1994	1	1	3853.94	 0.2	#_25        
+ 1995	1	1	4711.64	 0.2	#_26        
+ 1996	1	1	 4041.5	 0.2	#_27        
+ 1997	1	1	3258.78	 0.2	#_28        
+ 1998	1	1	2510.05	 0.2	#_29        
+ 1999	1	1	1892.36	 0.2	#_30        
+ 2000	1	1	2085.93	 0.2	#_31        
+ 2001	1	1	3504.75	 0.2	#_32        
+-9999	0	0	      0	   0	#_terminator
+#_CPUE_and_surveyabundance_observations
+#_Units:  0=numbers; 1=biomass; 2=F; >=30 for special types
+#_Errtype:  -1=normal; 0=lognormal; >0=T
+#_SD_Report: 0=no sdreport; 1=enable sdreport
+#_Fleet	Units	Errtype	SD_Report
+1	1	0	0	#_1
+2	0	0	0	#_2
+3	0	0	0	#_3
+#
+#_CPUE_data
+#_year	seas	index	obs	se_log
+ 1977	7	2	 220339	0.3	#_1         
+ 1980	7	2	 130788	0.3	#_2         
+ 1983	7	2	76162.5	0.3	#_3         
+ 1986	7	2	 136587	0.3	#_4         
+ 1989	7	2	50024.4	0.3	#_5         
+ 1992	7	2	42777.8	0.3	#_6         
+ 1995	7	2	36247.7	0.3	#_7         
+ 1998	7	2	29376.5	0.3	#_8         
+ 2001	7	2	  30832	0.3	#_9         
+ 1990	7	3	9.38429	0.7	#_10        
+ 1991	7	3	3.40078	0.7	#_11        
+ 1992	7	3	2.52159	0.7	#_12        
+ 1993	7	3	2.99565	0.7	#_13        
+ 1994	7	3	1.49053	0.7	#_14        
+ 1995	7	3	2.37793	0.7	#_15        
+ 1996	7	3	3.59249	0.7	#_16        
+ 1997	7	3	2.50434	0.7	#_17        
+ 1998	7	3	3.15164	0.7	#_18        
+ 1999	7	3	9.84062	0.7	#_19        
+ 2000	7	3	 6.0189	0.7	#_20        
+ 2001	7	3	2.00594	0.7	#_21        
+-9999	0	0	      0	  0	#_terminator
+0 #_N_discard_fleets
+#_discard_units (1=same_as_catchunits(bio/num); 2=fraction; 3=numbers)
+#_discard_errtype:  >0 for DF of T-dist(read CV below); 0 for normal with CV; -1 for normal with se; -2 for lognormal
+#
+#_discard_fleet_info
+#
+#_discard_data
+#
+#_meanbodywt
+0 #_use_meanbodywt
+ #_DF_for_meanbodywt_T-distribution_like
+#
+#_population_length_bins
+2 # length bin method: 1=use databins; 2=generate from binwidth,min,max below; 3=read vector
+2 # binwidth for population size comp
+10 # minimum size in the population (lower edge of first bin and size at age 0.00)
+94 # maximum size in the population (lower edge of last bin)
+0 #_use_lencomp
+0 #_N_agebins
+#
+#_MeanSize_at_Age_obs
+0 #_use_MeanSize_at_Age_obs
+0 #_N_environ_variables
+0 #_N_sizefreq_methods
+0 #_do_tags
+0 #_morphcomp_data
+0 #_use_selectivity_priors
+#
+999

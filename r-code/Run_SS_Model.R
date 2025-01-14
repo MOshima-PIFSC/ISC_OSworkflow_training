@@ -30,7 +30,7 @@ fleetnames<-c("FISHERY",
 model.info<-list(
   "Species"="EXM",
   "base.dir"=base.dir,
-  "scenario"="base",
+  "scenario"="AltSel_F1",
   "startyear"=1971,
   "endyear"=2001,
   "nyr"=5,  ## indicates how many years you want to average the dynamic B0 over if applicable
@@ -113,7 +113,7 @@ Build_All_SS(model.info=model.info,
              r4ssplots = FALSE,
              readGoogle = FALSE,
              run_parallel=FALSE,
-             exe="ss3_win",
+             exe="ss3_linux",
              r_code = "r-code", ## folder where your R scripts are stored
              run_folder = "stock-synthesis-models" ## folder you want your run models to be stored (default is SS3 runs)
 )
