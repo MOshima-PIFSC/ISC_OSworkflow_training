@@ -243,7 +243,7 @@
       "Package": "cli",
       "Version": "3.6.3",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
@@ -324,7 +324,7 @@
       "Package": "crayon",
       "Version": "1.5.3",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "grDevices",
         "methods",
@@ -1158,7 +1158,7 @@
       "Package": "pkgload",
       "Version": "1.4.0",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -1275,11 +1275,11 @@
       "Version": "1.51.0",
       "Source": "GitHub",
       "RemoteType": "github",
+      "RemoteHost": "api.github.com",
       "RemoteUsername": "r4ss",
       "RemoteRepo": "r4ss",
       "RemoteRef": "main",
       "RemoteSha": "7f97860e8d4f7ce9976265b991e63147770f4f0d",
-      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "coda",
@@ -1426,7 +1426,7 @@
       "Package": "roxygen2",
       "Version": "7.3.2",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
