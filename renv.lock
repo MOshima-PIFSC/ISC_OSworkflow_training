@@ -582,7 +582,7 @@
       "Package": "gh",
       "Version": "1.4.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "cli",
@@ -685,7 +685,8 @@
       "Package": "gridExtra",
       "Version": "2.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+
+      "Repository": "RSPM",
       "Requirements": [
         "grDevices",
         "graphics",
@@ -784,7 +785,8 @@
       "Package": "httr2",
       "Version": "1.0.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "R6",
@@ -816,7 +818,7 @@
       "Package": "ini",
       "Version": "0.3.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "6154ec2223172bce8162d4153cda21f7"
     },
     "isoband": {
@@ -1730,7 +1732,7 @@
       "Package": "viridis",
       "Version": "0.6.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "ggplot2",

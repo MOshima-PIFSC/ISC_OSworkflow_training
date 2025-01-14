@@ -1,0 +1,7 @@
+Note 1 Information: Max data length bin: 90  < max pop len bins: 94; so will accumulate larger pop len bins
+Warning 1 : parameter init value is greater than parameter max 0.2 > 0.15 for parm: 1; search for <now check> in echoinput.sso for parm_type
+Warning 2 : parameter init value is greater than parameter max 0.3 > 0.15 for parm: 13; search for <now check> in echoinput.sso for parm_type
+Warning 3 : 1st iteration warning: ssb(endyr)/ssb(styr)= 0.000470927; suggest start with larger R0 to get near 0.4; or use depletion fleet option
+Note 2 Information: A revised protocol for the Fcast_yr specification is available and recommended.
+Note 3 Information:  N parameters that are on or within 1% of min-max bound: 1; check results, variance may be suspect
+ 3 warnings  and 3 notes 
