@@ -1,551 +1,338 @@
 [
   {
-    "objectID": "r-code/Group_info_juicethemodeller.html",
-    "href": "r-code/Group_info_juicethemodeller.html",
+    "objectID": "r-code/Group_IATTC_Carolina.html",
+    "href": "r-code/Group_IATTC_Carolina.html",
     "title": "Group",
     "section": "",
-    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan\n\n\n\n\n\n\n\nBluefin Tuna\n\n\n\n\n\n### Example function: Calculate mean size\ncalculate_mean_size &lt;- function(lengths) {\n  mean(lengths, na.rm = TRUE)\n}\n### Usage\nfish_lengths &lt;- c(30, 40, 35, 50, NA)\nmean_size &lt;- calculate_mean_size(fish_lengths)\nprint(mean_size)\n\n\n\n\nRun Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
+    "text": "Carolina Minte-Vera: Inter-American Tropical Tuna Commission\n\n\n\n\n\n\n\nYellowfin Tuna\n\n\n\n\n\n### Histogram\nx&lt;-rnorm(100,0,1)\nhist(x)\n\n\n\n\nTools for reproducible research and assessments\nRun SS3 in Codespace\nModify inputs for SS3 within R code"
   },
   {
-    "objectID": "r-code/Group_info_juicethemodeller.html#members",
-    "href": "r-code/Group_info_juicethemodeller.html#members",
+    "objectID": "r-code/Group_IATTC_Carolina.html#members",
+    "href": "r-code/Group_IATTC_Carolina.html#members",
     "title": "Group",
     "section": "",
-    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan"
+    "text": "Carolina Minte-Vera: Inter-American Tropical Tuna Commission"
   },
   {
-    "objectID": "r-code/Group_info_juicethemodeller.html#species-of-interest",
-    "href": "r-code/Group_info_juicethemodeller.html#species-of-interest",
+    "objectID": "r-code/Group_IATTC_Carolina.html#species-of-interest",
+    "href": "r-code/Group_IATTC_Carolina.html#species-of-interest",
     "title": "Group",
     "section": "",
-    "text": "Bluefin Tuna"
+    "text": "Yellowfin Tuna"
   },
   {
-    "objectID": "r-code/Group_info_juicethemodeller.html#most-used-function",
-    "href": "r-code/Group_info_juicethemodeller.html#most-used-function",
+    "objectID": "r-code/Group_IATTC_Carolina.html#most-used-function",
+    "href": "r-code/Group_IATTC_Carolina.html#most-used-function",
     "title": "Group",
     "section": "",
-    "text": "### Example function: Calculate mean size\ncalculate_mean_size &lt;- function(lengths) {\n  mean(lengths, na.rm = TRUE)\n}\n### Usage\nfish_lengths &lt;- c(30, 40, 35, 50, NA)\nmean_size &lt;- calculate_mean_size(fish_lengths)\nprint(mean_size)"
+    "text": "### Histogram\nx&lt;-rnorm(100,0,1)\nhist(x)"
   },
   {
-    "objectID": "r-code/Group_info_juicethemodeller.html#three-things-we-want-to-learn-from-this-workshop",
-    "href": "r-code/Group_info_juicethemodeller.html#three-things-we-want-to-learn-from-this-workshop",
+    "objectID": "r-code/Group_IATTC_Carolina.html#three-things-i-want-to-learn-from-this-workshop",
+    "href": "r-code/Group_IATTC_Carolina.html#three-things-i-want-to-learn-from-this-workshop",
     "title": "Group",
     "section": "",
-    "text": "Run Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
+    "text": "Tools for reproducible research and assessments\nRun SS3 in Codespace\nModify inputs for SS3 within R code"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "r-code/Group_info_template.html",
+    "href": "r-code/Group_info_template.html",
+    "title": "Group",
     "section": "",
-    "text": "This repository contains materials for the ISC Open Science Workflows workshops held in Honolulu, HI and Yokohama, Japan in January 2025.\nView slides in full screen",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "(add list of members and their affiliations)\n\n\n\n(insert figure here)\n\n\n\n(insert a code chunk here)\n\n\n\n(insert task list (with check boxes) of at least 3 things)"
   },
   {
-    "objectID": "index.html#workshop-schedule",
-    "href": "index.html#workshop-schedule",
-    "title": "Home",
-    "section": "Workshop Schedule",
-    "text": "Workshop Schedule\nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:00\nModifying Stock Synthesis Files\n\n\n9:00-10:00\nGroup work\n\n\n10:00-10:15\nBreak\n\n\n10:15-11:00\nPull Requests and Code Review\n\n\n11:0-11:30\nShiny App\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nReview group work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nQuarto Reports and Presentations\n\n\n10:30-11:00\nQuarto Website\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:30\nReview group work\n\n\n9:30-12:00\nDiscussion, wrap up",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "assets/day-2.html",
-    "href": "assets/day-2.html",
-    "title": "Day 2",
+    "objectID": "r-code/Group_info_template.html#members",
+    "href": "r-code/Group_info_template.html#members",
+    "title": "Group",
     "section": "",
-    "text": "Presentation slides for pull requests and code review.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for building a Shiny app for our Stock Synthesis model runs.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
-    "crumbs": [
-      "Day 2"
-    ]
+    "text": "(add list of members and their affiliations)"
   },
   {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#section",
-    "href": "assets/day-1-pres-reproducible_environments.html#section",
-    "title": "Open Science Workflow Training for ISC",
+    "objectID": "r-code/Group_info_template.html#species-of-interest",
+    "href": "r-code/Group_info_template.html#species-of-interest",
+    "title": "Group",
     "section": "",
-    "text": "Reproducible Environments\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "(insert figure here)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#most-used-function",
+    "href": "r-code/Group_info_template.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "(insert a code chunk here)"
+  },
+  {
+    "objectID": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "(insert task list (with check boxes) of at least 3 things)"
+  },
+  {
+    "objectID": "assets/web-about-ms.html",
+    "href": "assets/web-about-ms.html",
+    "title": "Michelle Sculley",
+    "section": "",
+    "text": "Michelle Sculley has a PhD in Marine Biology and Fisheries from the Rosensteil School of Marine and Atmospheric Sciences, University of Miami and a MS in Biological Oceanography from Texas A&M University. She joined the Pacific Islands Fisheries Science Center in 2017 as a research fish biologist focusing on pelagic highly migratory species stock assessments. She is the lead modeler for the ISC Billfish Working Group and collaborates with scientists from Japan, Taiwan, Korea, Mexico, IATTC, WCPFC, and SPC. She has experience in stock assessment models, spatio-temporal modeling, Bayesian modeling, tagging studies, simulation work, tunas, billfish, and marine mammals. She is interested in exploring how climate change may impact pelagic fish population dynamics.\n\n\n Back to top",
     "crumbs": [
-      "Day 1",
-      "Reproducible environments"
+      "Contact us",
+      "Michelle Sculley"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
-    "href": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "What is a reproducible environment?",
-    "text": "What is a reproducible environment?\n\n\nA computing setup where all the necessary components are explicitly defined\n\nOS, package versions, software, etc.\n\n\nAnyone can replicate that exact coding environment and the results will be the same across different machines",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
-    "href": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Signs you want to use a reproducible environment",
-    "text": "Signs you want to use a reproducible environment\n\n\nCode that used to run no longer runs even though you haven’t changed the code itself\n\nIf you upgrade to a new version of a package or software and things break\n\nYou want to share your code with a colloaborator and ensure they get the same results you get\n\nYou want to run your code in some other environment besides your local computer",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
-    "href": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "How can we do this?",
-    "text": "How can we do this?\nrenv is an R package to help create reproducible environments",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#renv",
-    "href": "assets/day-1-pres-reproducible_environments.html#renv",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "renv",
-    "text": "renv\n\n\nIsloated - each project has it’s own library\n\nPortable - easy to install on different computers (even OS)\n\nReproducible - ensures you are using the exact package versions",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
-    "href": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "renv Workflow",
-    "text": "renv Workflow\n\n\n\n\n\n\n\n\n\n\n\nrenv::init()\n\n\n\n\n\n\n\nrenv::snapshot()\n\n\n\n\n\n\n\nrenv::restore()\n\n\n\n\n\n\n\nrenv::install()\n\n\n\n\n\n\n\nNew project\n\n\n\n\n\n\n\nProject library\n\n\n\n\n\n\n\nLockfile\n\n\n\n\n\n\n\nCRAN/GitHub",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#initalize-project",
-    "href": "assets/day-1-pres-reproducible_environments.html#initalize-project",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Initalize project",
-    "text": "Initalize project\n\n\n\nWhen you first start a project, you will want to initialize an renv project\n\n\n\n\n renv::init()\n\n\n\n\n\nCreates 3 items:\n\n\n\n\n renv/library/\n\n\n renv.lock\n\n\n .Rprofile\n\n\nrenv library is a library that is specific for that project and has the specific version of the packages that are being used in the project.\nlockfile holds the metadata for each package that specifies which version to install when run on a new computer.\nrprofile what tells the R session to use the renv files for the project library",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
-    "href": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Installing new packages",
-    "text": "Installing new packages\n\n\n renv::install() - can specify the location and version you want\n\n\n\n\n As you install new packages you will need to update the lockfile",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
-    "href": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Using the lockfile for collaboration",
-    "text": "Using the lockfile for collaboration\n\n\n renv::snapshot() - updates lockfile with metadata about all currently-used packages\n\n\n\n\n renv::restore() - reproduces the environment specified in the lockfile\n\n\n\nThe lockfile is what has all the information about the packages you’re using. It can be shared between people/computers and recreate the same environment you are using.",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
-    "href": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Another use for renv",
-    "text": "Another use for renv\n\n\nCan use a lockfile for GitHub Actions (or other continuous integration systems)\n\n\n\n\n\nUse the r-lib setup-renv action in your workflow\n\n\n\n\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n    - name: Install packages using renv\n      uses: r-lib/actions/setup-renv@v2",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-reproducible_environments.html#resources",
-    "href": "assets/day-1-pres-reproducible_environments.html#resources",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Resources",
-    "text": "Resources\n\nIntroduction to renv\n\nUsing renv in GitHub Actions",
-    "crumbs": [
-      "Day 1",
-      "Reproducible environments"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
+    "objectID": "assets/day-1-pres-codespaces.html#section",
+    "href": "assets/day-1-pres-codespaces.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Modifying and running stock synthesis models: part 2\nMichelle Sculley\nJanuary 2025",
+    "text": "Codespaces\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Codespaces"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#script-based-workflow",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#script-based-workflow",
+    "objectID": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "href": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "What is Codespaces?",
+    "text": "What is Codespaces?\n\n\nDevelopment environment that is hosted in the cloud on GitHub.com\n\n\n\n\n\nYou control the specs of the machine!\n\n\n\n\n\nConnected to your repository",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#why-use-it",
+    "href": "assets/day-1-pres-codespaces.html#why-use-it",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Why use it?",
+    "text": "Why use it?\n\n\n\nContainerized environment\n\nAnyone using it is working in the same environment\n\nSame OS\n\nSame software\n\nSame package versions\n\n\n\n\n“It works on my computer!”",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#set-up",
+    "href": "assets/day-1-pres-codespaces.html#set-up",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Set Up",
+    "text": "Set Up\n\nTo set up a Codespace,\n\nCreate a .devcontainer folder inside your repository\n\nAdd a devcontainer.json file to that folder\n\nSet up devcontainer.json how you like (packages, software, extensions, etc.)\n\nAdd a setup.r file if needed\n\nOn main page of repository, “Code” -&gt; “Create codespace on main”",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "href": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Devcontainer File",
+    "text": "Devcontainer File\n\ndevcontainer.json\n\n{\n    \"name\": \"Quarto Codespaces\",\n    \"image\": \"ghcr.io/mcanouil/quarto-codespaces:latest\", //pre-built image that includes quarto \n    \"remoteUser\": \"vscode\",\n    \"features\": { //options that you add in as needed\n        \"ghcr.io/rocker-org/devcontainer-features/r-apt:latest\": {},\n        \"ghcr.io/rocker-org/devcontainer-features/apt-packages:1\": {\n            \"packages\": \"libglpk-dev,libxml2-dev\" // needed for igraph\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1\": {\n            \"version\": \"1.6.37\", //specific version of quarto\n            \"installTinyTex\": \"false\", // TinyTex is already installed\n            \"installChromium\": \"false\" // needed for screen capture of htmlwidgets\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-rig:1\": {\n            \"version\": \"4.4.2\", // specific version of R\n            \"vscodeRSupport\": \"none\",\n            \"installDevTools\": \"false\",\n            \"installREnv\": \"true\", //install renv for later\n            \"installRMarkdown\": \"false\"\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-packages:1\": {\n            \"packages\": \"languageserver,jsonlite,rlang\", //r packages, can install packages from GitHub as well\n            \"installSystemRequirements\": true\n        }\n    },\n    \"customizations\": {\n        \"vscode\": { //setting up VSCode how we like it\n            \"extensions\": [\n                \"quarto.quarto\",\n                \"REditorSupport.r\",\n                \"GitHub.codespaces\",\n                \"mathematic.vscode-pdf\",\n                \"ms-vscode.live-server\",\n                \"mechatroner.rainbow-csv\"\n            ],\n            \"settings\": {\n                \"r.rterm.option\": [\n                    \"--no-save\",\n                    \"--no-restore-data\",\n                    \"--quiet\"\n                ],\n                \"r.useRenvLibPath\": true //use renv files to build container\n            }\n        }\n    },\n    \"forwardPorts\": [3000],   \n    // Use 'postCreateCommand' to run commands after the container is created.\n    //run an R script to call renv and restore the packages needed into the container\n    \"postCreateCommand\": \"Rscript .devcontainer/setup.r\"\n}",
+    "crumbs": [
+      "Day 1",
+      "Codespaces"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#section",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#section",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "",
+    "text": "Modifying and running stock synthesis models\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "crumbs": [
+      "Day 1",
+      "Modifying Stock Synthesis files"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#script-based-workflow",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#script-based-workflow",
     "title": "Open Science Workflow Training for ISC",
     "section": "Script based workflow",
-    "text": "Script based workflow\n\nNext we will cover editing and running stock assessments using a script based workflow developed for the BILLWG.\nThis code is available for the BILLWG in the SS_Intl_Auto repository. It is still in development - but can be run for NP Swordfish and WCNPO striped marlin.",
+    "text": "Script based workflow\n\nIn this module we will cover editing and running stock assessments using a script based workflow.",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#why-use-this-specific-workflow",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#why-use-this-specific-workflow",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#why",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#why",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Why use this specific workflow?",
-    "text": "Why use this specific workflow?\nThis was developed specifically to run BILLWG assessments to better distribute the workload during assessment meetings.\n\nEditing raw text files can lead to mistakes - its better to write a clean file each run.\n\nForgetting to change a parameter line\nMissing a value in a parameter line\n\nIt can be time consuming to run diagnostics by hand\n\nAutomating retrospectives, jitters, and likelihood profiles means we can run them in parallel\n\nWe are set up to run large numbers of models on super computers\nWe can run models on codespaces (no need to install software!)\nKeeps workflows consistent between WG members for ease of collaboration\nKeeps science transparent - easy to replicate your results",
+    "section": "Why?",
+    "text": "Why?\n\n\nContaining all steps of an analysis within a script is a key component of an Openscience workflow\n\n\n\nMakes analytic steps transparent\nImproves reproducibility\nAllows for integration with version control software (e.g., Git)\nFacilitates documentation",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#what-can-this-code-do",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#what-can-this-code-do",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#application",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#application",
     "title": "Open Science Workflow Training for ISC",
-    "section": "What can this code do?",
-    "text": "What can this code do?\n\nWrite SS files\nRun SS models\n\nIncluding sensitivity runs\n\nRun diagnostics\nPrint summary reports (with Quarto)\nPrint r4ss plots\nRun projections (in development)",
+    "section": "Application",
+    "text": "Application\n\nModify a Stock Synthesis input model file and running the modified model through R using the r4ss package.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpecifically, in our example we will run models that make alternative assumptions for the steepness (\\(h\\)) parameter which controls the shape of the stock-recruitment relationship (SRR).\n\n\n\n\n\n\nPhoto credit: Maven’s Notebook",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#data-inputs",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#data-inputs",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#running-stock-synthesis",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#running-stock-synthesis",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Data inputs",
-    "text": "Data inputs\nSome external data files are needed to run this code:\n\nThese are stored in the /Data folder in the repository\n\nCatch (csv)\nCPUE (csv)\nLength Composition (csv)\nCTL_Inputs (xlsx)\nCTL_Parameters (xlsx)\nAny other csv files for other input data - such as age comp or generalize size comp (in development)",
+    "section": "Running Stock Synthesis",
+    "text": "Running Stock Synthesis\nFour files (plus the executable) are needed to run a Stock Synthesis model:\n\n\n\nstarter.ss\n\n\n\n\n\n\nforecast.ss\n\n\n\n\n\n\ndata.ss\n\n\n\n\n\n\ncontrol.ss this is where the SRR is defined\n\n\n\n\n\nCheck out the manual for further details!\n\n\n\n\n#V3.30.23.00;_safe;_compile_date:_Oct 31 2024;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_13.2\n#_Stock_Synthesis_is_a_work_of_the_U.S._Government_and_is_not_subject_to_copyright_protection_in_the_United_States.\n#_Foreign_copyrights_may_apply._See_copyright.txt_for_more_information.\n#_User_support_available_at:NMFS.Stock.Synthesis@noaa.gov\n#_User_info_available_at:https://vlab.noaa.gov/group/stock-synthesis\n#_Source_code_at:_https://github.com/nmfs-ost/ss3-source-code\n\n#C growth parameters are estimated\n#C spawner-recruitment bias adjustment Not tuned For optimality\n#_data_and_control_files: data.ss // control.ss\n0  # 0 means do not read wtatage.ss; 1 means read and use wtatage.ss and also read and use growth parameters\n1  #_N_Growth_Patterns (Growth Patterns, Morphs, Bio Patterns, GP are terms used interchangeably in SS3)\n1 #_N_platoons_Within_GrowthPattern \n#_Cond 1 #_Platoon_within/between_stdev_ratio (no read if N_platoons=1)\n#_Cond sd_ratio_rd &lt; 0: platoon_sd_ratio parameter required after movement params.\n#_Cond  1 #vector_platoon_dist_(-1_in_first_val_gives_normal_approx)\n#\n4 # recr_dist_method for parameters:  2=main effects for GP, Area, Settle timing; 3=each Settle entity; 4=none (only when N_GP*Nsettle*pop==1)\n1 # not yet implemented; Future usage: Spawner-Recruitment: 1=global; 2=by area\n1 #  number of recruitment settlement assignments \n0 # unused option\n#GPattern month  area  age (for each settlement assignment)\n 1 1 1 0\n#\n#_Cond 0 # N_movement_definitions goes here if Nareas &gt; 1\n#_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration&gt;0\n#_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10\n#\n1 #_Nblock_Patterns\n 1 #_blocks_per_pattern \n# begin and end years of blocks\n 1970 1970\n#\n# controls for all timevary parameters \n1 #_time-vary parm bound check (1=warn relative to base parm bounds; 3=no bound check); Also see env (3) and dev (5) options to constrain with base bounds\n#\n# AUTOGEN\n 0 0 0 0 0 # autogen: 1st element for biology, 2nd for SR, 3rd for Q, 4th reserved, 5th for selex\n# where: 0 = autogen time-varying parms of this category; 1 = read each time-varying parm line; 2 = read then autogen if parm min==-12345\n#\n#_Available timevary codes\n#_Block types: 0: P_block=P_base*exp(TVP); 1: P_block=P_base+TVP; 2: P_block=TVP; 3: P_block=P_block(-1) + TVP\n#_Block_trends: -1: trend bounded by base parm min-max and parms in transformed units (beware); -2: endtrend and infl_year direct values; -3: end and infl as fraction of base range\n#_EnvLinks:  1: P(y)=P_base*exp(TVP*env(y));  2: P(y)=P_base+TVP*env(y);  3: P(y)=f(TVP,env_Zscore) w/ logit to stay in min-max;  4: P(y)=2.0/(1.0+exp(-TVP1*env(y) - TVP2))\n#_DevLinks:  1: P(y)*=exp(dev(y)*dev_se;  2: P(y)+=dev(y)*dev_se;  3: random walk;  4: zero-reverting random walk with rho;  5: like 4 with logit transform to stay in base min-max\n#_DevLinks(more):  21-25 keep last dev for rest of years\n#\n#_Prior_codes:  0=none; 6=normal; 1=symmetric beta; 2=CASAL's beta; 3=lognormal; 4=lognormal with biascorr; 5=gamma\n#\n# setup for M, growth, wt-len, maturity, fecundity, (hermaphro), recr_distr, cohort_grow, (movement), (age error), (catch_mult), sex ratio \n#_NATMORT\n0 #_natM_type:_0=1Parm; 1=N_breakpoints;_2=Lorenzen;_3=agespecific;_4=agespec_withseasinterpolate;_5=BETA:_Maunder_link_to_maturity;_6=Lorenzen_range\n  #_no additional input for selected M option; read 1P per morph\n#\n1 # GrowthModel: 1=vonBert with L1&L2; 2=Richards with L1&L2; 3=age_specific_K_incr; 4=age_specific_K_decr; 5=age_specific_K_each; 6=NA; 7=NA; 8=growth cessation\n0 #_Age(post-settlement) for L1 (aka Amin); first growth parameter is size at this age; linear growth below this\n25 #_Age(post-settlement) for L2 (aka Amax); 999 to treat as Linf\n-999 #_exponential decay for growth above maxage (value should approx initial Z; -999 replicates 3.24; -998 to not allow growth above maxage)\n0  #_placeholder for future growth feature\n#\n0 #_SD_add_to_LAA (set to 0.1 for SS2 V1.x compatibility)\n0 #_CV_Growth_Pattern:  0 CV=f(LAA); 1 CV=F(A); 2 SD=F(LAA); 3 SD=F(A); 4 logSD=F(A)\n#\n1 #_maturity_option:  1=length logistic; 2=age logistic; 3=read age-maturity matrix by growth_pattern; 4=read age-fecundity; 5=disabled; 6=read length-maturity\n1 #_First_Mature_Age\n1 #_fecundity_at_length option:(1)eggs=Wt*(a+b*Wt);(2)eggs=a*L^b;(3)eggs=a*Wt^b; (4)eggs=a+b*L; (5)eggs=a+b*W\n0 #_hermaphroditism option:  0=none; 1=female-to-male age-specific fxn; -1=male-to-female age-specific fxn\n1 #_parameter_offset_approach for M, G, CV_G:  1- direct, no offset**; 2- male=fem_parm*exp(male_parm); 3: male=female*exp(parm) then old=young*exp(parm)\n#_** in option 1, any male parameter with value = 0.0 and phase &lt;0 is set equal to female parameter\n#\n#_growth_parms\n#_ LO HI INIT PRIOR PR_SD PR_type PHASE env_var&link dev_link dev_minyr dev_maxyr dev_PH Block Block_Fxn\n# Sex: 1  BioPattern: 1  NatMort\n 0.05 0.15 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # NatM_uniform_Fem_GP_1\n# Sex: 1  BioPattern: 1  Growth\n -10 45 20.9372 36 10 6 -2 0 0 0 0 0 0 0 # L_at_Amin_Fem_GP_1\n 40 90 71.5566 70 10 6 -4 0 0 0 0 0 0 0 # L_at_Amax_Fem_GP_1\n 0.05 0.25 0.163678 0.15 0.8 6 -4 0 0 0 0 0 0 0 # VonBert_K_Fem_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_young_Fem_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_old_Fem_GP_1\n# Sex: 1  BioPattern: 1  WtLen\n -3 3 2.44e-06 2.44e-06 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_1_Fem_GP_1\n -3 4 3.34694 3.34694 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_2_Fem_GP_1\n# Sex: 1  BioPattern: 1  Maturity&Fecundity\n 50 60 55 55 0.8 0 -3 0 0 0 0 0 0 0 # Mat50%_Fem_GP_1\n -3 3 -0.25 -0.25 0.8 0 -3 0 0 0 0 0 0 0 # Mat_slope_Fem_GP_1\n -3 3 1 1 0.8 0 -3 0 0 0 0 0 0 0 # Eggs/kg_inter_Fem_GP_1\n -3 3 0 0 0.8 0 -3 0 0 0 0 0 0 0 # Eggs/kg_slope_wt_Fem_GP_1\n# Sex: 2  BioPattern: 1  NatMort\n 0.05 0.15 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # NatM_uniform_Mal_GP_1\n# Sex: 2  BioPattern: 1  Growth\n 0 45 0 36 10 0 -3 0 0 0 0 0 0 0 # L_at_Amin_Mal_GP_1\n 40 90 69.748400 70 10 6 -4 0 0 0 0 0 0 0 # L_at_Amax_Mal_GP_1\n 0.05 0.25 0.173516  0.15 0.8 6 -4 0 0 0 0 0 0 0 # VonBert_K_Mal_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_young_Mal_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_old_Mal_GP_1\n# Sex: 2  BioPattern: 1  WtLen\n -3 3 2.44e-06 2.44e-06 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_1_Mal_GP_1\n -3 4 3.34694 3.34694 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_2_Mal_GP_1\n# Hermaphroditism\n#  Recruitment Distribution \n#  Cohort growth dev base\n 0.1 10 1 1 1 0 -1 0 0 0 0 0 0 0 # CohortGrowDev\n#  Movement\n#  Platoon StDev Ratio \n#  Age Error from parameters\n#  catch multiplier\n#  fraction female, by GP\n 1e-06 0.999999 0.5 0.5 0.5 0 -99 0 0 0 0 0 0 0 # FracFemale_GP_1\n#  M2 parameter for each predator fleet\n#\n#_no timevary MG parameters\n#\n#_seasonal_effects_on_biology_parms\n 0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K\n#_ LO HI INIT PRIOR PR_SD PR_type PHASE\n#_Cond -2 2 0 0 -1 99 -2 #_placeholder when no seasonal MG parameters\n#\n3 #_Spawner-Recruitment; Options: 1=NA; 2=Ricker; 3=std_B-H; 4=SCAA; 5=Hockey; 6=B-H_flattop; 7=survival_3Parm; 8=Shepherd_3Parm; 9=RickerPower_3parm\n0  # 0/1 to use steepness in initial equ recruitment calculation\n0  #  future feature:  0/1 to make realized sigmaR a function of SR curvature\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn #  parm_name\n             3            31            10          10.3            10             0          1          0          0          0          0          0          0          0 # SR_LN(R0)\n           0.2             1      0.573835           0.7          0.05             1         -4          0          0          0          0          0          0          0 # SR_BH_steep\n             0             2           0.6           0.8           0.8             0         -4          0          0          0          0          0          0          0 # SR_sigmaR\n            -5             5             0             0             1             0         -4          0          0          0          0          0          0          0 # SR_regime\n             0             0             0             0             0             0        -99          0          0          0          0          0          0          0 # SR_autocorr\n#_no timevary SR parameters\n2 #do_recdev:  0=none; 1=devvector (R=F(SSB)+dev); 2=deviations (R=F(SSB)+dev); 3=deviations (R=R0*dev; dev2=R-f(SSB)); 4=like 3 with sum(dev2) adding penalty\n1971 # first year of main recr_devs; early devs can precede this era\n2001 # last year of main recr_devs; forecast devs start in following year\n2 #_recdev phase \n1 # (0/1) to read 13 advanced options\n 0 #_recdev_early_start (0=none; neg value makes relative to recdev_start)\n -4 #_recdev_early_phase\n 0 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)\n 1 #_lambda for Fcast_recr_like occurring before endyr+1\n1949.0   #_last_early_yr_nobias_adj_in_MPD \n1984.0   #_first_yr_fullbias_adj_in_MPD \n1997.0   #_last_yr_fullbias_adj_in_MPD \n2001.9   #_first_recent_yr_nobias_adj_in_MPD \n0.528  #_max_bias_adj_in_MPD (1.0 to mimic pre-2009 models)   \n0 #_period of cycles in recruitment (N parms read below)\n -5 #min rec_dev\n 5 #max rec_dev\n 0 #_read_recdevs\n#_end of advanced SR options\n#\n#_placeholder for full parameter lines for recruitment cycles\n# read specified recr devs\n#_year Input_value\n#\n# all recruitment deviations\n#  1971R 1972R 1973R 1974R 1975R 1976R 1977R 1978R 1979R 1980R 1981R 1982R 1983R 1984R 1985R 1986R 1987R 1988R 1989R 1990R 1991R 1992R 1993R 1994R 1995R 1996R 1997R 1998R 1999R 2000R 2001R 2002F 2003F 2004F 2005F 2006F 2007F 2008F 2009F 2010F 2011F\n#  0.134968 -0.0507584 0.0972615 -0.164709 0.0443745 0.710789 -0.00439022 0.0113464 0.266822 0.186805 0.100984 -0.208826 -0.418054 -0.284269 0.420545 0.586619 0.262575 0.204289 -0.321237 0.664807 -0.607033 -0.193662 -0.7506 0.446329 -0.524044 0.539563 1.20007 -0.459983 -0.567356 0.263829 -0.216963 0 0 0 0 0 0 0 0 0 0\n#\n#Fishing Mortality info \n0.3 # F ballpark value in units of annual_F\n-2001 # F ballpark year (neg value to disable)\n3 # F_Method:  1=Pope midseason rate; 2=F as parameter; 3=F as hybrid; 4=fleet-specific parm/hybrid (#4 is superset of #2 and #3 and is recommended)\n2.95 # max F (methods 2-4) or harvest fraction (method 1)\n4  # N iterations for tuning in hybrid mode; recommend 3 (faster) to 5 (more precise if many fleets)\n#\n#_initial_F_parms; for each fleet x season that has init_catch; nest season in fleet; count = 0\n#_for unconstrained init_F, use an arbitrary initial catch and set lambda=0 for its logL\n#_ LO HI INIT PRIOR PR_SD  PR_type  PHASE\n#\n# F rates by fleet x season\n#_year:  1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011\n# seas:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n# FISHERY 0 0.00211813 0.0106457 0.0107404 0.0217792 0.0334421 0.046095 0.0601249 0.0759325 0.10803 0.147259 0.162937 0.181299 0.203352 0.230858 0.266731 0.315247 0.338831 0.3551 0.356617 0.339428 0.2384 0.243238 0.251023 0.263884 0.283723 0.227427 0.23848 0.247863 0.25268 0.253549 0.0132306 0.0281356 0.0381987 0.0448672 0.0493659 0.0525756 0.0550896 0.0572622 0.0592695 0.0611758\n#\n#_Q_setup for fleets with cpue or survey or deviation data\n#_1:  fleet number\n#_2:  link type: 1=simple q; 2=mirror; 3=power (+1 parm); 4=mirror with scale (+1p); 5=offset (+1p); 6=offset & power (+2p)\n#_     where power is applied as y = q * x ^ (1 + power); so a power value of 0 has null effect\n#_     and with the offset included it is y = q * (x + offset) ^ (1 + power)\n#_3:  extra input for link, i.e. mirror fleet# or dev index number\n#_4:  0/1 to select extra sd parameter\n#_5:  0/1 for biasadj or not\n#_6:  0/1 to float\n#_   fleet      link link_info  extra_se   biasadj     float  #  fleetname\n         2         1         0         1         0         0  #  SURVEY1\n         3         1         0         0         0         0  #  SURVEY2\n-9999 0 0 0 0 0\n#\n#_Q_parameters\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name\n            -7             5      0.516916             0             1             0          1          0          0          0          0          0          0          0  #  LnQ_base_SURVEY1(2)\n             0           0.5             0          0.05             1             0         -4          0          0          0          0          0          0          0  #  Q_extraSD_SURVEY1(2)\n           -10             5      -6.62547             0             1             0          1          0          0          0          0          0          0          0  #  LnQ_base_SURVEY2(3)\n#_no timevary Q parameters\n#\n#_size_selex_patterns\n#Pattern:_0;  parm=0; selex=1.0 for all sizes\n#Pattern:_1;  parm=2; logistic; with 95% width specification\n#Pattern:_5;  parm=2; mirror another size selex; PARMS pick the min-max bin to mirror\n#Pattern:_11; parm=2; selex=1.0  for specified min-max population length bin range\n#Pattern:_15; parm=0; mirror another age or length selex\n#Pattern:_6;  parm=2+special; non-parm len selex\n#Pattern:_43; parm=2+special+2;  like 6, with 2 additional param for scaling (mean over bin range)\n#Pattern:_8;  parm=8; double_logistic with smooth transitions and constant above Linf option\n#Pattern:_9;  parm=6; simple 4-parm double logistic with starting length; parm 5 is first length; parm 6=1 does desc as offset\n#Pattern:_21; parm=2*special; non-parm len selex, read as N break points, then N selex parameters\n#Pattern:_22; parm=4; double_normal as in CASAL\n#Pattern:_23; parm=6; double_normal where final value is directly equal to sp(6) so can be &gt;1.0\n#Pattern:_24; parm=6; double_normal with sel(minL) and sel(maxL), using joiners\n#Pattern:_2;  parm=6; double_normal with sel(minL) and sel(maxL), using joiners, back compatibile version of 24 with 3.30.18 and older\n#Pattern:_25; parm=3; exponential-logistic in length\n#Pattern:_27; parm=special+3; cubic spline in length; parm1==1 resets knots; parm1==2 resets all \n#Pattern:_42; parm=special+3+2; cubic spline; like 27, with 2 additional param for scaling (mean over bin range)\n#_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention\n#_Pattern Discard Male Special\n 1 0 0 0 # 1 FISHERY\n 1 0 0 0 # 2 SURVEY1\n 0 0 0 0 # 3 SURVEY2\n#\n#_age_selex_patterns\n#Pattern:_0; parm=0; selex=1.0 for ages 0 to maxage\n#Pattern:_10; parm=0; selex=1.0 for ages 1 to maxage\n#Pattern:_11; parm=2; selex=1.0  for specified min-max age\n#Pattern:_12; parm=2; age logistic\n#Pattern:_13; parm=8; age double logistic. Recommend using pattern 18 instead.\n#Pattern:_14; parm=nages+1; age empirical\n#Pattern:_15; parm=0; mirror another age or length selex\n#Pattern:_16; parm=2; Coleraine - Gaussian\n#Pattern:_17; parm=nages+1; empirical as random walk  N parameters to read can be overridden by setting special to non-zero\n#Pattern:_41; parm=2+nages+1; // like 17, with 2 additional param for scaling (mean over bin range)\n#Pattern:_18; parm=8; double logistic - smooth transition\n#Pattern:_19; parm=6; simple 4-parm double logistic with starting age\n#Pattern:_20; parm=6; double_normal,using joiners\n#Pattern:_26; parm=3; exponential-logistic in age\n#Pattern:_27; parm=3+special; cubic spline in age; parm1==1 resets knots; parm1==2 resets all \n#Pattern:_42; parm=2+special+3; // cubic spline; with 2 additional param for scaling (mean over bin range)\n#Age patterns entered with value &gt;100 create Min_selage from first digit and pattern from remainder\n#_Pattern Discard Male Special\n 0 0 0 0 \n 0 0 0 0 \n 0 0 0 0\n#\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name\n# 1   FISHERY LenSelex\n            19            80       53.6629            50          0.01             1          2          0          0          0          0          0          0          0  #  Size_inflection_FISHERY(1)\n          0.01            60       18.9332            15          0.01             1          3          0          0          0          0          0          0          0  #  Size_95%width_FISHERY(1)\n# 2   SURVEY1 LenSelex\n            19            70       36.6585            30          0.01             1          2          0          0          0          0          0          0          0  #  Size_inflection_SURVEY1(2)\n          0.01            60       6.59966            10          0.01             1          3          0          0          0          0          0          0          0  #  Size_95%width_SURVEY1(2)\n# 3   SURVEY2 LenSelex\n#_No_Dirichlet parameters\n#_no timevary selex parameters\n#\n0   #  use 2D_AR1 selectivity? (0/1)\n#_no 2D_AR1 selex offset used\n#_specs:  fleet, ymin, ymax, amin, amax, sigma_amax, use_rho, len1/age2, devphase, before_range, after_range\n#_sigma_amax&gt;amin means create sigma parm for each bin from min to sigma_amax; sigma_amax&lt;0 means just one sigma parm is read and used for all bins\n#_needed parameters follow each fleet's specifications\n# -9999  0 0 0 0 0 0 0 0 0 0 # terminator\n#\n# Tag loss and Tag reporting parameters go next\n0  # TG_custom:  0=no read and autogen if tag data exist; 1=read\n#_Cond -6 6 1 1 2 0.01 -4 0 0 0 0 0 0 0  #_placeholder if no parameters\n#\n# no timevary parameters\n#\n#\n# Input variance adjustments factors: \n #_1=add_to_survey_CV\n #_2=add_to_discard_stddev\n #_3=add_to_bodywt_CV\n #_4=mult_by_lencomp_N\n #_5=mult_by_agecomp_N\n #_6=mult_by_size-at-age_N\n #_7=mult_by_generalized_sizecomp\n#_factor  fleet  value\n -9999   1    0  # terminator\n#\n4 #_maxlambdaphase\n1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter\n# read 3 changes to default Lambdas (default value is 1.0)\n# Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; \n# 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark; 18=initEQregime\n#like_comp fleet  phase  value  sizefreq_method\n 1 2 2 1 1\n 4 2 2 1 1\n 4 2 3 1 1\n-9999  1  1  1  1  #  terminator\n#\n# lambdas (for info only; columns are phases)\n#  0 0 0 0 #_CPUE/survey:_1\n#  1 1 1 1 #_CPUE/survey:_2\n#  1 1 1 1 #_CPUE/survey:_3\n#  1 1 1 1 #_lencomp:_1\n#  1 1 1 1 #_lencomp:_2\n#  0 0 0 0 #_lencomp:_3\n#  1 1 1 1 #_agecomp:_1\n#  1 1 1 1 #_agecomp:_2\n#  0 0 0 0 #_agecomp:_3\n#  1 1 1 1 #_size-age:_1\n#  1 1 1 1 #_size-age:_2\n#  0 0 0 0 #_size-age:_3\n#  1 1 1 1 #_init_equ_catch1\n#  1 1 1 1 #_init_equ_catch2\n#  1 1 1 1 #_init_equ_catch3\n#  1 1 1 1 #_recruitments\n#  1 1 1 1 #_parameter-priors\n#  1 1 1 1 #_parameter-dev-vectors\n#  1 1 1 1 #_crashPenLambda\n#  0 0 0 0 # F_ballpark_lambda\n0 # (0/1/2) read specs for more stddev reporting: 0 = skip, 1 = read specs for reporting stdev for selectivity, size, and numbers, 2 = add options for M,Dyn. Bzero, SmryBio\n# 1 1 -1 5 # Selectivity: (1) 0 to skip or fleet, (2) 1=len/2=age/3=combined, (3) year, (4) N selex bins; NOTE: combined reports in age bins\n# 1 5 # Growth: (1) 0 to skip or growth pattern, (2) growth ages; NOTE: does each sex\n# 1 -1 5 # Numbers-at-age: (1) 0 or area(-1 for all), (2) year, (3) N ages;  NOTE: sums across morphs\n# 5 15 25 35 43 # vector with selex std bins (-1 in first bin to self-generate)\n# 1 2 14 26 40 # vector with growth std ages picks (-1 in first bin to self-generate)\n# 1 2 14 26 40 # vector with NatAge std ages (-1 in first bin to self-generate)\n999",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_parameters",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_parameters",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#modifying-control.ss-using-r4ss",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#modifying-control.ss-using-r4ss",
     "title": "Open Science Workflow Training for ISC",
-    "section": "CTL_parameters",
-    "text": "CTL_parameters\n\nThis file contains all the long and short line parameters used in the control file.\nEach species is its own sheet\nWe will be editing the sheet for our species “EXM”\nEach line is a parameter\n\ncategory tells R which parameter group it belongs to\nOPTION tells R which option to use if more than one set of parameters in a particular type is used (i.e. alternative growth parameters)\nThe subsequent colmns are the parameters lines from the SS control file\n\nTo run alternative models add a new set of parameters for your parameter of choice - do NOT change the “Base” option parameters\nWhich parameters we use in the SS model is determined by the PARAM_option inputs in the Build_All_SS function",
+    "section": "Modifying control.ss using r4ss",
+    "text": "Modifying control.ss using r4ss\n\n\nUse SS_readctl() to read in the control file.\n\n\n\n\n\nss3-example-calcs.r\n# load packages\n    library(r4ss)\n\n# define paths\n    proj_dir = this.path::this.proj()\n    dir_model = paste0(proj_dir,\"/stock-synthesis-models/\")\n    dir_base_stock_synthesis = paste0(dir_model,\"base-model/\")\n\n# read control file\n    tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss\"),\n                         datlist = paste0(dir_base_stock_synthesis,\"data.ss\"))\n\n\n\n\n\n\nLet’s look more closely at tmp_ctl.\n\n\n\n\n\n\n\nclass(tmp_ctl)\n\n[1] \"list\"\n\nnames(tmp_ctl)\n\n [1] \"warnings\"                   \"Comments\"                  \n [3] \"nseas\"                      \"N_areas\"                   \n [5] \"Nages\"                      \"Nsexes\"                    \n [7] \"Npopbins\"                   \"Nfleets\"                   \n [9] \"Do_AgeKey\"                  \"fleetnames\"                \n[11] \"sourcefile\"                 \"type\"                      \n[13] \"ReadVersion\"                \"eof\"                       \n[15] \"EmpiricalWAA\"               \"N_GP\"                      \n[17] \"N_platoon\"                  \"recr_dist_method\"          \n[19] \"recr_global_area\"           \"recr_dist_read\"            \n[21] \"recr_dist_inx\"              \"recr_dist_pattern\"         \n[23] \"N_Block_Designs\"            \"blocks_per_pattern\"        \n[25] \"Block_Design\"               \"time_vary_adjust_method\"   \n[27] \"time_vary_auto_generation\"  \"natM_type\"                 \n[29] \"GrowthModel\"                \"Growth_Age_for_L1\"         \n[31] \"Growth_Age_for_L2\"          \"Exp_Decay\"                 \n[33] \"Growth_Placeholder\"         \"N_natMparms\"               \n[35] \"SD_add_to_LAA\"              \"CV_Growth_Pattern\"         \n[37] \"maturity_option\"            \"First_Mature_Age\"          \n[39] \"fecundity_option\"           \"hermaphroditism_option\"    \n[41] \"parameter_offset_approach\"  \"MG_parms\"                  \n[43] \"MGparm_seas_effects\"        \"SR_function\"               \n[45] \"Use_steep_init_equi\"        \"Sigma_R_FofCurvature\"      \n[47] \"SR_parms\"                   \"do_recdev\"                 \n[49] \"MainRdevYrFirst\"            \"MainRdevYrLast\"            \n[51] \"recdev_phase\"               \"recdev_adv\"                \n[53] \"recdev_early_start\"         \"recdev_early_phase\"        \n[55] \"Fcast_recr_phase\"           \"lambda4Fcast_recr_like\"    \n[57] \"last_early_yr_nobias_adj\"   \"first_yr_fullbias_adj\"     \n[59] \"last_yr_fullbias_adj\"       \"first_recent_yr_nobias_adj\"\n[61] \"max_bias_adj\"               \"period_of_cycles_in_recr\"  \n[63] \"min_rec_dev\"                \"max_rec_dev\"               \n[65] \"N_Read_recdevs\"             \"F_ballpark\"                \n[67] \"F_ballpark_year\"            \"F_Method\"                  \n[69] \"maxF\"                       \"F_iter\"                    \n[71] \"Q_options\"                  \"Q_parms\"                   \n[73] \"size_selex_types\"           \"age_selex_types\"           \n[75] \"size_selex_parms\"           \"Use_2D_AR1_selectivity\"    \n[77] \"TG_custom\"                  \"DoVar_adjust\"              \n[79] \"maxlambdaphase\"             \"sd_offset\"                 \n[81] \"lambdas\"                    \"N_lambdas\"                 \n[83] \"more_stddev_reporting\"     \n\n\n\n\n\n\n\n\n\nclass(tmp_ctl$SR_parms)\n\n[1] \"data.frame\"\n\ndim(tmp_ctl$SR_parms)\n\n[1]  5 14\n\ndimnames(tmp_ctl$SR_parms)\n\n[[1]]\n[1] \"SR_LN(R0)\"   \"SR_BH_steep\" \"SR_sigmaR\"   \"SR_regime\"   \"SR_autocorr\"\n\n[[2]]\n [1] \"LO\"           \"HI\"           \"INIT\"         \"PRIOR\"        \"PR_SD\"       \n [6] \"PR_type\"      \"PHASE\"        \"env_var&link\" \"dev_link\"     \"dev_minyr\"   \n[11] \"dev_maxyr\"    \"dev_PH\"       \"Block\"        \"Block_Fxn\"   \n\n\n\n\n\n\n\n\n\ntmp_ctl$SR_parms[\"SR_BH_steep\",c(\"LO\",\"HI\",\"INIT\",\"PHASE\")]\n\n             LO HI     INIT PHASE\nSR_BH_steep 0.2  1 0.573835    -4\n\n\n\n\n\n\n\nNow modify tmp_ctl and write-out the new control.ss.\n\nLet’s set \\(h = 0.7\\).\n\n\n\n\nss3-example-calcs.r\n# load packages\n    library(r4ss)\n\n# define paths\n    proj_dir = this.path::this.proj()\n    dir_model = paste0(proj_dir,\"/stock-synthesis-models/\")\n    dir_base_stock_synthesis = paste0(dir_model,\"base-model/\")\n\n# read control file\n    tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss\"),\n                         datlist = paste0(dir_base_stock_synthesis,\"data.ss\"))\n# modify\n    tmp_ctl$SR_parms[\"SR_BH_steep\",\"INIT\"] = 0.7\n\n# write out file using r4ss functions\n    SS_writectl(tmp_ctl,outfile=paste0(dir_base_stock_synthesis,\"control.ss\"),overwrite=TRUE)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_inputs",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_inputs",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#running-the-model",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#running-the-model",
     "title": "Open Science Workflow Training for ISC",
-    "section": "CTL_inputs",
-    "text": "CTL_inputs\nThis file contains all the additional information needed to populate the control file\n\nEach sheet is a model run\nYou will need to add a new sheet if you need to change any of the parameters in this sheet\n\n\nmodel.info&lt;-list(\n  \"scenario\"=\"Base\",  ## which sheet in CTL_inputs.xlsx\n  \"Species\"=\"EXM\", ...)",
+    "section": "Running the model",
+    "text": "Running the model\n\nUse run() to run the model.\n\nIn this case we also copy the executable into our model directory.\n\n\n\nss3-example-calcs.r\n# copy over executable\n    dir_exec = paste0(proj_dir,\"/executables/stock-synthesis/3.30.23.1/\")\n    ss3_exec = \"ss3_linux\"\n    file.copy(from=paste0(dir_exec,ss3_exec),to=dir_base_stock_synthesis)\n    \n# run the model\n    run(dir=dir_base_stock_synthesis,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#diagnostics",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#diagnostics",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#testing-multiple-alternatives",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#testing-multiple-alternatives",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Diagnostics",
-    "text": "Diagnostics\n\n\n\nASPM - no additional inputs needed\nRuns test (CPUE and Size Data) – No additional inputs\nStock status quantities – no additional inputs\nJitter\n\nNjitter = number of jitter models to run\njitterFraction = how much to change initial parameters for each run\n\nRetrospectives/Hindcasting\n\nretro_years = vector of years you want to run retrospectives on\n\n\n\n\nLikelihood Profiles\n\nprofile_name = name of parameter you want to profile on\n\nmust match name of parameter in report file (i.e. SR_LN(R0) or NatM_uniform_Fem_GP_1)\n\nprofile.vec = vector with two values:\n\n[1] number of models you want run (excluding MLE)\n[2] increment value between parameters (i.e. c(4,0.1) for a model where SR_LN(R0) = 8 would run - profile models at 7.8, 7.9, 8.0, 8.1, and 8.2)",
+    "section": "Testing multiple alternatives",
+    "text": "Testing multiple alternatives\n\n\nWhat if we wanted to test models with several different alternatives for \\(h\\)?\n\nSay also testing \\(h = 0.5\\) and \\(h = 0.6\\)?\n\n\n\n\nPut it in a for loop!\n\n\n\n\nss3-example-calcs.r\n# modify input file & run new stock synthesis models\n    steepness_vec = c(0.5,0.6,0.7)\n    for(i in seq_along(steepness_vec)){\n        # make new directory\n            tmp_dir = paste0(dir_model,\"steepness-\",steepness_vec[i],\"/\")\n            dir.create(tmp_dir,recursive=TRUE)\n        \n        # modify control file\n        # read in baseline stock synthesis files using r4ss functions\n            tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss_new\"),datlist = paste0(dir_base_stock_synthesis,\"data_echo.ss_new\"))\n            tmp_ctl$SR_parms[\"SR_BH_steep\",\"INIT\"] = steepness_vec[i]\n        \n        # write out file using r4ss functions\n            SS_writectl(tmp_ctl,outfile=paste0(tmp_dir,\"control.ss\"),overwrite=TRUE)\n        # copy remaining input files and executable\n            file.copy(from=paste0(dir_base_stock_synthesis,c(\"starter.ss\",\"data.ss\",\"forecast.ss\")),to=paste0(tmp_dir))\n            file.copy(from=paste0(dir_exec,ss3_exec),to=tmp_dir)\n\n        # run the model\n            run(dir=tmp_dir,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)\n\n        # clean-up workspace\n        rm(list=c(\"tmp_dir\",\"tmp_ctl\"))\n    }",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#to-run",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#to-run",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "To Run",
-    "text": "To Run\nYou should only modify the file Run_SS_Model.R\n\nSet the base directory you are working in\nProvide a vector of your fleet names\nModify model.info to the options you want to use while running the model\nSource 01_Build_All_SS.r\nRun Build_All_SS with appropriate inputs",
-    "crumbs": [
-      "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#a-warning-about-running-in-parallel",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#a-warning-about-running-in-parallel",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "A warning about running in parallel",
-    "text": "A warning about running in parallel\nYou are able to run jitters, retrospectives, and profiles in parallel with this code.\nBUT, The built in functions do this in r4ss are not set up to run in parallel.\nIf you choose to set run_parallel = TRUE the code will use bespoke functions based upon their r4ss equivalents, written to run in parallel, which are contained within this repository:\n\nparallel_jitter.R\nparallel_profile.R\nparallel_retro.R\nparallel_SS_parlines.R (supporting function)\n\nIf you set run_parallel = FALSE the r4ss functions will be used by default",
-    "crumbs": [
-      "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#group-activity",
-    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#group-activity",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#group-activity",
+    "href": "assets/day-1-pres-modify-stock-synthesis.html#group-activity",
     "title": "Open Science Workflow Training for ISC",
     "section": "Group activity!",
-    "text": "Group activity!\nUsing the Run_SS_Model.R script, run a sensitivity analysis on the base model for species “EXM”\nOptions for runs:\n\n\n\nGROWTH – increase Lamax by 10%\nGROWTH – decrease Lamax by 10%\nMORT – increase by 10%\nMORT – decrease by 10%\nMAT – increase L50 by 10%\n\n\n\nMAT – decrease L50 by 10%\nSEL – change F1 to option 24 – logistic\nSR – increase sigmaR to 0.9\nSR – decrease sigmaR to 0.3\nSteepness – change to 0.8",
+    "text": "Group activity!\n\nUsing the toy Stock Synthesis model in the stock-synthesis-models/base-model directory make some modifications to the model, and run the different configurations.\n\n\n\nOptions  - Growth  - Selectivity  - Maturity  - Natural mortality  - Data-weighting\n\n\n\n\nEach group should set-up their own branch on the GitHub repo to house the code, model files, and model results for the feature that they explore.",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files: Part 2"
+      "Modifying Stock Synthesis files"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#section",
-    "href": "assets/day-1-pres-github_basics.html#section",
+    "objectID": "assets/day-1-welcome.html#section",
+    "href": "assets/day-1-welcome.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "GitHub for Collaborative Workflows\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "text": "Welcome to ISC BILLWG Open Science Workshop\nJanuary 2025"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#version-control",
-    "href": "assets/day-1-pres-github_basics.html#version-control",
+    "objectID": "assets/day-1-welcome.html#introductions",
+    "href": "assets/day-1-welcome.html#introductions",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Version Control",
-    "text": "Version Control\n The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\nAll of us are probably familiar with some sort of version control, think of like Google Docs or track changes for a word document. It’s basically a history of all of the changes that have been made to the document you’re working on. With software like Google Docs that happens passively for you, it will automatically create backups every few minutes so you don’t have to think about saving a file. Today we’re going to be using software that we can apply the same idea but on a much larger and more controlled way. We are going to see how we can use those softwares to back up our work, share our work, and provide a clear, documented map of the developement of a project. So hopefully by the end of the next few days you will feel comfortable using GitHub for projects to make them more organized, transparent and colllaborative.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Introductions",
+    "text": "Introductions\n Nicholas  Ducharme-Barth\n Meg Oshima\n Michelle Sculley"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#git-and-github",
-    "href": "assets/day-1-pres-github_basics.html#git-and-github",
+    "objectID": "assets/day-1-welcome.html#workshop-materials",
+    "href": "assets/day-1-welcome.html#workshop-materials",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\n\n\n\n\n\n installed on local computer\n\n\n\n tracks changes to files\n\n\n\n separate versions\n\n\n\n\n\n\n\n\n central, remote storage of files\n\n\n\n everyone can contribute changes\n\n\n\n changes can be combined and shared\n\n\n\n\n\n\n\nWe can leverage the interplay between both to help us share code and collaborate with others!\n\n\n\nGit is the version control software that is installed on your computer. It tracks changes you make to files within a project. It has features that allow you to work collaboratively with others without overwriting each other’s work, and then combine everything when each part is ready.\nGitHub is an online platform to host the tracked files and share your code with others. Within GitHub, you can create repositories that acts as a centralized “remote” storage of files associated with a project. This allows anyone that has access to the repository to download the files onto their local computer, make changes to the code, and then share those changes with everyone else working on the project.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\n\nAll presentations can be found on the workshop website.\nCode can be found in the workshop repository.\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you have created a GitHub account before we start."
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
-    "href": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "objectID": "assets/day-1-welcome.html#why-open-science",
+    "href": "assets/day-1-welcome.html#why-open-science",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Basic Git/Github Workflow",
-    "text": "Basic Git/Github Workflow\n\n\n\n\n\n\n\n\nCommit changesSync remoteand local repositoriesRemote repository onGitHubLocal repositoryCreate new files andmake changes locally",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Why Open Science?",
+    "text": "Why Open Science?\n\n\nStandardized workflows and efficiency\n\n\n\n\n\nImprove and support collaboration\n\n\n\n\n\nEnsure our science is truly reproducible\n\n\n\n\n\nProvide tools for sharing and communicating our work"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
-    "href": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "objectID": "assets/day-1-welcome.html#topics-we-will-cover",
+    "href": "assets/day-1-welcome.html#topics-we-will-cover",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Remote repository on Github",
-    "text": "Remote repository on Github\n\n\n\nWhere all of your code and related files lives online\n\n\n\n\n\n\n\nCentral location where everyone is sharing their changes\n\n\n\n\n\nConnect the remote repository to the files on your local computer\n\n\n\ngit clone\n\n\n\n\ngit init",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Topics we will cover",
+    "text": "Topics we will cover\n\n\nGitHub for collaboration\n\n\n\n\nCodespaces and reproducible environments\n\n\n\n\nScript-based model development\n\n\n\n\nCreating Shiny apps\n\n\n\n\nCode review with GitHub\n\n\n\n\nCreating reproducible reports and presentations\n\n\n\n\nCreating websites to share results"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#local-repository",
-    "href": "assets/day-1-pres-github_basics.html#local-repository",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Local repository",
-    "text": "Local repository\n\n\n\nFiles kept on your local computer\n\n\n\n\n\n\n\nIncludes branches from the remote repository\n\nallows for different versions of the same file\n\n\n\n\n\n\nDifferent from local working directory",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#making-changes-locally",
-    "href": "assets/day-1-pres-github_basics.html#making-changes-locally",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Making changes locally",
-    "text": "Making changes locally\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave\n\n\n\n\n\n\n\nStage\n\n\n\n\n\n\n\nCommit\n\n\n\n\n\n\n\nPush",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#commits",
-    "href": "assets/day-1-pres-github_basics.html#commits",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Commits",
-    "text": "Commits\n\n\n\ngroups of small, meaningful changes\n\n\n\n\n\n\nsnapshots of your repository at that time\n\n\n\n\n\ntell a story of the history of your repository",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#commits-1",
-    "href": "assets/day-1-pres-github_basics.html#commits-1",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Commits",
-    "text": "Commits\nMake a commit in 2 stages:\n\n\nsave your changes locally and then stage the files you want to commit\ngit add &lt;FILENAME&gt;\n\n\n\n\n\ncommit your changes\ngit commit -m \"descriptive commit message\"",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#push",
-    "href": "assets/day-1-pres-github_basics.html#push",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Push",
-    "text": "Push\nTo sync the changes you’ve made locally with the remote repository, you need to “PUSH” your commits\ngit push",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#pull",
-    "href": "assets/day-1-pres-github_basics.html#pull",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull",
-    "text": "Pull\nTo sync any changes that were made to the remote repository onto your local computer you need to “PULL” commits\n\n2 ways:\n1. git pull\n\n\n\ngit fetch, then eventually git merge\n\n\n\ngit pull copies the changes from a remote directory directly into your working directory. the benefit of this is your local repo and local files are synced up with what is online. con is that you can’t do this if you are actively editing untracked files that conflict with what is on the remote server. git fetch only copies changes into your local git repo. You will later need to merge them into your working directory. the benefit is that you can continue editing files in your local working directory without having to merge your code with updates from the remote. Once you finished editing the files you are working on you can commit your changes and then use git merge to sync everything.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#branches",
-    "href": "assets/day-1-pres-github_basics.html#branches",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Branches",
-    "text": "Branches\n\n\n\nThe default for all repositories is main\n\n\n\n\n\n\n\nmainAdd initial filesCode for model developmentFinalize modelCreate Shiny appAdd reportFinish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report\n\n\n\n\n\n\n\n\n\nA really useful feature of github is branches. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained section of the project. You can make changes that don’t affect the main branch and once you are ready to add them to the main project you can merge them in.\nIf you are working on a project by yourself, your commit history might look something like this. Since it’s only you working on the code and you don’t need to worry about doing something that can break code someone else might be using, then all of your changes you could just commit to the main branch.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#pull-requests",
-    "href": "assets/day-1-pres-github_basics.html#pull-requests",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\nOnce you have finished development on your branch and want to add your changes to the main branch, you can submit a pull request",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#activity-1",
-    "href": "assets/day-1-pres-github_basics.html#activity-1",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Activity 1",
-    "text": "Activity 1\n\nFollowing the template provided here, create a new Markdown document with:\n\n\nA list of everyone in your group, including:\n\ntheir affiliation\ntheir GitHub name\n\na picture of a species you work on\na code chunk with your most used function\na task list of three things you would like to learn from the workshop\n\n\nSave the file with a new name.\nCommit your file, and push to the repository.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#activity-2-branches",
-    "href": "assets/day-1-pres-github_basics.html#activity-2-branches",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Activity 2: Branches",
-    "text": "Activity 2: Branches\n\nCreate a new branch from the main branch\nAdd your name to the list of participants.\nSave your change, commit, and push to your branch.\nSubmit a Pull Request to merge your changes into main branch.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-2-pres-PR-code-review.html#section",
-    "href": "assets/day-2-pres-PR-code-review.html#section",
-    "title": "Open Science Workflow Training for ISC",
+    "objectID": "assets/day-1-modify-stock-synthesis.html",
+    "href": "assets/day-1-modify-stock-synthesis.html",
+    "title": "Modifying and running stock synthesis models",
     "section": "",
-    "text": "Pull Requests and Code Review\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
-    "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
-    ]
+    "text": "Back to top"
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#section-1",
-    "href": "assets/day-2-pres-PR-code-review.html#section-1",
-    "title": "Open Science Workflow Training for ISC",
+    "objectID": "assets/day-1.html",
+    "href": "assets/day-1.html",
+    "title": "Day 1",
     "section": "",
-    "text": "So far we have:\n\n\n\nCreated branches for each group to work separately\n\n\n\n\n\n\n\nEach group has modified the Stock Synthesis models\n\n\n\n\n\n\nNext we want to:\n\n\n\nAggregate all of the model runs into the main branch\n\n\n\n\n\nProduce some visualizations of the results",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 1"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report",
+    "objectID": "assets/day-1.html#presentation-files",
+    "href": "assets/day-1.html#presentation-files",
+    "title": "Day 1",
+    "section": "",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 1"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\nIn the repository go to “Pull requests” and select which branches you want to merge",
+    "objectID": "assets/day-1.html#resources",
+    "href": "assets/day-1.html#resources",
+    "title": "Day 1",
+    "section": "Resources",
+    "text": "Resources\nExample code for modifying a Stock Synthesis input model file and running the modified model through R using the r4ss package can be found in the r-code/ directory on the course GitHub repo.\nBriefly the r-code/01-modify-stock-synthesis.r file takes you through the steps of:\n\n\nreading in the Stock Synthesis input file (e.g., control.ss) using the r4ss package\nmodifying this file, in this case changing the steepness value \\(h\\) and thus modifying the shape of the stock-recruitment relationship (SRR)\nrunning the newly modified model\n\n\nThere is also code at the end of the file that wraps all three of those steps in a for loop in case multiple alternate model configurations want to be explored.",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 1"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\n\n\n\n\n\n\n\n\nCan see the dif view of changes in the file, if the code passes checks and tests set up, what commits are associated with this PR, add comments to the PR\n\n\n\n\n\n\n\n\n\n\n\n\n\nRed lines show deleted code\nGreen lines show added code\n\n\n\n\n\n\n\n\n\n\nCan add a review of the changes",
+    "objectID": "assets/day-1-reproducible_environments.html",
+    "href": "assets/day-1-reproducible_environments.html",
+    "title": "Reproducible environments",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "assets/web-about-nd.html",
+    "href": "assets/web-about-nd.html",
+    "title": "Nicholas Ducharme-Barth",
+    "section": "",
+    "text": "Nicholas Ducharme-Barth joined the Pacific Islands Fisheries Science Center in 2021. Previously, Nicholas worked at the Pacific Community (SPC) conducting pelagic stock assessments for the Western and Central Pacific Fisheries Commission (WCPFC). He received his B.S. in Mathematics from the College of William & Mary and his Ph. D. in Fisheries and Aquatic Sciences from the University of Florida.\n\n\n Back to top",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Contact us",
+      "Nicholas Ducharme-Barth"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
-    "href": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "More complicated situation: Merge Conflicts",
-    "text": "More complicated situation: Merge Conflicts\nMerge conflicts happen when you merge 2 branches that have competing commits",
+    "objectID": "assets/web-about-mo.html",
+    "href": "assets/web-about-mo.html",
+    "title": "Megumi Oshima",
+    "section": "",
+    "text": "Megumi Oshima has been working at the Pacific Islands Fisheries Science Center since 2021. She works mostly on domestic and territorial bottomfish stocks and is interested in Openscience and creating reproducible and transparent workflows. Before joining PIFSC, she was a graduate student at University of Southern Mississippi where she got her PhD in Coastal Sciences.\n\n\n Back to top",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
-    ]
-  },
-  {
-    "objectID": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
-    "href": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Merge Conflicts",
-    "text": "Merge Conflicts\n\n\n2 ways to resolve them\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nLocally",
-    "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Contact us",
+      "Megumi Oshima"
     ]
   },
   {
@@ -714,304 +501,552 @@
     ]
   },
   {
-    "objectID": "assets/web-about-mo.html",
-    "href": "assets/web-about-mo.html",
-    "title": "Megumi Oshima",
+    "objectID": "assets/day-2-pres-PR-code-review.html#section",
+    "href": "assets/day-2-pres-PR-code-review.html#section",
+    "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Megumi Oshima has been working at the Pacific Islands Fisheries Science Center since 2021. She works mostly on domestic and territorial bottomfish stocks and is interested in Openscience and creating reproducible and transparent workflows. Before joining PIFSC, she was a graduate student at University of Southern Mississippi where she got her PhD in Coastal Sciences.\n\n\n Back to top",
+    "text": "Pull Requests and Code Review\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
-      "Contact us",
-      "Megumi Oshima"
+      "Day 2",
+      "Pull requests & code review"
     ]
   },
   {
-    "objectID": "assets/web-about-nd.html",
-    "href": "assets/web-about-nd.html",
-    "title": "Nicholas Ducharme-Barth",
+    "objectID": "assets/day-2-pres-PR-code-review.html#section-1",
+    "href": "assets/day-2-pres-PR-code-review.html#section-1",
+    "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Nicholas Ducharme-Barth joined the Pacific Islands Fisheries Science Center in 2021. Previously, Nicholas worked at the Pacific Community (SPC) conducting pelagic stock assessments for the Western and Central Pacific Fisheries Commission (WCPFC). He received his B.S. in Mathematics from the College of William & Mary and his Ph. D. in Fisheries and Aquatic Sciences from the University of Florida.\n\n\n Back to top",
+    "text": "So far we have:\n\n\n\nCreated branches for each group to work separately\n\n\n\n\n\n\n\nEach group has modified the Stock Synthesis models\n\n\n\n\n\n\nNext we want to:\n\n\n\nAggregate all of the model runs into the main branch\n\n\n\n\n\nProduce some visualizations of the results",
     "crumbs": [
-      "Contact us",
-      "Nicholas Ducharme-Barth"
+      "Day 2",
+      "Pull requests & code review"
     ]
   },
   {
-    "objectID": "assets/day-1-reproducible_environments.html",
-    "href": "assets/day-1-reproducible_environments.html",
-    "title": "Reproducible environments",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "assets/day-1.html",
-    "href": "assets/day-1.html",
-    "title": "Day 1",
-    "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report",
     "crumbs": [
-      "Day 1"
+      "Day 2",
+      "Pull requests & code review"
     ]
   },
   {
-    "objectID": "assets/day-1.html#presentation-files",
-    "href": "assets/day-1.html#presentation-files",
-    "title": "Day 1",
-    "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\nIn the repository go to “Pull requests” and select which branches you want to merge",
     "crumbs": [
-      "Day 1"
+      "Day 2",
+      "Pull requests & code review"
     ]
   },
   {
-    "objectID": "assets/day-1.html#resources",
-    "href": "assets/day-1.html#resources",
-    "title": "Day 1",
-    "section": "Resources",
-    "text": "Resources\nExample code for modifying a Stock Synthesis input model file and running the modified model through R using the r4ss package can be found in the r-code/ directory on the course GitHub repo.\nBriefly the r-code/01-modify-stock-synthesis.r file takes you through the steps of:\n\n\nreading in the Stock Synthesis input file (e.g., control.ss) using the r4ss package\nmodifying this file, in this case changing the steepness value \\(h\\) and thus modifying the shape of the stock-recruitment relationship (SRR)\nrunning the newly modified model\n\n\nThere is also code at the end of the file that wraps all three of those steps in a for loop in case multiple alternate model configurations want to be explored.",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\n\n\n\n\n\n\n\n\nCan see the dif view of changes in the file, if the code passes checks and tests set up, what commits are associated with this PR, add comments to the PR\n\n\n\n\n\n\n\n\n\n\n\n\n\nRed lines show deleted code\nGreen lines show added code\n\n\n\n\n\n\n\n\n\n\nCan add a review of the changes",
     "crumbs": [
-      "Day 1"
+      "Day 2",
+      "Pull requests & code review"
     ]
   },
   {
-    "objectID": "assets/day-1-modify-stock-synthesis.html",
-    "href": "assets/day-1-modify-stock-synthesis.html",
-    "title": "Modifying and running stock synthesis models",
-    "section": "",
-    "text": "Back to top"
+    "objectID": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
+    "href": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "More complicated situation: Merge Conflicts",
+    "text": "More complicated situation: Merge Conflicts\nMerge conflicts happen when you merge 2 branches that have competing commits",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
   },
   {
-    "objectID": "assets/day-1-welcome.html#section",
-    "href": "assets/day-1-welcome.html#section",
+    "objectID": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
+    "href": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Merge Conflicts",
+    "text": "Merge Conflicts\n\n\n2 ways to resolve them\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nLocally",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#section",
+    "href": "assets/day-1-pres-github_basics.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Welcome to ISC BILLWG Open Science Workshop\nJanuary 2025"
-  },
-  {
-    "objectID": "assets/day-1-welcome.html#introductions",
-    "href": "assets/day-1-welcome.html#introductions",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Introductions",
-    "text": "Introductions\n Nicholas  Ducharme-Barth\n Meg Oshima\n Michelle Sculley"
-  },
-  {
-    "objectID": "assets/day-1-welcome.html#workshop-materials",
-    "href": "assets/day-1-welcome.html#workshop-materials",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Workshop Materials",
-    "text": "Workshop Materials\n\nAll presentations can be found on the workshop website.\nCode can be found in the workshop repository.\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you have created a GitHub account before we start."
-  },
-  {
-    "objectID": "assets/day-1-welcome.html#why-open-science",
-    "href": "assets/day-1-welcome.html#why-open-science",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Why Open Science?",
-    "text": "Why Open Science?\n\n\nStandardized workflows and efficiency\n\n\n\n\n\nImprove and support collaboration\n\n\n\n\n\nEnsure our science is truly reproducible\n\n\n\n\n\nProvide tools for sharing and communicating our work"
-  },
-  {
-    "objectID": "assets/day-1-welcome.html#topics-we-will-cover",
-    "href": "assets/day-1-welcome.html#topics-we-will-cover",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Topics we will cover",
-    "text": "Topics we will cover\n\n\nGitHub for collaboration\n\n\n\n\nCodespaces and reproducible environments\n\n\n\n\nScript-based model development\n\n\n\n\nCreating Shiny apps\n\n\n\n\nCode review with GitHub\n\n\n\n\nCreating reproducible reports and presentations\n\n\n\n\nCreating websites to share results"
-  },
-  {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#section",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#section",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "",
-    "text": "Modifying and running stock synthesis models\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "GitHub for Collaborative Workflows\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Github for Collaborative Workflows"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#script-based-workflow",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#script-based-workflow",
+    "objectID": "assets/day-1-pres-github_basics.html#version-control",
+    "href": "assets/day-1-pres-github_basics.html#version-control",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Version Control",
+    "text": "Version Control\n The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\nAll of us are probably familiar with some sort of version control, think of like Google Docs or track changes for a word document. It’s basically a history of all of the changes that have been made to the document you’re working on. With software like Google Docs that happens passively for you, it will automatically create backups every few minutes so you don’t have to think about saving a file. Today we’re going to be using software that we can apply the same idea but on a much larger and more controlled way. We are going to see how we can use those softwares to back up our work, share our work, and provide a clear, documented map of the developement of a project. So hopefully by the end of the next few days you will feel comfortable using GitHub for projects to make them more organized, transparent and colllaborative.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#git-and-github",
+    "href": "assets/day-1-pres-github_basics.html#git-and-github",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n installed on local computer\n\n\n\n tracks changes to files\n\n\n\n separate versions\n\n\n\n\n\n\n\n\n central, remote storage of files\n\n\n\n everyone can contribute changes\n\n\n\n changes can be combined and shared\n\n\n\n\n\n\n\nWe can leverage the interplay between both to help us share code and collaborate with others!\n\n\n\nGit is the version control software that is installed on your computer. It tracks changes you make to files within a project. It has features that allow you to work collaboratively with others without overwriting each other’s work, and then combine everything when each part is ready.\nGitHub is an online platform to host the tracked files and share your code with others. Within GitHub, you can create repositories that acts as a centralized “remote” storage of files associated with a project. This allows anyone that has access to the repository to download the files onto their local computer, make changes to the code, and then share those changes with everyone else working on the project.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "href": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Basic Git/Github Workflow",
+    "text": "Basic Git/Github Workflow\n\n\n\n\n\n\n\n\nCommit changesSync remoteand local repositoriesRemote repository onGitHubLocal repositoryCreate new files andmake changes locally",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "href": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Remote repository on Github",
+    "text": "Remote repository on Github\n\n\n\nWhere all of your code and related files lives online\n\n\n\n\n\n\n\nCentral location where everyone is sharing their changes\n\n\n\n\n\nConnect the remote repository to the files on your local computer\n\n\n\ngit clone\n\n\n\n\ngit init",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#local-repository",
+    "href": "assets/day-1-pres-github_basics.html#local-repository",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Local repository",
+    "text": "Local repository\n\n\n\nFiles kept on your local computer\n\n\n\n\n\n\n\nIncludes branches from the remote repository\n\nallows for different versions of the same file\n\n\n\n\n\n\nDifferent from local working directory",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#making-changes-locally",
+    "href": "assets/day-1-pres-github_basics.html#making-changes-locally",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Making changes locally",
+    "text": "Making changes locally\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave\n\n\n\n\n\n\n\nStage\n\n\n\n\n\n\n\nCommit\n\n\n\n\n\n\n\nPush",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#commits",
+    "href": "assets/day-1-pres-github_basics.html#commits",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Commits",
+    "text": "Commits\n\n\n\ngroups of small, meaningful changes\n\n\n\n\n\n\nsnapshots of your repository at that time\n\n\n\n\n\ntell a story of the history of your repository",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#commits-1",
+    "href": "assets/day-1-pres-github_basics.html#commits-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Commits",
+    "text": "Commits\nMake a commit in 2 stages:\n\n\nsave your changes locally and then stage the files you want to commit\ngit add &lt;FILENAME&gt;\n\n\n\n\n\ncommit your changes\ngit commit -m \"descriptive commit message\"",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#push",
+    "href": "assets/day-1-pres-github_basics.html#push",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Push",
+    "text": "Push\nTo sync the changes you’ve made locally with the remote repository, you need to “PUSH” your commits\ngit push",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#pull",
+    "href": "assets/day-1-pres-github_basics.html#pull",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull",
+    "text": "Pull\nTo sync any changes that were made to the remote repository onto your local computer you need to “PULL” commits\n\n2 ways:\n1. git pull\n\n\n\ngit fetch, then eventually git merge\n\n\n\ngit pull copies the changes from a remote directory directly into your working directory. the benefit of this is your local repo and local files are synced up with what is online. con is that you can’t do this if you are actively editing untracked files that conflict with what is on the remote server. git fetch only copies changes into your local git repo. You will later need to merge them into your working directory. the benefit is that you can continue editing files in your local working directory without having to merge your code with updates from the remote. Once you finished editing the files you are working on you can commit your changes and then use git merge to sync everything.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#branches",
+    "href": "assets/day-1-pres-github_basics.html#branches",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Branches",
+    "text": "Branches\n\n\n\nThe default for all repositories is main\n\n\n\n\n\n\n\nmainAdd initial filesCode for model developmentFinalize modelCreate Shiny appAdd reportFinish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report\n\n\n\n\n\n\n\n\n\nA really useful feature of github is branches. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained section of the project. You can make changes that don’t affect the main branch and once you are ready to add them to the main project you can merge them in.\nIf you are working on a project by yourself, your commit history might look something like this. Since it’s only you working on the code and you don’t need to worry about doing something that can break code someone else might be using, then all of your changes you could just commit to the main branch.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#pull-requests",
+    "href": "assets/day-1-pres-github_basics.html#pull-requests",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull Requests",
+    "text": "Pull Requests\nOnce you have finished development on your branch and want to add your changes to the main branch, you can submit a pull request",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#activity-1",
+    "href": "assets/day-1-pres-github_basics.html#activity-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Activity 1",
+    "text": "Activity 1\n\nFollowing the template provided here, create a new Markdown document with:\n\n\nA list of everyone in your group, including:\n\ntheir affiliation\ntheir GitHub name\n\na picture of a species you work on\na code chunk with your most used function\na task list of three things you would like to learn from the workshop\n\n\nSave the file with a new name.\nCommit your file, and push to the repository.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#activity-2-branches",
+    "href": "assets/day-1-pres-github_basics.html#activity-2-branches",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Activity 2: Branches",
+    "text": "Activity 2: Branches\n\nCreate a new branch from the main branch\nAdd your name to the list of participants.\nSave your change, commit, and push to your branch.\nSubmit a Pull Request to merge your changes into main branch.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "",
+    "text": "Modifying and running stock synthesis models: part 2\nMichelle Sculley\nJanuary 2025",
+    "crumbs": [
+      "Day 1",
+      "Modifying Stock Synthesis files: Part 2"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#script-based-workflow",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#script-based-workflow",
     "title": "Open Science Workflow Training for ISC",
     "section": "Script based workflow",
-    "text": "Script based workflow\n\nIn this module we will cover editing and running stock assessments using a script based workflow.",
+    "text": "Script based workflow\n\nNext we will cover editing and running stock assessments using a script based workflow developed for the BILLWG.\nThis code is available for the BILLWG in the SS_Intl_Auto repository. It is still in development - but can be run for NP Swordfish and WCNPO striped marlin.",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#why",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#why",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#why-use-this-specific-workflow",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#why-use-this-specific-workflow",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Why?",
-    "text": "Why?\n\n\nContaining all steps of an analysis within a script is a key component of an Openscience workflow\n\n\n\nMakes analytic steps transparent\nImproves reproducibility\nAllows for integration with version control software (e.g., Git)\nFacilitates documentation",
+    "section": "Why use this specific workflow?",
+    "text": "Why use this specific workflow?\nThis was developed specifically to run BILLWG assessments to better distribute the workload during assessment meetings.\n\nEditing raw text files can lead to mistakes - its better to write a clean file each run.\n\nForgetting to change a parameter line\nMissing a value in a parameter line\n\nIt can be time consuming to run diagnostics by hand\n\nAutomating retrospectives, jitters, and likelihood profiles means we can run them in parallel\n\nWe are set up to run large numbers of models on super computers\nWe can run models on codespaces (no need to install software!)\nKeeps workflows consistent between WG members for ease of collaboration\nKeeps science transparent - easy to replicate your results",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#application",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#application",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#what-can-this-code-do",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#what-can-this-code-do",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Application",
-    "text": "Application\n\nModify a Stock Synthesis input model file and running the modified model through R using the r4ss package.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpecifically, in our example we will run models that make alternative assumptions for the steepness (\\(h\\)) parameter which controls the shape of the stock-recruitment relationship (SRR).\n\n\n\n\n\n\nPhoto credit: Maven’s Notebook",
+    "section": "What can this code do?",
+    "text": "What can this code do?\n\nWrite SS files\nRun SS models\n\nIncluding sensitivity runs\n\nRun diagnostics\nPrint summary reports (with Quarto)\nPrint r4ss plots\nRun projections (in development)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#running-stock-synthesis",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#running-stock-synthesis",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#data-inputs",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#data-inputs",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Running Stock Synthesis",
-    "text": "Running Stock Synthesis\nFour files (plus the executable) are needed to run a Stock Synthesis model:\n\n\n\nstarter.ss\n\n\n\n\n\n\nforecast.ss\n\n\n\n\n\n\ndata.ss\n\n\n\n\n\n\ncontrol.ss this is where the SRR is defined\n\n\n\n\n\nCheck out the manual for further details!\n\n\n\n\n#V3.30.23.00;_safe;_compile_date:_Oct 31 2024;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_13.2\n#_Stock_Synthesis_is_a_work_of_the_U.S._Government_and_is_not_subject_to_copyright_protection_in_the_United_States.\n#_Foreign_copyrights_may_apply._See_copyright.txt_for_more_information.\n#_User_support_available_at:NMFS.Stock.Synthesis@noaa.gov\n#_User_info_available_at:https://vlab.noaa.gov/group/stock-synthesis\n#_Source_code_at:_https://github.com/nmfs-ost/ss3-source-code\n\n#C growth parameters are estimated\n#C spawner-recruitment bias adjustment Not tuned For optimality\n#_data_and_control_files: data.ss // control.ss\n0  # 0 means do not read wtatage.ss; 1 means read and use wtatage.ss and also read and use growth parameters\n1  #_N_Growth_Patterns (Growth Patterns, Morphs, Bio Patterns, GP are terms used interchangeably in SS3)\n1 #_N_platoons_Within_GrowthPattern \n#_Cond 1 #_Platoon_within/between_stdev_ratio (no read if N_platoons=1)\n#_Cond sd_ratio_rd &lt; 0: platoon_sd_ratio parameter required after movement params.\n#_Cond  1 #vector_platoon_dist_(-1_in_first_val_gives_normal_approx)\n#\n4 # recr_dist_method for parameters:  2=main effects for GP, Area, Settle timing; 3=each Settle entity; 4=none (only when N_GP*Nsettle*pop==1)\n1 # not yet implemented; Future usage: Spawner-Recruitment: 1=global; 2=by area\n1 #  number of recruitment settlement assignments \n0 # unused option\n#GPattern month  area  age (for each settlement assignment)\n 1 1 1 0\n#\n#_Cond 0 # N_movement_definitions goes here if Nareas &gt; 1\n#_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration&gt;0\n#_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10\n#\n1 #_Nblock_Patterns\n 1 #_blocks_per_pattern \n# begin and end years of blocks\n 1970 1970\n#\n# controls for all timevary parameters \n1 #_time-vary parm bound check (1=warn relative to base parm bounds; 3=no bound check); Also see env (3) and dev (5) options to constrain with base bounds\n#\n# AUTOGEN\n 0 0 0 0 0 # autogen: 1st element for biology, 2nd for SR, 3rd for Q, 4th reserved, 5th for selex\n# where: 0 = autogen time-varying parms of this category; 1 = read each time-varying parm line; 2 = read then autogen if parm min==-12345\n#\n#_Available timevary codes\n#_Block types: 0: P_block=P_base*exp(TVP); 1: P_block=P_base+TVP; 2: P_block=TVP; 3: P_block=P_block(-1) + TVP\n#_Block_trends: -1: trend bounded by base parm min-max and parms in transformed units (beware); -2: endtrend and infl_year direct values; -3: end and infl as fraction of base range\n#_EnvLinks:  1: P(y)=P_base*exp(TVP*env(y));  2: P(y)=P_base+TVP*env(y);  3: P(y)=f(TVP,env_Zscore) w/ logit to stay in min-max;  4: P(y)=2.0/(1.0+exp(-TVP1*env(y) - TVP2))\n#_DevLinks:  1: P(y)*=exp(dev(y)*dev_se;  2: P(y)+=dev(y)*dev_se;  3: random walk;  4: zero-reverting random walk with rho;  5: like 4 with logit transform to stay in base min-max\n#_DevLinks(more):  21-25 keep last dev for rest of years\n#\n#_Prior_codes:  0=none; 6=normal; 1=symmetric beta; 2=CASAL's beta; 3=lognormal; 4=lognormal with biascorr; 5=gamma\n#\n# setup for M, growth, wt-len, maturity, fecundity, (hermaphro), recr_distr, cohort_grow, (movement), (age error), (catch_mult), sex ratio \n#_NATMORT\n0 #_natM_type:_0=1Parm; 1=N_breakpoints;_2=Lorenzen;_3=agespecific;_4=agespec_withseasinterpolate;_5=BETA:_Maunder_link_to_maturity;_6=Lorenzen_range\n  #_no additional input for selected M option; read 1P per morph\n#\n1 # GrowthModel: 1=vonBert with L1&L2; 2=Richards with L1&L2; 3=age_specific_K_incr; 4=age_specific_K_decr; 5=age_specific_K_each; 6=NA; 7=NA; 8=growth cessation\n0 #_Age(post-settlement) for L1 (aka Amin); first growth parameter is size at this age; linear growth below this\n25 #_Age(post-settlement) for L2 (aka Amax); 999 to treat as Linf\n-999 #_exponential decay for growth above maxage (value should approx initial Z; -999 replicates 3.24; -998 to not allow growth above maxage)\n0  #_placeholder for future growth feature\n#\n0 #_SD_add_to_LAA (set to 0.1 for SS2 V1.x compatibility)\n0 #_CV_Growth_Pattern:  0 CV=f(LAA); 1 CV=F(A); 2 SD=F(LAA); 3 SD=F(A); 4 logSD=F(A)\n#\n1 #_maturity_option:  1=length logistic; 2=age logistic; 3=read age-maturity matrix by growth_pattern; 4=read age-fecundity; 5=disabled; 6=read length-maturity\n1 #_First_Mature_Age\n1 #_fecundity_at_length option:(1)eggs=Wt*(a+b*Wt);(2)eggs=a*L^b;(3)eggs=a*Wt^b; (4)eggs=a+b*L; (5)eggs=a+b*W\n0 #_hermaphroditism option:  0=none; 1=female-to-male age-specific fxn; -1=male-to-female age-specific fxn\n1 #_parameter_offset_approach for M, G, CV_G:  1- direct, no offset**; 2- male=fem_parm*exp(male_parm); 3: male=female*exp(parm) then old=young*exp(parm)\n#_** in option 1, any male parameter with value = 0.0 and phase &lt;0 is set equal to female parameter\n#\n#_growth_parms\n#_ LO HI INIT PRIOR PR_SD PR_type PHASE env_var&link dev_link dev_minyr dev_maxyr dev_PH Block Block_Fxn\n# Sex: 1  BioPattern: 1  NatMort\n 0.05 0.15 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # NatM_uniform_Fem_GP_1\n# Sex: 1  BioPattern: 1  Growth\n -10 45 20.9372 36 10 6 -2 0 0 0 0 0 0 0 # L_at_Amin_Fem_GP_1\n 40 90 71.5566 70 10 6 -4 0 0 0 0 0 0 0 # L_at_Amax_Fem_GP_1\n 0.05 0.25 0.163678 0.15 0.8 6 -4 0 0 0 0 0 0 0 # VonBert_K_Fem_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_young_Fem_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_old_Fem_GP_1\n# Sex: 1  BioPattern: 1  WtLen\n -3 3 2.44e-06 2.44e-06 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_1_Fem_GP_1\n -3 4 3.34694 3.34694 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_2_Fem_GP_1\n# Sex: 1  BioPattern: 1  Maturity&Fecundity\n 50 60 55 55 0.8 0 -3 0 0 0 0 0 0 0 # Mat50%_Fem_GP_1\n -3 3 -0.25 -0.25 0.8 0 -3 0 0 0 0 0 0 0 # Mat_slope_Fem_GP_1\n -3 3 1 1 0.8 0 -3 0 0 0 0 0 0 0 # Eggs/kg_inter_Fem_GP_1\n -3 3 0 0 0.8 0 -3 0 0 0 0 0 0 0 # Eggs/kg_slope_wt_Fem_GP_1\n# Sex: 2  BioPattern: 1  NatMort\n 0.05 0.15 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # NatM_uniform_Mal_GP_1\n# Sex: 2  BioPattern: 1  Growth\n 0 45 0 36 10 0 -3 0 0 0 0 0 0 0 # L_at_Amin_Mal_GP_1\n 40 90 69.748400 70 10 6 -4 0 0 0 0 0 0 0 # L_at_Amax_Mal_GP_1\n 0.05 0.25 0.173516  0.15 0.8 6 -4 0 0 0 0 0 0 0 # VonBert_K_Mal_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_young_Mal_GP_1\n 0.05 0.25 0.1 0.1 0.8 0 -3 0 0 0 0 0 0 0 # CV_old_Mal_GP_1\n# Sex: 2  BioPattern: 1  WtLen\n -3 3 2.44e-06 2.44e-06 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_1_Mal_GP_1\n -3 4 3.34694 3.34694 0.8 0 -3 0 0 0 0 0 0 0 # Wtlen_2_Mal_GP_1\n# Hermaphroditism\n#  Recruitment Distribution \n#  Cohort growth dev base\n 0.1 10 1 1 1 0 -1 0 0 0 0 0 0 0 # CohortGrowDev\n#  Movement\n#  Platoon StDev Ratio \n#  Age Error from parameters\n#  catch multiplier\n#  fraction female, by GP\n 1e-06 0.999999 0.5 0.5 0.5 0 -99 0 0 0 0 0 0 0 # FracFemale_GP_1\n#  M2 parameter for each predator fleet\n#\n#_no timevary MG parameters\n#\n#_seasonal_effects_on_biology_parms\n 0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K\n#_ LO HI INIT PRIOR PR_SD PR_type PHASE\n#_Cond -2 2 0 0 -1 99 -2 #_placeholder when no seasonal MG parameters\n#\n3 #_Spawner-Recruitment; Options: 1=NA; 2=Ricker; 3=std_B-H; 4=SCAA; 5=Hockey; 6=B-H_flattop; 7=survival_3Parm; 8=Shepherd_3Parm; 9=RickerPower_3parm\n0  # 0/1 to use steepness in initial equ recruitment calculation\n0  #  future feature:  0/1 to make realized sigmaR a function of SR curvature\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn #  parm_name\n             3            31            10          10.3            10             0          1          0          0          0          0          0          0          0 # SR_LN(R0)\n           0.2             1      0.573835           0.7          0.05             1         -4          0          0          0          0          0          0          0 # SR_BH_steep\n             0             2           0.6           0.8           0.8             0         -4          0          0          0          0          0          0          0 # SR_sigmaR\n            -5             5             0             0             1             0         -4          0          0          0          0          0          0          0 # SR_regime\n             0             0             0             0             0             0        -99          0          0          0          0          0          0          0 # SR_autocorr\n#_no timevary SR parameters\n2 #do_recdev:  0=none; 1=devvector (R=F(SSB)+dev); 2=deviations (R=F(SSB)+dev); 3=deviations (R=R0*dev; dev2=R-f(SSB)); 4=like 3 with sum(dev2) adding penalty\n1971 # first year of main recr_devs; early devs can precede this era\n2001 # last year of main recr_devs; forecast devs start in following year\n2 #_recdev phase \n1 # (0/1) to read 13 advanced options\n 0 #_recdev_early_start (0=none; neg value makes relative to recdev_start)\n -4 #_recdev_early_phase\n 0 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)\n 1 #_lambda for Fcast_recr_like occurring before endyr+1\n1949.0   #_last_early_yr_nobias_adj_in_MPD \n1984.0   #_first_yr_fullbias_adj_in_MPD \n1997.0   #_last_yr_fullbias_adj_in_MPD \n2001.9   #_first_recent_yr_nobias_adj_in_MPD \n0.528  #_max_bias_adj_in_MPD (1.0 to mimic pre-2009 models)   \n0 #_period of cycles in recruitment (N parms read below)\n -5 #min rec_dev\n 5 #max rec_dev\n 0 #_read_recdevs\n#_end of advanced SR options\n#\n#_placeholder for full parameter lines for recruitment cycles\n# read specified recr devs\n#_year Input_value\n#\n# all recruitment deviations\n#  1971R 1972R 1973R 1974R 1975R 1976R 1977R 1978R 1979R 1980R 1981R 1982R 1983R 1984R 1985R 1986R 1987R 1988R 1989R 1990R 1991R 1992R 1993R 1994R 1995R 1996R 1997R 1998R 1999R 2000R 2001R 2002F 2003F 2004F 2005F 2006F 2007F 2008F 2009F 2010F 2011F\n#  0.134968 -0.0507584 0.0972615 -0.164709 0.0443745 0.710789 -0.00439022 0.0113464 0.266822 0.186805 0.100984 -0.208826 -0.418054 -0.284269 0.420545 0.586619 0.262575 0.204289 -0.321237 0.664807 -0.607033 -0.193662 -0.7506 0.446329 -0.524044 0.539563 1.20007 -0.459983 -0.567356 0.263829 -0.216963 0 0 0 0 0 0 0 0 0 0\n#\n#Fishing Mortality info \n0.3 # F ballpark value in units of annual_F\n-2001 # F ballpark year (neg value to disable)\n3 # F_Method:  1=Pope midseason rate; 2=F as parameter; 3=F as hybrid; 4=fleet-specific parm/hybrid (#4 is superset of #2 and #3 and is recommended)\n2.95 # max F (methods 2-4) or harvest fraction (method 1)\n4  # N iterations for tuning in hybrid mode; recommend 3 (faster) to 5 (more precise if many fleets)\n#\n#_initial_F_parms; for each fleet x season that has init_catch; nest season in fleet; count = 0\n#_for unconstrained init_F, use an arbitrary initial catch and set lambda=0 for its logL\n#_ LO HI INIT PRIOR PR_SD  PR_type  PHASE\n#\n# F rates by fleet x season\n#_year:  1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011\n# seas:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n# FISHERY 0 0.00211813 0.0106457 0.0107404 0.0217792 0.0334421 0.046095 0.0601249 0.0759325 0.10803 0.147259 0.162937 0.181299 0.203352 0.230858 0.266731 0.315247 0.338831 0.3551 0.356617 0.339428 0.2384 0.243238 0.251023 0.263884 0.283723 0.227427 0.23848 0.247863 0.25268 0.253549 0.0132306 0.0281356 0.0381987 0.0448672 0.0493659 0.0525756 0.0550896 0.0572622 0.0592695 0.0611758\n#\n#_Q_setup for fleets with cpue or survey or deviation data\n#_1:  fleet number\n#_2:  link type: 1=simple q; 2=mirror; 3=power (+1 parm); 4=mirror with scale (+1p); 5=offset (+1p); 6=offset & power (+2p)\n#_     where power is applied as y = q * x ^ (1 + power); so a power value of 0 has null effect\n#_     and with the offset included it is y = q * (x + offset) ^ (1 + power)\n#_3:  extra input for link, i.e. mirror fleet# or dev index number\n#_4:  0/1 to select extra sd parameter\n#_5:  0/1 for biasadj or not\n#_6:  0/1 to float\n#_   fleet      link link_info  extra_se   biasadj     float  #  fleetname\n         2         1         0         1         0         0  #  SURVEY1\n         3         1         0         0         0         0  #  SURVEY2\n-9999 0 0 0 0 0\n#\n#_Q_parameters\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name\n            -7             5      0.516916             0             1             0          1          0          0          0          0          0          0          0  #  LnQ_base_SURVEY1(2)\n             0           0.5             0          0.05             1             0         -4          0          0          0          0          0          0          0  #  Q_extraSD_SURVEY1(2)\n           -10             5      -6.62547             0             1             0          1          0          0          0          0          0          0          0  #  LnQ_base_SURVEY2(3)\n#_no timevary Q parameters\n#\n#_size_selex_patterns\n#Pattern:_0;  parm=0; selex=1.0 for all sizes\n#Pattern:_1;  parm=2; logistic; with 95% width specification\n#Pattern:_5;  parm=2; mirror another size selex; PARMS pick the min-max bin to mirror\n#Pattern:_11; parm=2; selex=1.0  for specified min-max population length bin range\n#Pattern:_15; parm=0; mirror another age or length selex\n#Pattern:_6;  parm=2+special; non-parm len selex\n#Pattern:_43; parm=2+special+2;  like 6, with 2 additional param for scaling (mean over bin range)\n#Pattern:_8;  parm=8; double_logistic with smooth transitions and constant above Linf option\n#Pattern:_9;  parm=6; simple 4-parm double logistic with starting length; parm 5 is first length; parm 6=1 does desc as offset\n#Pattern:_21; parm=2*special; non-parm len selex, read as N break points, then N selex parameters\n#Pattern:_22; parm=4; double_normal as in CASAL\n#Pattern:_23; parm=6; double_normal where final value is directly equal to sp(6) so can be &gt;1.0\n#Pattern:_24; parm=6; double_normal with sel(minL) and sel(maxL), using joiners\n#Pattern:_2;  parm=6; double_normal with sel(minL) and sel(maxL), using joiners, back compatibile version of 24 with 3.30.18 and older\n#Pattern:_25; parm=3; exponential-logistic in length\n#Pattern:_27; parm=special+3; cubic spline in length; parm1==1 resets knots; parm1==2 resets all \n#Pattern:_42; parm=special+3+2; cubic spline; like 27, with 2 additional param for scaling (mean over bin range)\n#_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention\n#_Pattern Discard Male Special\n 1 0 0 0 # 1 FISHERY\n 1 0 0 0 # 2 SURVEY1\n 0 0 0 0 # 3 SURVEY2\n#\n#_age_selex_patterns\n#Pattern:_0; parm=0; selex=1.0 for ages 0 to maxage\n#Pattern:_10; parm=0; selex=1.0 for ages 1 to maxage\n#Pattern:_11; parm=2; selex=1.0  for specified min-max age\n#Pattern:_12; parm=2; age logistic\n#Pattern:_13; parm=8; age double logistic. Recommend using pattern 18 instead.\n#Pattern:_14; parm=nages+1; age empirical\n#Pattern:_15; parm=0; mirror another age or length selex\n#Pattern:_16; parm=2; Coleraine - Gaussian\n#Pattern:_17; parm=nages+1; empirical as random walk  N parameters to read can be overridden by setting special to non-zero\n#Pattern:_41; parm=2+nages+1; // like 17, with 2 additional param for scaling (mean over bin range)\n#Pattern:_18; parm=8; double logistic - smooth transition\n#Pattern:_19; parm=6; simple 4-parm double logistic with starting age\n#Pattern:_20; parm=6; double_normal,using joiners\n#Pattern:_26; parm=3; exponential-logistic in age\n#Pattern:_27; parm=3+special; cubic spline in age; parm1==1 resets knots; parm1==2 resets all \n#Pattern:_42; parm=2+special+3; // cubic spline; with 2 additional param for scaling (mean over bin range)\n#Age patterns entered with value &gt;100 create Min_selage from first digit and pattern from remainder\n#_Pattern Discard Male Special\n 0 0 0 0 \n 0 0 0 0 \n 0 0 0 0\n#\n#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name\n# 1   FISHERY LenSelex\n            19            80       53.6629            50          0.01             1          2          0          0          0          0          0          0          0  #  Size_inflection_FISHERY(1)\n          0.01            60       18.9332            15          0.01             1          3          0          0          0          0          0          0          0  #  Size_95%width_FISHERY(1)\n# 2   SURVEY1 LenSelex\n            19            70       36.6585            30          0.01             1          2          0          0          0          0          0          0          0  #  Size_inflection_SURVEY1(2)\n          0.01            60       6.59966            10          0.01             1          3          0          0          0          0          0          0          0  #  Size_95%width_SURVEY1(2)\n# 3   SURVEY2 LenSelex\n#_No_Dirichlet parameters\n#_no timevary selex parameters\n#\n0   #  use 2D_AR1 selectivity? (0/1)\n#_no 2D_AR1 selex offset used\n#_specs:  fleet, ymin, ymax, amin, amax, sigma_amax, use_rho, len1/age2, devphase, before_range, after_range\n#_sigma_amax&gt;amin means create sigma parm for each bin from min to sigma_amax; sigma_amax&lt;0 means just one sigma parm is read and used for all bins\n#_needed parameters follow each fleet's specifications\n# -9999  0 0 0 0 0 0 0 0 0 0 # terminator\n#\n# Tag loss and Tag reporting parameters go next\n0  # TG_custom:  0=no read and autogen if tag data exist; 1=read\n#_Cond -6 6 1 1 2 0.01 -4 0 0 0 0 0 0 0  #_placeholder if no parameters\n#\n# no timevary parameters\n#\n#\n# Input variance adjustments factors: \n #_1=add_to_survey_CV\n #_2=add_to_discard_stddev\n #_3=add_to_bodywt_CV\n #_4=mult_by_lencomp_N\n #_5=mult_by_agecomp_N\n #_6=mult_by_size-at-age_N\n #_7=mult_by_generalized_sizecomp\n#_factor  fleet  value\n -9999   1    0  # terminator\n#\n4 #_maxlambdaphase\n1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter\n# read 3 changes to default Lambdas (default value is 1.0)\n# Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; \n# 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark; 18=initEQregime\n#like_comp fleet  phase  value  sizefreq_method\n 1 2 2 1 1\n 4 2 2 1 1\n 4 2 3 1 1\n-9999  1  1  1  1  #  terminator\n#\n# lambdas (for info only; columns are phases)\n#  0 0 0 0 #_CPUE/survey:_1\n#  1 1 1 1 #_CPUE/survey:_2\n#  1 1 1 1 #_CPUE/survey:_3\n#  1 1 1 1 #_lencomp:_1\n#  1 1 1 1 #_lencomp:_2\n#  0 0 0 0 #_lencomp:_3\n#  1 1 1 1 #_agecomp:_1\n#  1 1 1 1 #_agecomp:_2\n#  0 0 0 0 #_agecomp:_3\n#  1 1 1 1 #_size-age:_1\n#  1 1 1 1 #_size-age:_2\n#  0 0 0 0 #_size-age:_3\n#  1 1 1 1 #_init_equ_catch1\n#  1 1 1 1 #_init_equ_catch2\n#  1 1 1 1 #_init_equ_catch3\n#  1 1 1 1 #_recruitments\n#  1 1 1 1 #_parameter-priors\n#  1 1 1 1 #_parameter-dev-vectors\n#  1 1 1 1 #_crashPenLambda\n#  0 0 0 0 # F_ballpark_lambda\n0 # (0/1/2) read specs for more stddev reporting: 0 = skip, 1 = read specs for reporting stdev for selectivity, size, and numbers, 2 = add options for M,Dyn. Bzero, SmryBio\n# 1 1 -1 5 # Selectivity: (1) 0 to skip or fleet, (2) 1=len/2=age/3=combined, (3) year, (4) N selex bins; NOTE: combined reports in age bins\n# 1 5 # Growth: (1) 0 to skip or growth pattern, (2) growth ages; NOTE: does each sex\n# 1 -1 5 # Numbers-at-age: (1) 0 or area(-1 for all), (2) year, (3) N ages;  NOTE: sums across morphs\n# 5 15 25 35 43 # vector with selex std bins (-1 in first bin to self-generate)\n# 1 2 14 26 40 # vector with growth std ages picks (-1 in first bin to self-generate)\n# 1 2 14 26 40 # vector with NatAge std ages (-1 in first bin to self-generate)\n999",
+    "section": "Data inputs",
+    "text": "Data inputs\nSome external data files are needed to run this code:\n\nThese are stored in the /Data folder in the repository\n\nCatch (csv)\nCPUE (csv)\nLength Composition (csv)\nCTL_Inputs (xlsx)\nCTL_Parameters (xlsx)\nAny other csv files for other input data - such as age comp or generalize size comp (in development)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#modifying-control.ss-using-r4ss",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#modifying-control.ss-using-r4ss",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_parameters",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_parameters",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Modifying control.ss using r4ss",
-    "text": "Modifying control.ss using r4ss\n\n\nUse SS_readctl() to read in the control file.\n\n\n\n\n\nss3-example-calcs.r\n# load packages\n    library(r4ss)\n\n# define paths\n    proj_dir = this.path::this.proj()\n    dir_model = paste0(proj_dir,\"/stock-synthesis-models/\")\n    dir_base_stock_synthesis = paste0(dir_model,\"base-model/\")\n\n# read control file\n    tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss\"),\n                         datlist = paste0(dir_base_stock_synthesis,\"data.ss\"))\n\n\n\n\n\n\nLet’s look more closely at tmp_ctl.\n\n\n\n\n\n\n\nclass(tmp_ctl)\n\n[1] \"list\"\n\nnames(tmp_ctl)\n\n [1] \"warnings\"                   \"Comments\"                  \n [3] \"nseas\"                      \"N_areas\"                   \n [5] \"Nages\"                      \"Nsexes\"                    \n [7] \"Npopbins\"                   \"Nfleets\"                   \n [9] \"Do_AgeKey\"                  \"fleetnames\"                \n[11] \"sourcefile\"                 \"type\"                      \n[13] \"ReadVersion\"                \"eof\"                       \n[15] \"EmpiricalWAA\"               \"N_GP\"                      \n[17] \"N_platoon\"                  \"recr_dist_method\"          \n[19] \"recr_global_area\"           \"recr_dist_read\"            \n[21] \"recr_dist_inx\"              \"recr_dist_pattern\"         \n[23] \"N_Block_Designs\"            \"blocks_per_pattern\"        \n[25] \"Block_Design\"               \"time_vary_adjust_method\"   \n[27] \"time_vary_auto_generation\"  \"natM_type\"                 \n[29] \"GrowthModel\"                \"Growth_Age_for_L1\"         \n[31] \"Growth_Age_for_L2\"          \"Exp_Decay\"                 \n[33] \"Growth_Placeholder\"         \"N_natMparms\"               \n[35] \"SD_add_to_LAA\"              \"CV_Growth_Pattern\"         \n[37] \"maturity_option\"            \"First_Mature_Age\"          \n[39] \"fecundity_option\"           \"hermaphroditism_option\"    \n[41] \"parameter_offset_approach\"  \"MG_parms\"                  \n[43] \"MGparm_seas_effects\"        \"SR_function\"               \n[45] \"Use_steep_init_equi\"        \"Sigma_R_FofCurvature\"      \n[47] \"SR_parms\"                   \"do_recdev\"                 \n[49] \"MainRdevYrFirst\"            \"MainRdevYrLast\"            \n[51] \"recdev_phase\"               \"recdev_adv\"                \n[53] \"recdev_early_start\"         \"recdev_early_phase\"        \n[55] \"Fcast_recr_phase\"           \"lambda4Fcast_recr_like\"    \n[57] \"last_early_yr_nobias_adj\"   \"first_yr_fullbias_adj\"     \n[59] \"last_yr_fullbias_adj\"       \"first_recent_yr_nobias_adj\"\n[61] \"max_bias_adj\"               \"period_of_cycles_in_recr\"  \n[63] \"min_rec_dev\"                \"max_rec_dev\"               \n[65] \"N_Read_recdevs\"             \"F_ballpark\"                \n[67] \"F_ballpark_year\"            \"F_Method\"                  \n[69] \"maxF\"                       \"F_iter\"                    \n[71] \"Q_options\"                  \"Q_parms\"                   \n[73] \"size_selex_types\"           \"age_selex_types\"           \n[75] \"size_selex_parms\"           \"Use_2D_AR1_selectivity\"    \n[77] \"TG_custom\"                  \"DoVar_adjust\"              \n[79] \"maxlambdaphase\"             \"sd_offset\"                 \n[81] \"lambdas\"                    \"N_lambdas\"                 \n[83] \"more_stddev_reporting\"     \n\n\n\n\n\n\n\n\n\nclass(tmp_ctl$SR_parms)\n\n[1] \"data.frame\"\n\ndim(tmp_ctl$SR_parms)\n\n[1]  5 14\n\ndimnames(tmp_ctl$SR_parms)\n\n[[1]]\n[1] \"SR_LN(R0)\"   \"SR_BH_steep\" \"SR_sigmaR\"   \"SR_regime\"   \"SR_autocorr\"\n\n[[2]]\n [1] \"LO\"           \"HI\"           \"INIT\"         \"PRIOR\"        \"PR_SD\"       \n [6] \"PR_type\"      \"PHASE\"        \"env_var&link\" \"dev_link\"     \"dev_minyr\"   \n[11] \"dev_maxyr\"    \"dev_PH\"       \"Block\"        \"Block_Fxn\"   \n\n\n\n\n\n\n\n\n\ntmp_ctl$SR_parms[\"SR_BH_steep\",c(\"LO\",\"HI\",\"INIT\",\"PHASE\")]\n\n             LO HI     INIT PHASE\nSR_BH_steep 0.2  1 0.573835    -4\n\n\n\n\n\n\n\nNow modify tmp_ctl and write-out the new control.ss.\n\nLet’s set \\(h = 0.7\\).\n\n\n\n\nss3-example-calcs.r\n# load packages\n    library(r4ss)\n\n# define paths\n    proj_dir = this.path::this.proj()\n    dir_model = paste0(proj_dir,\"/stock-synthesis-models/\")\n    dir_base_stock_synthesis = paste0(dir_model,\"base-model/\")\n\n# read control file\n    tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss\"),\n                         datlist = paste0(dir_base_stock_synthesis,\"data.ss\"))\n# modify\n    tmp_ctl$SR_parms[\"SR_BH_steep\",\"INIT\"] = 0.7\n\n# write out file using r4ss functions\n    SS_writectl(tmp_ctl,outfile=paste0(dir_base_stock_synthesis,\"control.ss\"),overwrite=TRUE)",
+    "section": "CTL_parameters",
+    "text": "CTL_parameters\n\nThis file contains all the long and short line parameters used in the control file.\nEach species is its own sheet\nWe will be editing the sheet for our species “EXM”\nEach line is a parameter\n\ncategory tells R which parameter group it belongs to\nOPTION tells R which option to use if more than one set of parameters in a particular type is used (i.e. alternative growth parameters)\nThe subsequent colmns are the parameters lines from the SS control file\n\nTo run alternative models add a new set of parameters for your parameter of choice - do NOT change the “Base” option parameters\nWhich parameters we use in the SS model is determined by the PARAM_option inputs in the Build_All_SS function",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#running-the-model",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#running-the-model",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_inputs",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#ctl_inputs",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Running the model",
-    "text": "Running the model\n\nUse run() to run the model.\n\nIn this case we also copy the executable into our model directory.\n\n\n\nss3-example-calcs.r\n# copy over executable\n    dir_exec = paste0(proj_dir,\"/executables/stock-synthesis/3.30.23.1/\")\n    ss3_exec = \"ss3_linux\"\n    file.copy(from=paste0(dir_exec,ss3_exec),to=dir_base_stock_synthesis)\n    \n# run the model\n    run(dir=dir_base_stock_synthesis,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)",
+    "section": "CTL_inputs",
+    "text": "CTL_inputs\nThis file contains all the additional information needed to populate the control file\n\nEach sheet is a model run\nYou will need to add a new sheet if you need to change any of the parameters in this sheet\n\n\nmodel.info&lt;-list(\n  \"scenario\"=\"Base\",  ## which sheet in CTL_inputs.xlsx\n  \"Species\"=\"EXM\", ...)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#testing-multiple-alternatives",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#testing-multiple-alternatives",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#diagnostics",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#diagnostics",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Testing multiple alternatives",
-    "text": "Testing multiple alternatives\n\n\nWhat if we wanted to test models with several different alternatives for \\(h\\)?\n\nSay also testing \\(h = 0.5\\) and \\(h = 0.6\\)?\n\n\n\n\nPut it in a for loop!\n\n\n\n\nss3-example-calcs.r\n# modify input file & run new stock synthesis models\n    steepness_vec = c(0.5,0.6,0.7)\n    for(i in seq_along(steepness_vec)){\n        # make new directory\n            tmp_dir = paste0(dir_model,\"steepness-\",steepness_vec[i],\"/\")\n            dir.create(tmp_dir,recursive=TRUE)\n        \n        # modify control file\n        # read in baseline stock synthesis files using r4ss functions\n            tmp_ctl = SS_readctl(file=paste0(dir_base_stock_synthesis,\"control.ss_new\"),datlist = paste0(dir_base_stock_synthesis,\"data_echo.ss_new\"))\n            tmp_ctl$SR_parms[\"SR_BH_steep\",\"INIT\"] = steepness_vec[i]\n        \n        # write out file using r4ss functions\n            SS_writectl(tmp_ctl,outfile=paste0(tmp_dir,\"control.ss\"),overwrite=TRUE)\n        # copy remaining input files and executable\n            file.copy(from=paste0(dir_base_stock_synthesis,c(\"starter.ss\",\"data.ss\",\"forecast.ss\")),to=paste0(tmp_dir))\n            file.copy(from=paste0(dir_exec,ss3_exec),to=tmp_dir)\n\n        # run the model\n            run(dir=tmp_dir,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)\n\n        # clean-up workspace\n        rm(list=c(\"tmp_dir\",\"tmp_ctl\"))\n    }",
+    "section": "Diagnostics",
+    "text": "Diagnostics\n\n\n\nASPM - no additional inputs needed\nRuns test (CPUE and Size Data) – No additional inputs\nStock status quantities – no additional inputs\nJitter\n\nNjitter = number of jitter models to run\njitterFraction = how much to change initial parameters for each run\n\nRetrospectives/Hindcasting\n\nretro_years = vector of years you want to run retrospectives on\n\n\n\n\nLikelihood Profiles\n\nprofile_name = name of parameter you want to profile on\n\nmust match name of parameter in report file (i.e. SR_LN(R0) or NatM_uniform_Fem_GP_1)\n\nprofile.vec = vector with two values:\n\n[1] number of models you want run (excluding MLE)\n[2] increment value between parameters (i.e. c(4,0.1) for a model where SR_LN(R0) = 8 would run - profile models at 7.8, 7.9, 8.0, 8.1, and 8.2)",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-modify-stock-synthesis.html#group-activity",
-    "href": "assets/day-1-pres-modify-stock-synthesis.html#group-activity",
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#to-run",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#to-run",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "To Run",
+    "text": "To Run\nYou should only modify the file Run_SS_Model.R\n\nSet the base directory you are working in\nProvide a vector of your fleet names\nModify model.info to the options you want to use while running the model\nSource 01_Build_All_SS.r\nRun Build_All_SS with appropriate inputs",
+    "crumbs": [
+      "Day 1",
+      "Modifying Stock Synthesis files: Part 2"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#a-warning-about-running-in-parallel",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#a-warning-about-running-in-parallel",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "A warning about running in parallel",
+    "text": "A warning about running in parallel\nYou are able to run jitters, retrospectives, and profiles in parallel with this code.\nBUT, The built in functions do this in r4ss are not set up to run in parallel.\nIf you choose to set run_parallel = TRUE the code will use bespoke functions based upon their r4ss equivalents, written to run in parallel, which are contained within this repository:\n\nparallel_jitter.R\nparallel_profile.R\nparallel_retro.R\nparallel_SS_parlines.R (supporting function)\n\nIf you set run_parallel = FALSE the r4ss functions will be used by default",
+    "crumbs": [
+      "Day 1",
+      "Modifying Stock Synthesis files: Part 2"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#group-activity",
+    "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#group-activity",
     "title": "Open Science Workflow Training for ISC",
     "section": "Group activity!",
-    "text": "Group activity!\n\nUsing the toy Stock Synthesis model in the stock-synthesis-models/base-model directory make some modifications to the model, and run the different configurations.\n\n\n\nOptions  - Growth  - Selectivity  - Maturity  - Natural mortality  - Data-weighting\n\n\n\n\nEach group should set-up their own branch on the GitHub repo to house the code, model files, and model results for the feature that they explore.",
+    "text": "Group activity!\nUsing the Run_SS_Model.R script, run a sensitivity analysis on the base model for species “EXM”\nOptions for runs:\n\n\n\nGROWTH – increase Lamax by 10%\nGROWTH – decrease Lamax by 10%\nMORT – increase by 10%\nMORT – decrease by 10%\nMAT – increase L50 by 10%\n\n\n\nMAT – decrease L50 by 10%\nSEL – change F1 to option 24 – logistic\nSR – increase sigmaR to 0.9\nSR – decrease sigmaR to 0.3\nSteepness – change to 0.8",
     "crumbs": [
       "Day 1",
-      "Modifying Stock Synthesis files"
+      "Modifying Stock Synthesis files: Part 2"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#section",
-    "href": "assets/day-1-pres-codespaces.html#section",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#section",
+    "href": "assets/day-1-pres-reproducible_environments.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Codespaces\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "Reproducible Environments\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#what-is-codespaces",
-    "href": "assets/day-1-pres-codespaces.html#what-is-codespaces",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
+    "href": "assets/day-1-pres-reproducible_environments.html#what-is-a-reproducible-environment",
     "title": "Open Science Workflow Training for ISC",
-    "section": "What is Codespaces?",
-    "text": "What is Codespaces?\n\n\nDevelopment environment that is hosted in the cloud on GitHub.com\n\n\n\n\n\nYou control the specs of the machine!\n\n\n\n\n\nConnected to your repository",
+    "section": "What is a reproducible environment?",
+    "text": "What is a reproducible environment?\n\n\nA computing setup where all the necessary components are explicitly defined\n\nOS, package versions, software, etc.\n\n\nAnyone can replicate that exact coding environment and the results will be the same across different machines",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#why-use-it",
-    "href": "assets/day-1-pres-codespaces.html#why-use-it",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
+    "href": "assets/day-1-pres-reproducible_environments.html#signs-you-want-to-use-a-reproducible-environment",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Why use it?",
-    "text": "Why use it?\n\n\n\nContainerized environment\n\nAnyone using it is working in the same environment\n\nSame OS\n\nSame software\n\nSame package versions\n\n\n\n\n“It works on my computer!”",
+    "section": "Signs you want to use a reproducible environment",
+    "text": "Signs you want to use a reproducible environment\n\n\nCode that used to run no longer runs even though you haven’t changed the code itself\n\nIf you upgrade to a new version of a package or software and things break\n\nYou want to share your code with a colloaborator and ensure they get the same results you get\n\nYou want to run your code in some other environment besides your local computer",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#set-up",
-    "href": "assets/day-1-pres-codespaces.html#set-up",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
+    "href": "assets/day-1-pres-reproducible_environments.html#how-can-we-do-this",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Set Up",
-    "text": "Set Up\n\nTo set up a Codespace,\n\nCreate a .devcontainer folder inside your repository\n\nAdd a devcontainer.json file to that folder\n\nSet up devcontainer.json how you like (packages, software, extensions, etc.)\n\nAdd a setup.r file if needed\n\nOn main page of repository, “Code” -&gt; “Create codespace on main”",
+    "section": "How can we do this?",
+    "text": "How can we do this?\nrenv is an R package to help create reproducible environments",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/day-1-pres-codespaces.html#devcontainer-file",
-    "href": "assets/day-1-pres-codespaces.html#devcontainer-file",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#renv",
+    "href": "assets/day-1-pres-reproducible_environments.html#renv",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Devcontainer File",
-    "text": "Devcontainer File\n\ndevcontainer.json\n\n{\n    \"name\": \"Quarto Codespaces\",\n    \"image\": \"ghcr.io/mcanouil/quarto-codespaces:latest\", //pre-built image that includes quarto \n    \"remoteUser\": \"vscode\",\n    \"features\": { //options that you add in as needed\n        \"ghcr.io/rocker-org/devcontainer-features/r-apt:latest\": {},\n        \"ghcr.io/rocker-org/devcontainer-features/apt-packages:1\": {\n            \"packages\": \"libglpk-dev,libxml2-dev\" // needed for igraph\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1\": {\n            \"version\": \"1.6.37\", //specific version of quarto\n            \"installTinyTex\": \"false\", // TinyTex is already installed\n            \"installChromium\": \"false\" // needed for screen capture of htmlwidgets\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-rig:1\": {\n            \"version\": \"4.4.2\", // specific version of R\n            \"vscodeRSupport\": \"none\",\n            \"installDevTools\": \"false\",\n            \"installREnv\": \"true\", //install renv for later\n            \"installRMarkdown\": \"false\"\n        },\n        \"ghcr.io/rocker-org/devcontainer-features/r-packages:1\": {\n            \"packages\": \"languageserver,jsonlite,rlang\", //r packages, can install packages from GitHub as well\n            \"installSystemRequirements\": true\n        }\n    },\n    \"customizations\": {\n        \"vscode\": { //setting up VSCode how we like it\n            \"extensions\": [\n                \"quarto.quarto\",\n                \"REditorSupport.r\",\n                \"GitHub.codespaces\",\n                \"mathematic.vscode-pdf\",\n                \"ms-vscode.live-server\",\n                \"mechatroner.rainbow-csv\"\n            ],\n            \"settings\": {\n                \"r.rterm.option\": [\n                    \"--no-save\",\n                    \"--no-restore-data\",\n                    \"--quiet\"\n                ],\n                \"r.useRenvLibPath\": true //use renv files to build container\n            }\n        }\n    },\n    \"forwardPorts\": [3000],   \n    // Use 'postCreateCommand' to run commands after the container is created.\n    //run an R script to call renv and restore the packages needed into the container\n    \"postCreateCommand\": \"Rscript .devcontainer/setup.r\"\n}",
+    "section": "renv",
+    "text": "renv\n\n\nIsloated - each project has it’s own library\n\nPortable - easy to install on different computers (even OS)\n\nReproducible - ensures you are using the exact package versions",
     "crumbs": [
       "Day 1",
-      "Codespaces"
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "assets/web-about-ms.html",
-    "href": "assets/web-about-ms.html",
-    "title": "Michelle Sculley",
-    "section": "",
-    "text": "Michelle Sculley has a PhD in Marine Biology and Fisheries from the Rosensteil School of Marine and Atmospheric Sciences, University of Miami and a MS in Biological Oceanography from Texas A&M University. She joined the Pacific Islands Fisheries Science Center in 2017 as a research fish biologist focusing on pelagic highly migratory species stock assessments. She is the lead modeler for the ISC Billfish Working Group and collaborates with scientists from Japan, Taiwan, Korea, Mexico, IATTC, WCPFC, and SPC. She has experience in stock assessment models, spatio-temporal modeling, Bayesian modeling, tagging studies, simulation work, tunas, billfish, and marine mammals. She is interested in exploring how climate change may impact pelagic fish population dynamics.\n\n\n Back to top",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
+    "href": "assets/day-1-pres-reproducible_environments.html#renv-workflow",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "renv Workflow",
+    "text": "renv Workflow\n\n\n\n\n\n\n\n\n\n\n\nrenv::init()\n\n\n\n\n\n\n\nrenv::snapshot()\n\n\n\n\n\n\n\nrenv::restore()\n\n\n\n\n\n\n\nrenv::install()\n\n\n\n\n\n\n\nNew project\n\n\n\n\n\n\n\nProject library\n\n\n\n\n\n\n\nLockfile\n\n\n\n\n\n\n\nCRAN/GitHub",
     "crumbs": [
-      "Contact us",
-      "Michelle Sculley"
+      "Day 1",
+      "Reproducible environments"
     ]
   },
   {
-    "objectID": "r-code/Group_info_template.html",
-    "href": "r-code/Group_info_template.html",
-    "title": "Group",
-    "section": "",
-    "text": "(add list of members and their affiliations)\n\n\n\n(insert figure here)\n\n\n\n(insert a code chunk here)\n\n\n\n(insert task list (with check boxes) of at least 3 things)"
+    "objectID": "assets/day-1-pres-reproducible_environments.html#initalize-project",
+    "href": "assets/day-1-pres-reproducible_environments.html#initalize-project",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Initalize project",
+    "text": "Initalize project\n\n\n\nWhen you first start a project, you will want to initialize an renv project\n\n\n\n\n renv::init()\n\n\n\n\n\nCreates 3 items:\n\n\n\n\n renv/library/\n\n\n renv.lock\n\n\n .Rprofile\n\n\nrenv library is a library that is specific for that project and has the specific version of the packages that are being used in the project.\nlockfile holds the metadata for each package that specifies which version to install when run on a new computer.\nrprofile what tells the R session to use the renv files for the project library",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
   },
   {
-    "objectID": "r-code/Group_info_template.html#members",
-    "href": "r-code/Group_info_template.html#members",
-    "title": "Group",
-    "section": "",
-    "text": "(add list of members and their affiliations)"
+    "objectID": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
+    "href": "assets/day-1-pres-reproducible_environments.html#installing-new-packages",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Installing new packages",
+    "text": "Installing new packages\n\n\n renv::install() - can specify the location and version you want\n\n\n\n\n As you install new packages you will need to update the lockfile",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
   },
   {
-    "objectID": "r-code/Group_info_template.html#species-of-interest",
-    "href": "r-code/Group_info_template.html#species-of-interest",
-    "title": "Group",
-    "section": "",
-    "text": "(insert figure here)"
+    "objectID": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
+    "href": "assets/day-1-pres-reproducible_environments.html#using-the-lockfile-for-collaboration",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Using the lockfile for collaboration",
+    "text": "Using the lockfile for collaboration\n\n\n renv::snapshot() - updates lockfile with metadata about all currently-used packages\n\n\n\n\n renv::restore() - reproduces the environment specified in the lockfile\n\n\n\nThe lockfile is what has all the information about the packages you’re using. It can be shared between people/computers and recreate the same environment you are using.",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
   },
   {
-    "objectID": "r-code/Group_info_template.html#most-used-function",
-    "href": "r-code/Group_info_template.html#most-used-function",
-    "title": "Group",
-    "section": "",
-    "text": "(insert a code chunk here)"
+    "objectID": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
+    "href": "assets/day-1-pres-reproducible_environments.html#another-use-for-renv",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Another use for renv",
+    "text": "Another use for renv\n\n\nCan use a lockfile for GitHub Actions (or other continuous integration systems)\n\n\n\n\n\nUse the r-lib setup-renv action in your workflow\n\n\n\n\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n    - name: Install packages using renv\n      uses: r-lib/actions/setup-renv@v2",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
   },
   {
-    "objectID": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
-    "href": "r-code/Group_info_template.html#three-things-we-want-to-learn-from-this-workshop",
+    "objectID": "assets/day-1-pres-reproducible_environments.html#resources",
+    "href": "assets/day-1-pres-reproducible_environments.html#resources",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Resources",
+    "text": "Resources\n\nIntroduction to renv\n\nUsing renv in GitHub Actions",
+    "crumbs": [
+      "Day 1",
+      "Reproducible environments"
+    ]
+  },
+  {
+    "objectID": "assets/day-2.html",
+    "href": "assets/day-2.html",
+    "title": "Day 2",
+    "section": "",
+    "text": "Presentation slides for pull requests and code review.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for building a Shiny app for our Stock Synthesis model runs.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
+    "crumbs": [
+      "Day 2"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This repository contains materials for the ISC Open Science Workflows workshops held in Honolulu, HI and Yokohama, Japan in January 2025.\nView slides in full screen",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-schedule",
+    "href": "index.html#workshop-schedule",
+    "title": "Home",
+    "section": "Workshop Schedule",
+    "text": "Workshop Schedule\nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:00\nModifying Stock Synthesis Files\n\n\n9:00-10:00\nGroup work\n\n\n10:00-10:15\nBreak\n\n\n10:15-11:00\nPull Requests and Code Review\n\n\n11:0-11:30\nShiny App\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nReview group work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nQuarto Reports and Presentations\n\n\n10:30-11:00\nQuarto Website\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:30\nReview group work\n\n\n9:30-12:00\nDiscussion, wrap up",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "r-code/Group_info_juicethemodeller.html",
+    "href": "r-code/Group_info_juicethemodeller.html",
     "title": "Group",
     "section": "",
-    "text": "(insert task list (with check boxes) of at least 3 things)"
+    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan\n\n\n\n\n\n\n\nBluefin Tuna\n\n\n\n\n\n### Example function: Calculate mean size\ncalculate_mean_size &lt;- function(lengths) {\n  mean(lengths, na.rm = TRUE)\n}\n### Usage\nfish_lengths &lt;- c(30, 40, 35, 50, NA)\nmean_size &lt;- calculate_mean_size(fish_lengths)\nprint(mean_size)\n\n\n\n\nRun Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
+  },
+  {
+    "objectID": "r-code/Group_info_juicethemodeller.html#members",
+    "href": "r-code/Group_info_juicethemodeller.html#members",
+    "title": "Group",
+    "section": "",
+    "text": "Marko Jusup: Fisheries Research Agency, Japan\n\nJane Smith: Fisheries Ecology Lab, University of California, USA\n\nHiroshi Tanaka: Ocean Research Center, Japan"
+  },
+  {
+    "objectID": "r-code/Group_info_juicethemodeller.html#species-of-interest",
+    "href": "r-code/Group_info_juicethemodeller.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "Bluefin Tuna"
+  },
+  {
+    "objectID": "r-code/Group_info_juicethemodeller.html#most-used-function",
+    "href": "r-code/Group_info_juicethemodeller.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "### Example function: Calculate mean size\ncalculate_mean_size &lt;- function(lengths) {\n  mean(lengths, na.rm = TRUE)\n}\n### Usage\nfish_lengths &lt;- c(30, 40, 35, 50, NA)\nmean_size &lt;- calculate_mean_size(fish_lengths)\nprint(mean_size)"
+  },
+  {
+    "objectID": "r-code/Group_info_juicethemodeller.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Group_info_juicethemodeller.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "Run Stock Synthesis on a remote machine\n\nImprove parameter estimation for growth models\n\nDevelop tools for visualizing spatial fishery data"
   }
 ]
