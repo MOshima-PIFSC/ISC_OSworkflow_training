@@ -415,7 +415,7 @@ if (any(!is.na(model.info$fleetinfo.special))) {
    
    if(runmodels){
   #   ### Run Stock Synthesis ####
-     file.copy(file.path(root_dir,"bin", paste0(exe)), 
+     file.copy(file.path(root_dir,"bin", paste0(exe,".exe")), 
                model_dir)
      r4ss::run(dir = model_dir, 
                    exe = exe, extras = ext_args,  skipfinished = FALSE, show_in_console = TRUE)

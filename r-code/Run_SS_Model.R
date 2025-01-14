@@ -17,7 +17,7 @@ library(stringr)
 library(this.path)
 ## base working directory where all files are stored
 
-base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
+base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training"
 base.dir <- getwd()
 
 fleetnames<-c("FISHERY",
@@ -113,7 +113,7 @@ Build_All_SS(model.info=model.info,
              r4ssplots = FALSE,
              readGoogle = FALSE,
              run_parallel=FALSE,
-             exe="ss3_linux",
+             exe="ss3_win",
              r_code = "r-code", ## folder where your R scripts are stored
              run_folder = "stock-synthesis-models" ## folder you want your run models to be stored (default is SS3 runs)
 )
