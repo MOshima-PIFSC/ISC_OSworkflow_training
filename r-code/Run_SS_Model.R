@@ -17,8 +17,8 @@ library(stringr)
 library(this.path)
 ## base working directory where all files are stored
 
-base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
-
+base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training"
+base.dir <- getwd()
 
 fleetnames<-c("FISHERY",
               "SURVEY1",
@@ -74,7 +74,7 @@ Build_All_SS(model.info=model.info,
              species_folder=FALSE,
              M_option = "Base",
              GROWTH_option = "Base",
-             LW_option = "Base",
+             LW_option = "Fat_Fish",
              MAT_option = "Base",
              SR_option = "Base",
              EST_option = "Base",
@@ -97,10 +97,10 @@ Build_All_SS(model.info=model.info,
              Fcast_years = c(0,0,0,0,0,0),
              Fixed_forecatch=1,
              ControlRule = 0,
-             write_files = FALSE,
-             runmodels = FALSE,
+             write_files = TRUE,
+             runmodels = TRUE,
              ext_args = "",  ## -nohess to run without hessian
-             do_retro = TRUE,
+             do_retro = FALSE,
              retro_years = 0:-5,
              do_profile = FALSE,
              profile_name = "SR_LN(R0)",
