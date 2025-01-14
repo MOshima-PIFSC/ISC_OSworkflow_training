@@ -17,20 +17,18 @@ library(stringr)
 library(this.path)
 ## base working directory where all files are stored
 
-base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
-
-
+#base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
+#base.dir<-"C:/work/ISC_OSworkflow_training-Huihua_Lee_test"
+base.dir <- getwd()
+base.dir <- "/workspaces/ISC_OSworkflow_training-Huihua_Lee_test"
 fleetnames<-c("FISHERY",
               "SURVEY1",
               "SURVEY2")
 
-
-
-
 model.info<-list(
   "Species"="EXM",
   "base.dir"=base.dir,
-  "scenario"="base",
+  "scenario"="base-model",
   "startyear"=1971,
   "endyear"=2001,
   "nyr"=5,  ## indicates how many years you want to average the dynamic B0 over if applicable
@@ -101,7 +99,7 @@ Build_All_SS(model.info=model.info,
              runmodels = FALSE,
              ext_args = "",  ## -nohess to run without hessian
              do_retro = TRUE,
-             retro_years = 0:-5,
+             retro_years = FALSE,
              do_profile = FALSE,
              profile_name = "SR_LN(R0)",
              profile.vec = c(4, 0.1),  #[1] the number of models to run; [2] the increment you want to chang the parameter
@@ -113,7 +111,7 @@ Build_All_SS(model.info=model.info,
              r4ssplots = FALSE,
              readGoogle = FALSE,
              run_parallel=FALSE,
-             exe="ss3_win",
+             exe="ss3_linux",
              r_code = "r-code", ## folder where your R scripts are stored
              run_folder = "stock-synthesis-models" ## folder you want your run models to be stored (default is SS3 runs)
 )

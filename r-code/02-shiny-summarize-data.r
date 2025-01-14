@@ -41,7 +41,8 @@ library(r4ss)
                        setnames(.,c("SSB","Recruitment"),c("ssb","rec_actual"))
   }
   expected_srr_dt = rbindlist(expected_srr_dt.list)
-  fwrite(expected_srr_dt,file=paste0(proj_dir,"shiny/shiny-data/expected_srr.csv"))
+  dir.create(paste0(proj_dir,"/shiny/shiny-data"),recursive=TRUE)
+  fwrite(expected_srr_dt,file=paste0(proj_dir,"/shiny/shiny-data/expected_srr.csv"))
 
   # annual estimated recruitments and corresponding spawning biomass
   est_recruit_dt.list = as.list(rep(NA,length(all_dirs)))
@@ -53,9 +54,9 @@ library(r4ss)
                        setnames(.,c("Yr","SpawnBio","pred_recr"),c("yr","ssb","rec_estimated"))
   }
   est_recruit_dt = rbindlist(est_recruit_dt.list)
-  fwrite(est_recruit_dt,file=paste0(proj_dir,"shiny/shiny-data/est_recruit.csv"))
+  fwrite(est_recruit_dt,file=paste0(proj_dir,"/shiny/shiny-data/est_recruit.csv"))
   
 #_____________________________________________________________________________________________________________________________
 # make summary files to run the shiny app from
   summary_dt = data.table(model_name=names(output),steepness=model_steepness)
-  fwrite(summary_dt,file=paste0(proj_dir,"shiny/shiny-data/summary.csv"))
+  fwrite(summary_dt,file=paste0(proj_dir,"/shiny/shiny-data/summary.csv"))

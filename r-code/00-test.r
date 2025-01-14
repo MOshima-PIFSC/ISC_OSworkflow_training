@@ -34,7 +34,7 @@
 
     
 # run the model
-    run(dir=tmp_dir,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)
+    r4ss::run(dir=tmp_dir,exe=ss3_exec,show_in_console=TRUE,skipfinished=FALSE)
 
 #_____________________________________________________________________________________________________________________________
 # analyze in a for loop
