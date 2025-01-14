@@ -17,10 +17,9 @@ library(stringr)
 library(this.path)
 ## base working directory where all files are stored
 
-#base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
-#base.dir<-"C:/work/ISC_OSworkflow_training-Huihua_Lee_test"
+base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training"
 base.dir <- getwd()
-base.dir <- "/workspaces/ISC_OSworkflow_training-Huihua_Lee_test"
+
 fleetnames<-c("FISHERY",
               "SURVEY1",
               "SURVEY2")
@@ -28,7 +27,7 @@ fleetnames<-c("FISHERY",
 model.info<-list(
   "Species"="EXM",
   "base.dir"=base.dir,
-  "scenario"="base-model",
+  "scenario"="AltSel_F1",
   "startyear"=1971,
   "endyear"=2001,
   "nyr"=5,  ## indicates how many years you want to average the dynamic B0 over if applicable
@@ -72,7 +71,7 @@ Build_All_SS(model.info=model.info,
              species_folder=FALSE,
              M_option = "Base",
              GROWTH_option = "Base",
-             LW_option = "Base",
+             LW_option = "Fat_Fish",
              MAT_option = "Base",
              SR_option = "Base",
              EST_option = "Base",
@@ -95,11 +94,11 @@ Build_All_SS(model.info=model.info,
              Fcast_years = c(0,0,0,0,0,0),
              Fixed_forecatch=1,
              ControlRule = 0,
-             write_files = FALSE,
-             runmodels = FALSE,
+             write_files = TRUE,
+             runmodels = TRUE,
              ext_args = "",  ## -nohess to run without hessian
-             do_retro = TRUE,
-             retro_years = FALSE,
+             do_retro = FALSE,
+             retro_years = 0:-5,
              do_profile = FALSE,
              profile_name = "SR_LN(R0)",
              profile.vec = c(4, 0.1),  #[1] the number of models to run; [2] the increment you want to chang the parameter
