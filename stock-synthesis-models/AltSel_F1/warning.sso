@@ -1,0 +1,7 @@
+Warning 1 : bias adjustment ramp extends into forecast; biasadj set to 0.0 internally for forecast years
+Warning 2 Adjustment:  recdev_end: 2021 > retro_yr: 2001 reset 
+Warning 3 : Main recdev biasadj is >2 times ratio of rmse to sigmaR
+Warning 4 : Early recdev biasadj is >2 times ratio of rmse to sigmaR
+Note 1 Information: A revised protocol for the Fcast_yr specification is available and recommended.
+Note 2 Information:  N parameters that are on or within 1% of min-max bound: 1; check results, variance may be suspect
+ 4 warnings  and 2 notes 
