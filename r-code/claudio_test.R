@@ -30,7 +30,7 @@
     SS_writectl(tmp_ctl,outfile=paste0(tmp_dir,"control.ss"),overwrite=TRUE)
 
 # copy over executable
-    dir_exec = paste0(proj_dir,"/executables/stock-synthesis/3.30.23.1/")
+    dir_exec = paste0(proj_dir,"/executables/stock-synthesis/3.30.22.1/")
     ss3_exec = "ss3_linux"
     file.copy(from=paste0(dir_exec,ss3_exec),to=tmp_dir)
     file.copy(from=paste0(dir_base_stock_synthesis,c("starter.ss","data.ss","forecast.ss")),to=paste0(tmp_dir,c("starter.ss","data.ss","forecast.ss")))
