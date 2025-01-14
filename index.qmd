@@ -40,16 +40,15 @@ The schedule for the 4-day workshop is: (note this is flexible and will be updat
 
 |Time    |Module  |
 |--------|--------|
-|8:30-9:45|Review group work|
-|9:45-10:00|Break| 
-|10:00-10:30|Quarto Reports and Presentations|  
-|10:30-11:00|Quarto Website|    
-|11:00-12:00|Group work, wrap up|  
+|8:30-10:00|Shiny group coding|
+|10:00-10:15|Break| 
+|10:15-10:45|Quarto Reports and Presentations|      
+|10:45-12:00|Group work, wrap up|  
 
 
 ### Day 4  
 
 |Time    |Module  |
 |--------|--------|
-|8:30-9:30|Review group work|  
-|9:30-12:00|Discussion, wrap up|  
+|8:30-10:00|Quarto Website|  
+|10:00-12:00|Discussion, wrap up|  
