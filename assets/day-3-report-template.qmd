@@ -25,11 +25,13 @@ new_steep <- report$parameters %>%
              pull(Value)
 ```
 
-# Model modification description  
-I changed the `r params$parameter` to `r new_steep`. 
+# Model modification description
 
-# Plot of SSB  
-Here is a plot showing the timeseries of SSB for the modified model.  
+I changed the `r params$parameter` to `r new_steep`.
+
+# Plot of SSB
+
+Here is a plot showing the timeseries of SSB for the modified model.
 
 ```{r}
 #| code-fold: true
