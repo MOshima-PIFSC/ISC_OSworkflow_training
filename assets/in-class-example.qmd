@@ -1,4 +1,6 @@
 ---
+bibliography: references.bib
+csl: fisheries-research.csl
 format:
   pdf:
     toc: true
@@ -8,7 +10,10 @@ format:
       - doc-class.tex
       - before-title.tex
       - before-body.tex
+    
 ---
+
+{{< pagebreak >}}
 
 # Abstract
 
@@ -16,7 +21,7 @@ Here is our awesome document. We will add a figure.
 
 # Introduction
 
-The figure will be added in the results section.
+The figure will be added in the results section (@isc_stock_2017). 
 
 # Results
 
@@ -80,3 +85,10 @@ input = list(srr_show_est = "TRUE",srr_est_type = "Both")
 ```
 
 The figure will go here (@fig-srr).
+
+{{< pagebreak> }}
+
+# References  
+
+::: {#refs}
+:::
