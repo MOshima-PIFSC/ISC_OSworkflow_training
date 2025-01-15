@@ -536,3 +536,11 @@ format:
 - `revealjs` slidecraft: check out these [examples by Emil Hvitfeldt](https://emilhvitfeldt.com/project/slidecraft-101/){preview-link="true"}
 - [Quarto guide](https://quarto.org/docs/guide/){preview-link="true"}
 - [Get started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/){preview-link="true"}
+
+</br>
+
+[How to render?]{.blue}
+
+</br>
+
+`quarto render <filename>`
