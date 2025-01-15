@@ -8,7 +8,7 @@
 
 ## Species of interest  
 
-![Bluefin Tuna](https://en.wikipedia.org/wiki/File:Thunnus_orientalis_(Osaka_Kaiyukan_Aquarium).jpg)  
+![Bluefin Tuna](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Thunnus_orientalis_%28Osaka_Kaiyukan_Aquarium%29.jpg/900px-Thunnus_orientalis_%28Osaka_Kaiyukan_Aquarium%29.jpg)  
 
 ## Most used function  
 
