@@ -31,9 +31,10 @@
                 "quarto.quarto",
                 "REditorSupport.r",
                 "GitHub.codespaces",
-                "mathematic.vscode-pdf",
                 "ms-vscode.live-server",
-                "mechatroner.rainbow-csv"
+                "mechatroner.rainbow-csv",
+                "adamraichu.pdf-viewer",
+                "george-alisson.html-preview-vscode"
             ],
             "settings": {
                 "r.rterm.option": [
