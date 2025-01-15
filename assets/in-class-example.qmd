@@ -5,9 +5,9 @@ format:
     number-sections: true
     colorlinks: true
     template-partials:
-      - assets/doc-class.tex
-      - assets/before-title.tex
-      - assets/before-body.tex
+      - doc-class.tex
+      - before-title.tex
+      - before-body.tex
 ---
 
 # Abstract
