@@ -43,9 +43,9 @@ ui = shinydashboard::dashboardPage(
       selected = "Path")
     ),
     conditionalPanel(condition="input.sidebarmenu == 'natM_plots'",
-      # natM-dropdown
+      # natM_dropdown
       pickerInput(
-        inputId = "natM-dropdown", 
+        inputId = "natM_dropdown", 
         label = "Select a model:", 
         choices = summary_dt$model_name, 
         options = list(
