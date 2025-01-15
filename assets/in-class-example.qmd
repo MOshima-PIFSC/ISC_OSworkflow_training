@@ -1,0 +1,21 @@
+---
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    template-partials:
+      - assets/doc-class.tex
+      - assets/before-title.tex
+      - assets/before-body.tex
+---
+
+# Abstract
+
+Here is our awesome document. We will add a figure.
+
+# Introduction
+
+The figure will be added in the results section.
+
+# Results
