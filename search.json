@@ -77,14 +77,22 @@
     "text": "Shiny app to compare Stock Synthesis model runs.\nAvailable panels: - [x] Summary table - [x] Stock-recruit relationship (SRR) - [ ] other options yet to be developed…\n\n\n\n Back to top"
   },
   {
-    "objectID": "assets/day-2.html",
-    "href": "assets/day-2.html",
-    "title": "Day 2",
+    "objectID": "assets/day-3-report-template.html",
+    "href": "assets/day-3-report-template.html",
+    "title": "Report template",
     "section": "",
-    "text": "Presentation slides for pull requests and code review.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for building a Shiny app for our Stock Synthesis model runs.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
+    "text": "library(r4ss)\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(magrittr)\nlibrary(ggplot2)\n\nmain_dir &lt;- this.path::this.proj()\n\nreport &lt;- SS_output(dir = file.path(main_dir, \"stock-synthesis-models\", params$model_dir), verbose=FALSE, printstats=FALSE)\nnew_steep &lt;- report$parameters %&gt;% \n             filter(str_detect(Label, \"SR_BH_steep\")) %&gt;% ## Need to change this to match the parameter name in control file\n             pull(Value)\n\n\nModel modification description\nI changed the steepness to 0.7.\n\n\nPlot of SSB\nHere is a plot showing the timeseries of SSB for the modified model.\n\n\nCode\nssb_summary &lt;- report$timeseries %&gt;% \n               select(Yr, SpawnBio) %&gt;%\n               mutate(model_name = params$model_dir)\n\nssb_summary %&gt;%\n    ggplot() +\n    geom_line(aes(x = Yr, y = SpawnBio)) + \n    xlab(\"Year\") + \n    ylab(\"Spawning Biomass\") +\n    theme(panel.background = element_rect(fill = \"white\", color = \"black\", linetype = \"solid\"),\n                panel.grid.major = element_line(color = 'gray70',linetype = \"dotted\"), \n                panel.grid.minor = element_line(color = 'gray70',linetype = \"dotted\"),\n                strip.background =element_rect(fill=\"white\"),\n                legend.key = element_rect(fill = \"white\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Day 2"
+      "Group projects",
+      "Report template"
     ]
+  },
+  {
+    "objectID": "assets/header-example.html",
+    "href": "assets/header-example.html",
+    "title": "Report template",
+    "section": "",
+    "text": "Report text\nAs an example we changed the steepness in the model to 0.7.\n\n\n\n\n Back to top"
   },
   {
     "objectID": "assets/day-1-pres-reproducible_environments.html#section",
@@ -208,6 +216,44 @@
     ]
   },
   {
+    "objectID": "assets/day-3.html",
+    "href": "assets/day-3.html",
+    "title": "Day 2",
+    "section": "",
+    "text": "Presentation slides for Quarto: Reports and presentations.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
+    "crumbs": [
+      "Day 3"
+    ]
+  },
+  {
+    "objectID": "assets/example-basic-html.html",
+    "href": "assets/example-basic-html.html",
+    "title": "Basic document",
+    "section": "",
+    "text": "Make different documents by changing the format!"
+  },
+  {
+    "objectID": "assets/example-basic-html.html#quarto",
+    "href": "assets/example-basic-html.html#quarto",
+    "title": "Basic document",
+    "section": "",
+    "text": "Make different documents by changing the format!"
+  },
+  {
+    "objectID": "assets/example-basic-html.html#code",
+    "href": "assets/example-basic-html.html#code",
+    "title": "Basic document",
+    "section": "Code",
+    "text": "Code\nIncorporate code into your work …\n\nx = 1 + 1\n\n… and report the computations later \\(x =\\) 2."
+  },
+  {
+    "objectID": "assets/example-basic-html.html#make-plots",
+    "href": "assets/example-basic-html.html#make-plots",
+    "title": "Basic document",
+    "section": "Make plots",
+    "text": "Make plots\nEven insert figures:\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: City and highway mileage for 38 popular models of cars."
+  },
+  {
     "objectID": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
     "href": "assets/day-1-pres-modify-stock-synthesis_BILLWG.html#section",
     "title": "Open Science Workflow Training for ISC",
@@ -329,245 +375,177 @@
     ]
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#section",
-    "href": "assets/day-1-pres-github_basics.html#section",
+    "objectID": "assets/day-1-welcome.html#section",
+    "href": "assets/day-1-welcome.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "GitHub for Collaborative Workflows\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "text": "Welcome to ISC BILLWG Open Science Workshop\nJanuary 2025"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#version-control",
-    "href": "assets/day-1-pres-github_basics.html#version-control",
+    "objectID": "assets/day-1-welcome.html#introductions",
+    "href": "assets/day-1-welcome.html#introductions",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Version Control",
-    "text": "Version Control\n The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\nAll of us are probably familiar with some sort of version control, think of like Google Docs or track changes for a word document. It’s basically a history of all of the changes that have been made to the document you’re working on. With software like Google Docs that happens passively for you, it will automatically create backups every few minutes so you don’t have to think about saving a file. Today we’re going to be using software that we can apply the same idea but on a much larger and more controlled way. We are going to see how we can use those softwares to back up our work, share our work, and provide a clear, documented map of the developement of a project. So hopefully by the end of the next few days you will feel comfortable using GitHub for projects to make them more organized, transparent and colllaborative.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Introductions",
+    "text": "Introductions\n Nicholas  Ducharme-Barth\n Meg Oshima\n Michelle Sculley"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#git-and-github",
-    "href": "assets/day-1-pres-github_basics.html#git-and-github",
+    "objectID": "assets/day-1-welcome.html#workshop-materials",
+    "href": "assets/day-1-welcome.html#workshop-materials",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\n\n\n\n\n\n installed on local computer\n\n\n\n tracks changes to files\n\n\n\n separate versions\n\n\n\n\n\n\n\n\n central, remote storage of files\n\n\n\n everyone can contribute changes\n\n\n\n changes can be combined and shared\n\n\n\n\n\n\n\nWe can leverage the interplay between both to help us share code and collaborate with others!\n\n\n\nGit is the version control software that is installed on your computer. It tracks changes you make to files within a project. It has features that allow you to work collaboratively with others without overwriting each other’s work, and then combine everything when each part is ready.\nGitHub is an online platform to host the tracked files and share your code with others. Within GitHub, you can create repositories that acts as a centralized “remote” storage of files associated with a project. This allows anyone that has access to the repository to download the files onto their local computer, make changes to the code, and then share those changes with everyone else working on the project.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\n\nAll presentations can be found on the workshop website.\nCode can be found in the workshop repository.\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you have created a GitHub account before we start."
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
-    "href": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "objectID": "assets/day-1-welcome.html#why-open-science",
+    "href": "assets/day-1-welcome.html#why-open-science",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Basic Git/Github Workflow",
-    "text": "Basic Git/Github Workflow\n\n\n\n\n\n\n\n\nCommit changesSync remoteand local repositoriesRemote repository onGitHubLocal repositoryCreate new files andmake changes locally",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Why Open Science?",
+    "text": "Why Open Science?\n\n\nStandardized workflows and efficiency\n\n\n\n\n\nImprove and support collaboration\n\n\n\n\n\nEnsure our science is truly reproducible\n\n\n\n\n\nProvide tools for sharing and communicating our work"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
-    "href": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "objectID": "assets/day-1-welcome.html#topics-we-will-cover",
+    "href": "assets/day-1-welcome.html#topics-we-will-cover",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Remote repository on Github",
-    "text": "Remote repository on Github\n\n\n\nWhere all of your code and related files lives online\n\n\n\n\n\n\n\nCentral location where everyone is sharing their changes\n\n\n\n\n\nConnect the remote repository to the files on your local computer\n\n\n\ngit clone\n\n\n\n\ngit init",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "section": "Topics we will cover",
+    "text": "Topics we will cover\n\n\nGitHub for collaboration\n\n\n\n\nCodespaces and reproducible environments\n\n\n\n\nScript-based model development\n\n\n\n\nCreating Shiny apps\n\n\n\n\nCode review with GitHub\n\n\n\n\nCreating reproducible reports and presentations\n\n\n\n\nCreating websites to share results"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#local-repository",
-    "href": "assets/day-1-pres-github_basics.html#local-repository",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Local repository",
-    "text": "Local repository\n\n\n\nFiles kept on your local computer\n\n\n\n\n\n\n\nIncludes branches from the remote repository\n\nallows for different versions of the same file\n\n\n\n\n\n\nDifferent from local working directory",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
+    "objectID": "assets/day-1-modify-stock-synthesis.html",
+    "href": "assets/day-1-modify-stock-synthesis.html",
+    "title": "Modifying and running stock synthesis models",
+    "section": "",
+    "text": "Back to top"
   },
   {
-    "objectID": "assets/day-1-pres-github_basics.html#making-changes-locally",
-    "href": "assets/day-1-pres-github_basics.html#making-changes-locally",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Making changes locally",
-    "text": "Making changes locally\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave\n\n\n\n\n\n\n\nStage\n\n\n\n\n\n\n\nCommit\n\n\n\n\n\n\n\nPush",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#commits",
-    "href": "assets/day-1-pres-github_basics.html#commits",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Commits",
-    "text": "Commits\n\n\n\ngroups of small, meaningful changes\n\n\n\n\n\n\nsnapshots of your repository at that time\n\n\n\n\n\ntell a story of the history of your repository",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#commits-1",
-    "href": "assets/day-1-pres-github_basics.html#commits-1",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Commits",
-    "text": "Commits\nMake a commit in 2 stages:\n\n\nsave your changes locally and then stage the files you want to commit\ngit add &lt;FILENAME&gt;\n\n\n\n\n\ncommit your changes\ngit commit -m \"descriptive commit message\"",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#push",
-    "href": "assets/day-1-pres-github_basics.html#push",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Push",
-    "text": "Push\nTo sync the changes you’ve made locally with the remote repository, you need to “PUSH” your commits\ngit push",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#pull",
-    "href": "assets/day-1-pres-github_basics.html#pull",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull",
-    "text": "Pull\nTo sync any changes that were made to the remote repository onto your local computer you need to “PULL” commits\n\n2 ways:\n1. git pull\n\n\n\ngit fetch, then eventually git merge\n\n\n\ngit pull copies the changes from a remote directory directly into your working directory. the benefit of this is your local repo and local files are synced up with what is online. con is that you can’t do this if you are actively editing untracked files that conflict with what is on the remote server. git fetch only copies changes into your local git repo. You will later need to merge them into your working directory. the benefit is that you can continue editing files in your local working directory without having to merge your code with updates from the remote. Once you finished editing the files you are working on you can commit your changes and then use git merge to sync everything.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#branches",
-    "href": "assets/day-1-pres-github_basics.html#branches",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Branches",
-    "text": "Branches\n\n\n\nThe default for all repositories is main\n\n\n\n\n\n\n\nmainAdd initial filesCode for model developmentFinalize modelCreate Shiny appAdd reportFinish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report\n\n\n\n\n\n\n\n\n\nA really useful feature of github is branches. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained section of the project. You can make changes that don’t affect the main branch and once you are ready to add them to the main project you can merge them in.\nIf you are working on a project by yourself, your commit history might look something like this. Since it’s only you working on the code and you don’t need to worry about doing something that can break code someone else might be using, then all of your changes you could just commit to the main branch.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#pull-requests",
-    "href": "assets/day-1-pres-github_basics.html#pull-requests",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\nOnce you have finished development on your branch and want to add your changes to the main branch, you can submit a pull request",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#activity-1",
-    "href": "assets/day-1-pres-github_basics.html#activity-1",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Activity 1",
-    "text": "Activity 1\n\nFollowing the template provided here, create a new Markdown document with:\n\n\nA list of everyone in your group, including:\n\ntheir affiliation\ntheir GitHub name\n\na picture of a species you work on\na code chunk with your most used function\na task list of three things you would like to learn from the workshop\n\n\nSave the file with a new name.\nCommit your file, and push to the repository.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-pres-github_basics.html#activity-2-branches",
-    "href": "assets/day-1-pres-github_basics.html#activity-2-branches",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Activity 2: Branches",
-    "text": "Activity 2: Branches\n\nCreate a new branch from the main branch\nAdd your name to the list of participants.\nSave your change, commit, and push to your branch.\nSubmit a Pull Request to merge your changes into main branch.",
-    "crumbs": [
-      "Day 1",
-      "Github for Collaborative Workflows"
-    ]
-  },
-  {
-    "objectID": "assets/day-2-pres-PR-code-review.html#section",
-    "href": "assets/day-2-pres-PR-code-review.html#section",
+    "objectID": "assets/day-3-pres-quarto.html#section",
+    "href": "assets/day-3-pres-quarto.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Pull Requests and Code Review\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "Quarto: Reports and presentations\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#section-1",
-    "href": "assets/day-2-pres-PR-code-review.html#section-1",
+    "objectID": "assets/day-3-pres-quarto.html#what-is-quarto",
+    "href": "assets/day-3-pres-quarto.html#what-is-quarto",
     "title": "Open Science Workflow Training for ISC",
-    "section": "",
-    "text": "So far we have:\n\n\n\nCreated branches for each group to work separately\n\n\n\n\n\n\n\nEach group has modified the Stock Synthesis models\n\n\n\n\n\n\nNext we want to:\n\n\n\nAggregate all of the model runs into the main branch\n\n\n\n\n\nProduce some visualizations of the results",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\n\n“An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more.”\n\n— In their own words…\n\n\n\nBut really it is fancy LaTeX or expanded R Markdown that can do so much more!",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests",
+    "objectID": "assets/day-3-pres-quarto.html#what-can-it-do",
+    "href": "assets/day-3-pres-quarto.html#what-can-it-do",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report",
+    "section": "What can it do?",
+    "text": "What can it do?\n\n\n\nIncorporate executable code blocks,\nwrite in math notation: \\(\\hat{y} = \\text{exp}(\\mu - \\frac{\\sigma^2}{2})\\),\ninsert figures,\nand output to multiple formats!",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
+    "objectID": "assets/day-3-pres-quarto.html#format-html",
+    "href": "assets/day-3-pres-quarto.html#format-html",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\nIn the repository go to “Pull requests” and select which branches you want to merge",
+    "section": "Format: html",
+    "text": "Format: html\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: html\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
-    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
+    "objectID": "assets/day-3-pres-quarto.html#format-pdf",
+    "href": "assets/day-3-pres-quarto.html#format-pdf",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Pull Requests",
-    "text": "Pull Requests\n\n\n\n\n\n\n\n\n\n\n\nCan see the dif view of changes in the file, if the code passes checks and tests set up, what commits are associated with this PR, add comments to the PR\n\n\n\n\n\n\n\n\n\n\n\n\n\nRed lines show deleted code\nGreen lines show added code\n\n\n\n\n\n\n\n\n\n\nCan add a review of the changes",
+    "section": "Format: pdf",
+    "text": "Format: pdf\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: pdf\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n\n   \n    Unable to display PDF file. Download instead.",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
-    "href": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
+    "objectID": "assets/day-3-pres-quarto.html#format-revealjs",
+    "href": "assets/day-3-pres-quarto.html#format-revealjs",
     "title": "Open Science Workflow Training for ISC",
-    "section": "More complicated situation: Merge Conflicts",
-    "text": "More complicated situation: Merge Conflicts\nMerge conflicts happen when you merge 2 branches that have competing commits",
+    "section": "Format: revealjs",
+    "text": "Format: revealjs\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
-    "href": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
+    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header",
+    "href": "assets/day-3-pres-quarto.html#quarto-basics-header",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Merge Conflicts",
-    "text": "Merge Conflicts\n\n\n2 ways to resolve them\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nLocally",
+    "section": "Quarto basics: Header",
+    "text": "Quarto basics: Header\n\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\nUse the header to set options for the document, including the format.",
     "crumbs": [
-      "Day 2",
-      "Pull requests & code review"
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
+    "href": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Quarto basics: Header",
+    "text": "Quarto basics: Header\nThe header can also be used to define re-usable parameters, and these can be used in the body of the report.\n\n\n\nheader-param.qmd\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\nengine: knitr\nparams:\n  parameter: \"steepness\"\n  value: 0.7\n---\n\n# Report text\n\nAs an example we changed the `r params$parameter` in the model to `r params$value`.",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#revealjs-features",
+    "href": "assets/day-3-pres-quarto.html#revealjs-features",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "revealjs features",
+    "text": "revealjs features\n\n\n---\nformat:\n revealjs:\n  slide-number: true\n  mermaid-format: svg\nembed-resources: true\n---\n\n# Intro\n\nWe can specify the format as `revealjs` to make a presentation.\n\n# Fragments {.smaller}\n\n[Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments){preview-link=\"true\"} can be used to animate elements on a slide.\nFragment order can be defined using [`fragment-index`](https://quarto.org/docs/presentations/revealjs/advanced.html#fragment-order){preview-link=\"true\"}.\n\n::: {.fragment}\n- Fade in\n:::\n\n::: {.fragment .fade-out}\n- Fade out\n:::\n\n::: {.fragment .fade-in-then-out}\n- Fade in, then out\n:::\n\n::: {.fragment .fade-up}\n- Slide up while fading in\n:::\n\n# Code-highlighting {.smaller}\n\nIf displaying a code block, lines can be highlighted in a sequential fashion using [`code-line-numbers`](https://quarto.org/docs/presentations/revealjs/#line-highlighting){preview-link=\"true\"}.\n\n```{.r code-line-numbers=\"|1|3|5|4|4-6|\"}\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n# Mermaid charts\n\n[Diagrams](https://quarto.org/docs/authoring/diagrams.html){preview-link=\"true\"} can be embedded \nusing [Mermaid](https://mermaid.js.org/){preview-link=\"true\"} which has \na great [live editor](https://mermaid.live/){preview-link=\"true\"}!\n\n```{mermaid}\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#html-features",
+    "href": "assets/day-3-pres-quarto.html#html-features",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "html features",
+    "text": "html features\n\n\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\n---\n\n# Code-folding\n\nWe can visualize the `mpg` dataset for common cars...\n\n```{r}\n#| code-fold: true\n#| code-summary: \"Show the code to plot the `mpg` dataset.\"\n#| echo: true\n#| eval: false\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n```\n\n# Panel-tabset\n\n... and explore the relationship between highway fuel consumption and the number of cylinders.\n\n::: {.panel-tabset}\n\n## Plot\n\n```{r}\n#| echo: false\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n## Data subset\n\n```{r}\n#| echo: false\nhead(mpg)\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#report-formatting",
+    "href": "assets/day-3-pres-quarto.html#report-formatting",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Report formatting",
+    "text": "Report formatting\nTechnical formatting of pdf’s can be done by modifying the LaTeX template-partials and including them in the header.\n\n\n\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    template-partials:\n      - assets/doc-class.tex\n      - assets/before-title.tex\n      - assets/before-body.tex\n\n\n\n\n% begin title page\n\\thispagestyle{empty}\n\\begin{flushright}\n    % UPDATE: add document number\n    \\textbf{ISC/25/SHARKWG-1/XX}\n\\end{flushright}\n\\vspace{1in}\n\n\\begin{center}\n    % UPDATE: title\n    \\textbf{Updated blue shark CPUE from US Hawai'i longline fisheries; 2002-2023}\n    % UPDATE: footnote with meeting information\n    \\textbf{\\footnote{Working document submitted to the ISC Shark Working Group Workshop, 27 January - 3 February 2025\n    (JST), Yokohama Japan. Document not to be cited without author’s permission.}}\n    \n    \\vspace{0.25in}\n    % UPDATE: authors\n    Nicholas D. Ducharme-Barth\\begin{math}^2\\end{math} % define superscript for affiliation\n\n    \\vspace{0.25in}\n    % UPDATE: affiliations\n    \\begin{math}^2\\end{math}NOAA Fisheries, Pacific Islands Fisheries Science Center, Honolulu, Hawaii USA\n\n    \\vspace{0.25in}\n    % UPDATE: contact information\n    Email: nicholas.ducharme-barth@noaa.gov\n\\end{center}\n\n% include the species image in the 'static' sub-directory\n\\begin{figure}[!hb]\n    \\begin{center}\n        % UPDATE: path to figure, figure name, and alternative text.\n        \\pdftooltip{\\includegraphics[scale=0.8]{static/bsh.jpg}}{A blue shark, \\textit{Prionace glauca}.}\n    \\end{center}\n\\end{figure}\n\n% end of title page\n\\clearpage",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#resources",
+    "href": "assets/day-3-pres-quarto.html#resources",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Resources",
+    "text": "Resources\n\nrevealjs slidecraft: check out these examples by Emil Hvitfeldt\nQuarto guide\nGet started with Quarto",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
@@ -795,46 +773,267 @@
     ]
   },
   {
-    "objectID": "assets/day-1-modify-stock-synthesis.html",
-    "href": "assets/day-1-modify-stock-synthesis.html",
-    "title": "Modifying and running stock synthesis models",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "assets/day-1-welcome.html#section",
-    "href": "assets/day-1-welcome.html#section",
+    "objectID": "assets/day-2-pres-PR-code-review.html#section",
+    "href": "assets/day-2-pres-PR-code-review.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Welcome to ISC BILLWG Open Science Workshop\nJanuary 2025"
+    "text": "Pull Requests and Code Review\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
   },
   {
-    "objectID": "assets/day-1-welcome.html#introductions",
-    "href": "assets/day-1-welcome.html#introductions",
+    "objectID": "assets/day-2-pres-PR-code-review.html#section-1",
+    "href": "assets/day-2-pres-PR-code-review.html#section-1",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Introductions",
-    "text": "Introductions\n Nicholas  Ducharme-Barth\n Meg Oshima\n Michelle Sculley"
+    "section": "",
+    "text": "So far we have:\n\n\n\nCreated branches for each group to work separately\n\n\n\n\n\n\n\nEach group has modified the Stock Synthesis models\n\n\n\n\n\n\nNext we want to:\n\n\n\nAggregate all of the model runs into the main branch\n\n\n\n\n\nProduce some visualizations of the results",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
   },
   {
-    "objectID": "assets/day-1-welcome.html#workshop-materials",
-    "href": "assets/day-1-welcome.html#workshop-materials",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Workshop Materials",
-    "text": "Workshop Materials\n\nAll presentations can be found on the workshop website.\nCode can be found in the workshop repository.\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you have created a GitHub account before we start."
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
   },
   {
-    "objectID": "assets/day-1-welcome.html#why-open-science",
-    "href": "assets/day-1-welcome.html#why-open-science",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-1",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Why Open Science?",
-    "text": "Why Open Science?\n\n\nStandardized workflows and efficiency\n\n\n\n\n\nImprove and support collaboration\n\n\n\n\n\nEnsure our science is truly reproducible\n\n\n\n\n\nProvide tools for sharing and communicating our work"
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\nIn the repository go to “Pull requests” and select which branches you want to merge",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
   },
   {
-    "objectID": "assets/day-1-welcome.html#topics-we-will-cover",
-    "href": "assets/day-1-welcome.html#topics-we-will-cover",
+    "objectID": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
+    "href": "assets/day-2-pres-PR-code-review.html#pull-requests-2",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Topics we will cover",
-    "text": "Topics we will cover\n\n\nGitHub for collaboration\n\n\n\n\nCodespaces and reproducible environments\n\n\n\n\nScript-based model development\n\n\n\n\nCreating Shiny apps\n\n\n\n\nCode review with GitHub\n\n\n\n\nCreating reproducible reports and presentations\n\n\n\n\nCreating websites to share results"
+    "section": "Pull Requests",
+    "text": "Pull Requests\n\n\n\n\n\n\n\n\n\n\n\nCan see the dif view of changes in the file, if the code passes checks and tests set up, what commits are associated with this PR, add comments to the PR\n\n\n\n\n\n\n\n\n\n\n\n\n\nRed lines show deleted code\nGreen lines show added code\n\n\n\n\n\n\n\n\n\n\nCan add a review of the changes",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
+  },
+  {
+    "objectID": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
+    "href": "assets/day-2-pres-PR-code-review.html#more-complicated-situation-merge-conflicts",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "More complicated situation: Merge Conflicts",
+    "text": "More complicated situation: Merge Conflicts\nMerge conflicts happen when you merge 2 branches that have competing commits",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
+  },
+  {
+    "objectID": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
+    "href": "assets/day-2-pres-PR-code-review.html#merge-conflicts",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Merge Conflicts",
+    "text": "Merge Conflicts\n\n\n2 ways to resolve them\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nLocally",
+    "crumbs": [
+      "Day 2",
+      "Pull requests & code review"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#section",
+    "href": "assets/day-1-pres-github_basics.html#section",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "",
+    "text": "GitHub for Collaborative Workflows\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#version-control",
+    "href": "assets/day-1-pres-github_basics.html#version-control",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Version Control",
+    "text": "Version Control\n The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\nAll of us are probably familiar with some sort of version control, think of like Google Docs or track changes for a word document. It’s basically a history of all of the changes that have been made to the document you’re working on. With software like Google Docs that happens passively for you, it will automatically create backups every few minutes so you don’t have to think about saving a file. Today we’re going to be using software that we can apply the same idea but on a much larger and more controlled way. We are going to see how we can use those softwares to back up our work, share our work, and provide a clear, documented map of the developement of a project. So hopefully by the end of the next few days you will feel comfortable using GitHub for projects to make them more organized, transparent and colllaborative.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#git-and-github",
+    "href": "assets/day-1-pres-github_basics.html#git-and-github",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n installed on local computer\n\n\n\n tracks changes to files\n\n\n\n separate versions\n\n\n\n\n\n\n\n\n central, remote storage of files\n\n\n\n everyone can contribute changes\n\n\n\n changes can be combined and shared\n\n\n\n\n\n\n\nWe can leverage the interplay between both to help us share code and collaborate with others!\n\n\n\nGit is the version control software that is installed on your computer. It tracks changes you make to files within a project. It has features that allow you to work collaboratively with others without overwriting each other’s work, and then combine everything when each part is ready.\nGitHub is an online platform to host the tracked files and share your code with others. Within GitHub, you can create repositories that acts as a centralized “remote” storage of files associated with a project. This allows anyone that has access to the repository to download the files onto their local computer, make changes to the code, and then share those changes with everyone else working on the project.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "href": "assets/day-1-pres-github_basics.html#basic-gitgithub-workflow",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Basic Git/Github Workflow",
+    "text": "Basic Git/Github Workflow\n\n\n\n\n\n\n\n\nCommit changesSync remoteand local repositoriesRemote repository onGitHubLocal repositoryCreate new files andmake changes locally",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "href": "assets/day-1-pres-github_basics.html#remote-repository-on-github",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Remote repository on Github",
+    "text": "Remote repository on Github\n\n\n\nWhere all of your code and related files lives online\n\n\n\n\n\n\n\nCentral location where everyone is sharing their changes\n\n\n\n\n\nConnect the remote repository to the files on your local computer\n\n\n\ngit clone\n\n\n\n\ngit init",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#local-repository",
+    "href": "assets/day-1-pres-github_basics.html#local-repository",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Local repository",
+    "text": "Local repository\n\n\n\nFiles kept on your local computer\n\n\n\n\n\n\n\nIncludes branches from the remote repository\n\nallows for different versions of the same file\n\n\n\n\n\n\nDifferent from local working directory",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#making-changes-locally",
+    "href": "assets/day-1-pres-github_basics.html#making-changes-locally",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Making changes locally",
+    "text": "Making changes locally\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSave\n\n\n\n\n\n\n\nStage\n\n\n\n\n\n\n\nCommit\n\n\n\n\n\n\n\nPush",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#commits",
+    "href": "assets/day-1-pres-github_basics.html#commits",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Commits",
+    "text": "Commits\n\n\n\ngroups of small, meaningful changes\n\n\n\n\n\n\nsnapshots of your repository at that time\n\n\n\n\n\ntell a story of the history of your repository",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#commits-1",
+    "href": "assets/day-1-pres-github_basics.html#commits-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Commits",
+    "text": "Commits\nMake a commit in 2 stages:\n\n\nsave your changes locally and then stage the files you want to commit\ngit add &lt;FILENAME&gt;\n\n\n\n\n\ncommit your changes\ngit commit -m \"descriptive commit message\"",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#push",
+    "href": "assets/day-1-pres-github_basics.html#push",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Push",
+    "text": "Push\nTo sync the changes you’ve made locally with the remote repository, you need to “PUSH” your commits\ngit push",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#pull",
+    "href": "assets/day-1-pres-github_basics.html#pull",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull",
+    "text": "Pull\nTo sync any changes that were made to the remote repository onto your local computer you need to “PULL” commits\n\n2 ways:\n1. git pull\n\n\n\ngit fetch, then eventually git merge\n\n\n\ngit pull copies the changes from a remote directory directly into your working directory. the benefit of this is your local repo and local files are synced up with what is online. con is that you can’t do this if you are actively editing untracked files that conflict with what is on the remote server. git fetch only copies changes into your local git repo. You will later need to merge them into your working directory. the benefit is that you can continue editing files in your local working directory without having to merge your code with updates from the remote. Once you finished editing the files you are working on you can commit your changes and then use git merge to sync everything.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#branches",
+    "href": "assets/day-1-pres-github_basics.html#branches",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Branches",
+    "text": "Branches\n\n\n\nThe default for all repositories is main\n\n\n\n\n\n\n\nmainAdd initial filesCode for model developmentFinalize modelCreate Shiny appAdd reportFinish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmainbuild_modelgrowth_curveAdd initial filesDevelop base modelFinalize base modelChange growth curveCheck new growth curveFinal model report\n\n\n\n\n\n\n\n\n\nA really useful feature of github is branches. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained section of the project. You can make changes that don’t affect the main branch and once you are ready to add them to the main project you can merge them in.\nIf you are working on a project by yourself, your commit history might look something like this. Since it’s only you working on the code and you don’t need to worry about doing something that can break code someone else might be using, then all of your changes you could just commit to the main branch.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#pull-requests",
+    "href": "assets/day-1-pres-github_basics.html#pull-requests",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Pull Requests",
+    "text": "Pull Requests\nOnce you have finished development on your branch and want to add your changes to the main branch, you can submit a pull request",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#activity-1",
+    "href": "assets/day-1-pres-github_basics.html#activity-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Activity 1",
+    "text": "Activity 1\n\nFollowing the template provided here, create a new Markdown document with:\n\n\nA list of everyone in your group, including:\n\ntheir affiliation\ntheir GitHub name\n\na picture of a species you work on\na code chunk with your most used function\na task list of three things you would like to learn from the workshop\n\n\nSave the file with a new name.\nCommit your file, and push to the repository.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/day-1-pres-github_basics.html#activity-2-branches",
+    "href": "assets/day-1-pres-github_basics.html#activity-2-branches",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Activity 2: Branches",
+    "text": "Activity 2: Branches\n\nCreate a new branch from the main branch\nAdd your name to the list of participants.\nSave your change, commit, and push to your branch.\nSubmit a Pull Request to merge your changes into main branch.",
+    "crumbs": [
+      "Day 1",
+      "Github for Collaborative Workflows"
+    ]
+  },
+  {
+    "objectID": "assets/example-basic-revealjs.html#quarto",
+    "href": "assets/example-basic-revealjs.html#quarto",
+    "title": "Basic document",
+    "section": "Quarto",
+    "text": "Quarto\nMake different documents by changing the format!"
+  },
+  {
+    "objectID": "assets/example-basic-revealjs.html#code",
+    "href": "assets/example-basic-revealjs.html#code",
+    "title": "Basic document",
+    "section": "Code",
+    "text": "Code\nIncorporate code into your work …\n\nx = 1 + 1\n\n… and report the computations later \\(x =\\) 2."
+  },
+  {
+    "objectID": "assets/example-basic-revealjs.html#make-plots",
+    "href": "assets/example-basic-revealjs.html#make-plots",
+    "title": "Basic document",
+    "section": "Make plots",
+    "text": "Make plots\nEven insert figures:\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n\n\n\n\nFigure 1: City and highway mileage for 38 popular models of cars."
   },
   {
     "objectID": "assets/day-1-pres-modify-stock-synthesis.html#section",
@@ -936,6 +1135,13 @@
     ]
   },
   {
+    "objectID": "assets/report-example.html",
+    "href": "assets/report-example.html",
+    "title": "Report template",
+    "section": "",
+    "text": "Code-folding\nWe can visualize the mpg dataset for common cars…\n\n\nShow the code to plot the mpg dataset.\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n\n\n\nPanel-tabset\n… and explore the relationship between highway fuel consumption and the number of cylinders.\n\nPlotData subset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 6 × 11\n  manufacturer model displ  year   cyl trans      drv     cty   hwy fl    class \n  &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; \n1 audi         a4      1.8  1999     4 auto(l5)   f        18    29 p     compa…\n2 audi         a4      1.8  1999     4 manual(m5) f        21    29 p     compa…\n3 audi         a4      2    2008     4 manual(m6) f        20    31 p     compa…\n4 audi         a4      2    2008     4 auto(av)   f        21    30 p     compa…\n5 audi         a4      2.8  1999     6 auto(l5)   f        16    26 p     compa…\n6 audi         a4      2.8  1999     6 manual(m5) f        18    26 p     compa…\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "assets/day-1-pres-codespaces.html#section",
     "href": "assets/day-1-pres-codespaces.html#section",
     "title": "Open Science Workflow Training for ISC",
@@ -991,6 +1197,16 @@
     ]
   },
   {
+    "objectID": "assets/day-2.html",
+    "href": "assets/day-2.html",
+    "title": "Day 2",
+    "section": "",
+    "text": "Presentation slides for pull requests and code review.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for building a Shiny app for our Stock Synthesis model runs.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
+    "crumbs": [
+      "Day 2"
+    ]
+  },
+  {
     "objectID": "assets/web-about-ms.html",
     "href": "assets/web-about-ms.html",
     "title": "Michelle Sculley",
@@ -1016,7 +1232,7 @@
     "href": "index.html#workshop-schedule",
     "title": "Home",
     "section": "Workshop Schedule",
-    "text": "Workshop Schedule\nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:00\nModifying Stock Synthesis Files\n\n\n9:00-10:00\nGroup work\n\n\n10:00-10:15\nBreak\n\n\n10:15-11:00\nPull Requests and Code Review\n\n\n11:0-11:30\nShiny App\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:45\nReview group work\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:30\nQuarto Reports and Presentations\n\n\n10:30-11:00\nQuarto Website\n\n\n11:00-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:30\nReview group work\n\n\n9:30-12:00\nDiscussion, wrap up",
+    "text": "Workshop Schedule\nThe schedule for the 4-day workshop is: (note this is flexible and will be updated at the end of each day)\n\nDay 1\n\n\n\nTime\nModule\n\n\n\n\n8:30-8:45\nWelcome and introductions\n\n\n8:45-9:30\nGitHub for Collaborative Workflows\n\n\n9:30-9:45\nCodespaces\n\n\n9:45-10:00\nBreak\n\n\n10:00-10:15\nReproducible Environments\n\n\n10:15-11:30\nModifying Stock Synthesis Files\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 2\n\n\n\nTime\nModule\n\n\n\n\n8:30-9:00\nModifying Stock Synthesis Files\n\n\n9:00-10:00\nGroup work\n\n\n10:00-10:15\nBreak\n\n\n10:15-11:00\nPull Requests and Code Review\n\n\n11:0-11:30\nShiny App\n\n\n11:30-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 3\n\n\n\nTime\nModule\n\n\n\n\n8:30-10:00\nShiny group coding\n\n\n10:00-10:15\nBreak\n\n\n10:15-10:45\nQuarto Reports and Presentations\n\n\n10:45-12:00\nGroup work, wrap up\n\n\n\n\n\nDay 4\n\n\n\nTime\nModule\n\n\n\n\n8:30-10:00\nQuarto Website\n\n\n10:00-12:00\nDiscussion, wrap up",
     "crumbs": [
       "Home"
     ]
