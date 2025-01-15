@@ -1,0 +1,34 @@
+---
+title: "Basic document"
+format: pdf
+---
+
+## Quarto
+
+Make different documents by changing the format! 
+
+## Code
+
+Incorporate `code` into your work ...
+
+```{r}
+#| echo: true
+x = 1 + 1
+```
+... and report the computations later $x =$ `r x`.
+
+## Make plots
+
+Even insert figures:
+
+```{r}
+#| label: fig-scatterplot
+#| fig-cap: "City and highway mileage for 38 popular models of cars."
+#| echo: true
+library(ggplot2)
+
+ggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +
+  geom_point(alpha = 0.5, size = 2) +
+  scale_color_viridis_c() +
+  theme_minimal()
+```
