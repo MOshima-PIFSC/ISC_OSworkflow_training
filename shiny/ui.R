@@ -10,6 +10,8 @@ css <- htmltools::HTML(
     }"
 )
 
+summary_dt = fread(file="./shiny-data/summary.csv")
+
 ui = shinydashboard::dashboardPage(
   header = shinydashboard::dashboardHeader(title="Shiny demo"),
   sidebar = shinydashboard::dashboardSidebar(
@@ -18,7 +20,8 @@ ui = shinydashboard::dashboardPage(
     sidebarMenu(id="sidebarmenu",
       menuItem("Introduction", tabName="introduction"),
       menuItem("Summary table", tabName="table"),
-      menuItem("Stock-recruit relationship (SRR)", tabName="srr_plots")
+      menuItem("Stock-recruit relationship (SRR)", tabName="srr_plots"),
+      menuItem("Natural mortality (M)", tabName="natM_plots")
     ),
 
     # Only show these on the plotting tabs - not Introduction and Summary table tabs
@@ -36,6 +39,27 @@ ui = shinydashboard::dashboardPage(
       awesomeRadio(
       inputId = "srr_est_type",  
       label = "Plot estimated recruitment as:",
+      choices=c("Path","Points","Both"),
+      selected = "Path")
+    ),
+    conditionalPanel(condition="input.sidebarmenu == 'natM_plots'",
+      # natM-dropdown
+      pickerInput(
+        inputId = "natM-dropdown", 
+        label = "Select a model:", 
+        choices = summary_dt$model_name, 
+        options = list(
+          `actions-box` = TRUE,
+          `deselect-all-text` = "None...",
+          `select-all-text` = "Yeah, all !",
+          `none-selected-text` = "zero"
+        ), 
+        multiple = TRUE
+      ),
+      # natM-plot-type
+      awesomeRadio(
+      inputId = "natM_plot_type",  
+      label = "Plot as:",
       choices=c("Path","Points","Both"),
       selected = "Path")
     ),
@@ -72,7 +96,16 @@ ui = shinydashboard::dashboardPage(
             p("Select at least one model."),
             plotOutput("srr_plots", height="auto"))
         )
-      ) # End of srr_plots tab
+      ), # End of srr_plots tab
+
+      # **** Natural mortality recruitment plots ****
+      tabItem(tabName="natM_plots", h2("Natural mortality plots"),
+        fluidRow(
+          box(title="Natural mortality-at-age (M)", solidHeader=TRUE, collapsible=TRUE, collapsed=FALSE, status="primary", width=12,
+            p("Select at least one model."),
+            plotOutput("natM_plots", height="auto"))
+        )
+      ) # End of natM_plots tab
     ) # End of tabItems
   ) # End of dashboardBody
 )
