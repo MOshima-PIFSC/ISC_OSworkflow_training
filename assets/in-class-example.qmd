@@ -37,9 +37,9 @@ input = list(srr_show_est = "TRUE",srr_est_type = "Both")
 
 # input$natM_plot_type = "Path"
 
-    expected_srr_dt = fread(file="./shiny-data/expected_srr.csv") %>%
+    expected_srr_dt = fread(file="../shiny/shiny-data/expected_srr.csv") %>%
                       .[model_name %in% input_models]
-    est_recruit_dt = fread(file="./shiny-data/est_recruit.csv") %>%
+    est_recruit_dt = fread(file="../shiny/shiny-data/est_recruit.csv") %>%
                       .[model_name %in% input_models]
 
     p = expected_srr_dt %>%
