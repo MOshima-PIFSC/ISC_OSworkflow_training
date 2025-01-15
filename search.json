@@ -70,6 +70,69 @@
     "text": "(insert task list (with check boxes) of at least 3 things)"
   },
   {
+    "objectID": "r-code/Undecided learner.html",
+    "href": "r-code/Undecided learner.html",
+    "title": "Group",
+    "section": "",
+    "text": "May join the Chinese Taipei team on Tuesday ## Members\nHongguang Ma\n\n\nMain Hawaiian Islands Deep 7 bottomfish and Kona crab\n\n\n\nvar_product &lt;- function(x, var_x, y, var_y){ out &lt;- var_xy^2 + var_yx^2 - var_x*var_y return(out) }\n\n\n\n\nBetter understand running R script in Codespace\nBetter understand the essential components of the SS scripts\nBetter appreciate the benefits of collaborative work with Github and Open Science"
+  },
+  {
+    "objectID": "r-code/Undecided learner.html#species-of-interest",
+    "href": "r-code/Undecided learner.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "Main Hawaiian Islands Deep 7 bottomfish and Kona crab"
+  },
+  {
+    "objectID": "r-code/Undecided learner.html#most-used-function",
+    "href": "r-code/Undecided learner.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "var_product &lt;- function(x, var_x, y, var_y){ out &lt;- var_xy^2 + var_yx^2 - var_x*var_y return(out) }"
+  },
+  {
+    "objectID": "r-code/Undecided learner.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Undecided learner.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "Better understand running R script in Codespace\nBetter understand the essential components of the SS scripts\nBetter appreciate the benefits of collaborative work with Github and Open Science"
+  },
+  {
+    "objectID": "r-code/Group_JAY & Riyar.html",
+    "href": "r-code/Group_JAY & Riyar.html",
+    "title": "Group",
+    "section": "",
+    "text": "Group A\n\n\n\nMichael Kinney\n\n\n\n\n\nBlue shark, Mako shark, Blue marlin, Striped Marlin, Swordfish\n\n\n\n\n\nggplot()\n\n\n\n\n\nGain a better understanding of forks; how to include data in project; uses for git in terms of published papers"
+  },
+  {
+    "objectID": "r-code/Group_JAY & Riyar.html#members",
+    "href": "r-code/Group_JAY & Riyar.html#members",
+    "title": "Group",
+    "section": "",
+    "text": "Michael Kinney"
+  },
+  {
+    "objectID": "r-code/Group_JAY & Riyar.html#species-of-interest",
+    "href": "r-code/Group_JAY & Riyar.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "Blue shark, Mako shark, Blue marlin, Striped Marlin, Swordfish"
+  },
+  {
+    "objectID": "r-code/Group_JAY & Riyar.html#most-used-function",
+    "href": "r-code/Group_JAY & Riyar.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "ggplot()"
+  },
+  {
+    "objectID": "r-code/Group_JAY & Riyar.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Group_JAY & Riyar.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "Gain a better understanding of forks; how to include data in project; uses for git in terms of published papers"
+  },
+  {
     "objectID": "shiny/introduction_index.html",
     "href": "shiny/introduction_index.html",
     "title": "Open Science Workflow Training for ISC",
@@ -1236,6 +1299,76 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "r-code/Group A.html",
+    "href": "r-code/Group A.html",
+    "title": "Group",
+    "section": "",
+    "text": "Group A\n\n\n\nMichael Kinney\n\n\n\n\n\nBlue shark, Mako shark, Blue marlin, Striped Marlin, Swordfish\n\n\n\n\n\nggplot()\n\n\n\n\n\nGain a better understanding of forks; how to include data in project; uses for git in terms of published papers"
+  },
+  {
+    "objectID": "r-code/Group A.html#members",
+    "href": "r-code/Group A.html#members",
+    "title": "Group",
+    "section": "",
+    "text": "Michael Kinney"
+  },
+  {
+    "objectID": "r-code/Group A.html#species-of-interest",
+    "href": "r-code/Group A.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "Blue shark, Mako shark, Blue marlin, Striped Marlin, Swordfish"
+  },
+  {
+    "objectID": "r-code/Group A.html#most-used-function",
+    "href": "r-code/Group A.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "ggplot()"
+  },
+  {
+    "objectID": "r-code/Group A.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/Group A.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "Gain a better understanding of forks; how to include data in project; uses for git in terms of published papers"
+  },
+  {
+    "objectID": "r-code/MikihikoKai.html",
+    "href": "r-code/MikihikoKai.html",
+    "title": "Group",
+    "section": "",
+    "text": "-** Mikihiko Kai- - Fisheries Research Institute in Japan **-\n\n\n\nBillfishes and Sharks “C:\\00006961Workshop_photo.JPG”\n\n\n\nfunc.w &lt;- function(para-a,para-b,length){ out &lt;- para-a*(length)^para-b return(out) }\n\n\n\n\nMaking the code of estimation of bilogical parameters for billfishes\nMaking the code of plots for the output of SS\nMaking the code of runs the SS\n\n(insert task list (with check boxes) of at least 3 things)"
+  },
+  {
+    "objectID": "r-code/MikihikoKai.html#members",
+    "href": "r-code/MikihikoKai.html#members",
+    "title": "Group",
+    "section": "",
+    "text": "-** Mikihiko Kai- - Fisheries Research Institute in Japan **-"
+  },
+  {
+    "objectID": "r-code/MikihikoKai.html#species-of-interest",
+    "href": "r-code/MikihikoKai.html#species-of-interest",
+    "title": "Group",
+    "section": "",
+    "text": "Billfishes and Sharks “C:\\00006961Workshop_photo.JPG”"
+  },
+  {
+    "objectID": "r-code/MikihikoKai.html#most-used-function",
+    "href": "r-code/MikihikoKai.html#most-used-function",
+    "title": "Group",
+    "section": "",
+    "text": "func.w &lt;- function(para-a,para-b,length){ out &lt;- para-a*(length)^para-b return(out) }"
+  },
+  {
+    "objectID": "r-code/MikihikoKai.html#three-things-we-want-to-learn-from-this-workshop",
+    "href": "r-code/MikihikoKai.html#three-things-we-want-to-learn-from-this-workshop",
+    "title": "Group",
+    "section": "",
+    "text": "Making the code of estimation of bilogical parameters for billfishes\nMaking the code of plots for the output of SS\nMaking the code of runs the SS\n\n(insert task list (with check boxes) of at least 3 things)"
   },
   {
     "objectID": "r-code/Group_info_juicethemodeller.html",
