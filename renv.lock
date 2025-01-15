@@ -608,6 +608,24 @@
       ],
       "Hash": "44c6a2f8202d5b7e878ea274b1092426"
     },
+    "gh": {
+      "Package": "gh",
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cli",
+        "gitcreds",
+        "glue",
+        "httr2",
+        "ini",
+        "jsonlite",
+        "lifecycle",
+        "rlang"
+      ],
+      "Hash": "fbbbc48eba7a6626a08bb365e44b563b"
+    },
     "gitcreds": {
       "Package": "gitcreds",
       "Version": "0.1.2",
@@ -822,6 +840,27 @@
       ],
       "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
     },
+    "httr2": {
+      "Package": "httr2",
+      "Version": "1.0.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R6",
+        "cli",
+        "curl",
+        "glue",
+        "lifecycle",
+        "magrittr",
+        "openssl",
+        "rappdirs",
+        "rlang",
+        "vctrs",
+        "withr"
+      ],
+      "Hash": "5a76da345ed4f3e6430517e08441edaf"
+    },
     "ids": {
       "Package": "ids",
       "Version": "1.0.1",
@@ -832,6 +871,13 @@
         "uuid"
       ],
       "Hash": "99df65cfef20e525ed38c3d2577f7190"
+    },
+    "ini": {
+      "Package": "ini",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6154ec2223172bce8162d4153cda21f7"
     },
     "isoband": {
       "Package": "isoband",
@@ -1315,21 +1361,32 @@
     },
     "r4ss": {
       "Package": "r4ss",
-      "Version": "1.44.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "1.51.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "r4ss",
+      "RemoteRepo": "r4ss",
+      "RemoteRef": "main",
+      "RemoteSha": "1775f366bcb1a39f9fd7ba6f00007b99f8da0186",
       "Requirements": [
         "R",
         "coda",
         "corpcor",
         "dplyr",
         "forcats",
+        "furrr",
+        "future",
         "ggplot2",
+        "gh",
         "kableExtra",
         "lifecycle",
-        "stringr"
+        "purrr",
+        "stringr",
+        "tidyr",
+        "viridis"
       ],
-      "Hash": "c75ce5fa0dd940ba25ae5cdc86fba114"
+      "Hash": "0111f5ae24d90c9583bd39956ca32398"
     },
     "rappdirs": {
       "Package": "rappdirs",
