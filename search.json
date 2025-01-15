@@ -542,7 +542,7 @@
     "href": "assets/day-3-pres-quarto.html#resources",
     "title": "Open Science Workflow Training for ISC",
     "section": "Resources",
-    "text": "Resources\n\nrevealjs slidecraft: check out these examples by Emil Hvitfeldt\nQuarto guide\nGet started with Quarto",
+    "text": "Resources\n\nrevealjs slidecraft: check out these examples by Emil Hvitfeldt\nQuarto guide\nGet started with Quarto\n\n\nHow to render?\n\nquarto render &lt;filename&gt;",
     "crumbs": [
       "Day 3",
       "Quarto: Reports and presentations"
