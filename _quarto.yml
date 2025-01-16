@@ -54,6 +54,10 @@ website:
             file: assets/day-4-pres-quarto-website.qmd
       - section: "Group projects"
         contents:
+        - text: "Report template"
+          file: assets/day-3-report-template.qmd
+        - text: "Report Claudio"
+          file: assets/day-3-report-template_CCJ.qmd
         - text: "kai Report template"
           file: assets/report-example.qmd
         - text: "jb Report template"
