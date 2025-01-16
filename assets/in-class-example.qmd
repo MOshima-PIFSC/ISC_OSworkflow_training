@@ -1,0 +1,94 @@
+---
+bibliography: references.bib
+csl: fisheries-research.csl
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    template-partials:
+      - doc-class.tex
+      - before-title.tex
+      - before-body.tex
+    
+---
+
+{{< pagebreak >}}
+
+# Abstract
+
+Here is our awesome document. We will add a figure.
+
+# Introduction
+
+The figure will be added in the results section (@isc_stock_2017). 
+
+# Results
+
+```{r}
+#| include: false
+#| eval: true
+
+library(data.table)
+library(magrittr)
+library(ggplot2)
+library(viridis)
+
+input_models = "base-model"
+
+input = list(srr_show_est = "TRUE",srr_est_type = "Both")
+
+# input$natM_plot_type = "Path"
+
+    expected_srr_dt = fread(file="../shiny/shiny-data/expected_srr.csv") %>%
+                      .[model_name %in% input_models]
+    est_recruit_dt = fread(file="../shiny/shiny-data/est_recruit.csv") %>%
+                      .[model_name %in% input_models]
+```
+
+```{r}
+#| eval: true
+#| echo: false
+#| label: fig-srr
+#| fig-cap: "City and highway mileage for 38 popular models of cars."
+
+
+
+    p = expected_srr_dt %>%
+      ggplot() +
+			ylim(0,NA) +
+			xlab("Spawning biomass (SSB)") +
+            ylab("Recruitment") +
+            geom_path(aes(x=ssb,y=rec_actual,group=model_name,color=model_name),linewidth=1.5)
+
+      if(input$srr_show_est == "TRUE")
+      {
+        if(input$srr_est_type == "Path"){
+            p = p + geom_line(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,color=model_name),alpha=0.5)
+        } else if(input$srr_est_type == "Points"){
+            p = p + geom_point(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,fill=model_name),shape=21,cex=3)
+        } else {
+            p = p + geom_line(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,color=model_name),alpha=0.5)
+            p = p + geom_point(data=est_recruit_dt,aes(x=ssb,y=rec_estimated,group=model_name,fill=model_name),shape=21,cex=3)
+        }
+      }
+	  
+    
+      p = p + viridis::scale_color_viridis("Model",begin = 0.1,end = 0.8,direction = 1,option = "H",discrete=TRUE) +
+			viridis::scale_fill_viridis("Model",begin = 0.1,end = 0.8,direction = 1,option = "H",discrete=TRUE) +
+			theme(panel.background = element_rect(fill = "white", color = "black", linetype = "solid"),
+							panel.grid.major = element_line(color = 'gray70',linetype = "dotted"), 
+							panel.grid.minor = element_line(color = 'gray70',linetype = "dotted"),
+							strip.background =element_rect(fill="white"),
+							legend.key = element_rect(fill = "white"))
+     p
+```
+
+The figure will go here (@fig-srr).
+
+{{< pagebreak> }}
+
+# References  
+
+::: {#refs}
+:::

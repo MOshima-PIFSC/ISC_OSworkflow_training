@@ -1,0 +1,320 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Worflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+---
+
+## {.center}
+::: {.titlebox style="text-align:center; font-size: 1.25em;"}
+
+[Quarto: Creating websites]{.blue-title}
+
+
+[Megumi Oshima & Nicholas Ducharme-Barth]{.blue style="font-size:0.5em;"}  
+
+[January 2025]{.blue style="font-size:0.5em;"}
+:::
+
+## Building a website
+
+</br>
+
+In addition to being able to produce an array of document types, [Quarto](https://quarto.org/){preview-link="true"} can also be used to organize multiple [html](https://quarto.org/docs/output-formats/html-basics.html){preview-link="true"} or [revealjs](https://quarto.org/docs/presentations/revealjs/){preview-link="true"} documents into a website.
+
+## Configuration
+
+</br>
+
+Website configuration is controlled by the `_quarto.yml` file which defines:
+
+::: {.incremental}
+- layout
+- [navigation bar](https://quarto.org/docs/websites/website-navigation.html#top-navigation){preview-link="true"}
+- [sidebar](https://quarto.org/docs/websites/website-navigation.html#side-navigation){preview-link="true"}
+- [searchbar](https://quarto.org/docs/websites/website-navigation.html#site-search){preview-link="true"}
+- [theme](https://quarto.org/docs/websites/#website-theme){preview-link="true"}
+:::
+
+## Configuration
+
+::: columns
+
+::: {.column width=50%}
+
+```{.yml code-line-numbers="|1-2|3-4|7|8|9-10|11|12|13|15-70|76-78|"}
+project:
+  type: website
+  resources:
+   - assets/*
+
+website:
+  title: "Open Science Workflow Training for ISC"
+  reader-mode: true
+  site-url: "https://moshima-pifsc.github.io/ISC_OSworkflow_training" 
+  repo-url: "https://github.com/MOshima-PIFSC/ISC_OSworkflow_training"
+  repo-actions: [source, issue]
+  search: true
+  back-to-top-navigation: true
+  bread-crumbs: false
+  sidebar:
+    collapse-level: 1
+    style: "floating"
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training
+    contents: 
+      - text: "Home"
+        file: index.qmd
+      - section: "Day 1"
+        href: assets/day-1.html
+        contents:
+          - text: "Github for Collaborative Workflows"
+            file: assets/day-1-pres-github_basics.qmd
+          - text: "Codespaces"
+            file: assets/day-1-pres-codespaces.qmd
+          - text: "Reproducible environments"
+            file: assets/day-1-pres-reproducible_environments.qmd
+          - text: "Modifying Stock Synthesis files"
+            file: assets/day-1-pres-modify-stock-synthesis.qmd
+          - text: "Modifying Stock Synthesis files: Part 2"
+            file: assets/day-1-pres-modify-stock-synthesis_BILLWG.qmd
+      - section: "Day 2"
+        href: assets/day-2.html
+        contents:
+          - text: "Pull requests & code review"
+            file: assets/day-2-pres-PR-code-review.qmd
+          - text: "Building a Shiny app"
+            file: assets/day-2-pres-build-shiny.qmd
+      - section: "Day 3"
+        href: assets/day-3.html
+        contents:
+          - text: "Quarto: Reports and presentations"
+            file: assets/day-3-pres-quarto.qmd
+      - section: "Day 4"
+        href: assets/day-4.html
+        contents:
+          - text: "Quarto: Creating websites"
+            file: assets/day-4-pres-quarto-website.qmd
+      - section: "Group projects"
+        contents:
+        - text: "Report template"
+          file: assets/day-3-report-template.qmd
+      - section: "Contact us"
+        contents:
+        - text: "Nicholas Ducharme-Barth"
+          file: assets/web-about-nd.qmd
+        - text: "Megumi Oshima"
+          file: assets/web-about-mo.qmd
+        - text: "Michelle Sculley"
+          file: assets/web-about-ms.qmd
+      - section: "Support"
+        contents:
+        - text: "Submit an issue"
+          href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/issues/new/choose
+
+format: 
+  html:
+    toc: true
+    toc-expand: false
+    theme:
+      - default
+      - assets/customizations/website-custom.scss
+```
+:::
+
+::: {.column width=50%}
+
+```{=html}
+<iframe width=100% height=575 top=15% src="../index.html" style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"></iframe>
+```
+
+:::
+
+:::
+
+## Embedding an `iframe`
+
+</br>
+
+`html` or `revealjs` content can be embedded in an existing `html` document using an [`iframe`](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/12-html-block/){preview-link="true"}.
+
+
+````{.html}
+```{{=html}}
+<iframe width=100% height=200 src="../index.html" style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"></iframe>
+```
+````
+</br>
+
+```{=html}
+<iframe width=100% height=200 src="../index.html" style="border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"></iframe>
+```
+
+## Custom theming
+
+::: columns
+
+::: {.column width=50%}
+
+</br>
+
+[Custom](https://quarto.org/docs/output-formats/html-themes.html#theme-options){preview-link="true"} website and `html` themes can be defined using [Sass](https://sass-lang.com/){preview-link="true"} 
+
+</br>
+
+```{.md}
+This is a [custom rule]{.blue}
+```
+</br>
+
+This is a [custom rule]{.blue}
+:::
+
+
+::: {.column width=50%}
+
+```{.scss code-line-numbers="|3-11|13-15|18-21|24-26|28|30-34|"}
+/*-- scss:defaults --*/
+// Check contrast: https://colourcontrast.cc/
+// define colors
+$website-background: #fafafa;
+$theme-whale-gray: #323C46;
+$theme-midnight-sky: #001743;
+$theme-twilight-sky: #002364;
+$theme-noaa-sky: #003087;
+$theme-noaa-sea: #0085CA;
+$theme-pale-sea: #C6E6F0;
+$theme-dove-gray: #A5AAAF;
+
+// Get fonts: https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+// define theme colors
+$body-bg: $website-background;
+$body-color: $theme-whale-gray;
+$link-color: $theme-noaa-sea;
+$headings-color: $theme-midnight-sky;
+
+// define theme fonts
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$headings-font-family: 'Roboto Serif', serif;
+$headings-font-weight: 400;
+
+/*-- scss:rules --*/
+
+// add a shortcut for emphasizing text
+.blue {
+  color: $theme-noaa-sky;
+  font-weight: bold;
+}
+
+.hide-text {
+    color: $theme-dove-gray;
+  }
+
+// add underline for hyperlinks
+.reveal .slide a {
+  text-decoration: underline;
+}
+
+```
+:::
+
+:::
+
+## Publishing
+
+</br>
+
+Websites can be published to a number of different locations including:
+
+::: {.incremental}
+- [GitHub pages](https://quarto.org/docs/publishing/github-pages.html){preview-link="true"}
+- [Quarto pub](https://quarto.org/docs/publishing/quarto-pub.html){preview-link="true"}
+- [Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html){preview-link="true"} & [Posit Cloud](https://quarto.org/docs/publishing/posit-cloud.html){preview-link="true"}
+:::
+
+## Setting up GitHub Pages  
+
+![](static/gh-pages.PNG){.absolute left=0% top=15% bottom=20% right=10% style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left="10%" top="71%" right="70%" bottom="23%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left="57%" top="15%" right="33%" bottom="75%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+::: {.absolute left="35%" top="64%" right="40%" bottom="29%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .fade-out fragment-index=4}
+::: {.absolute left="5%" bottom="45%" right="12%" style="font-size:0.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, 1); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+Remember, use [`git checkout -b gh-pages`]{.blue} to create the branch 
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=4}
+::: {.absolute left="35%" top="30%" right="15%" bottom="56%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+
+## Publishing to GitHub Pages  
+
+<br>
+
+Once you have turned on the website and created the [`gh-pages`]{.blue} branch in the repository, you can publish your site with the command (in your terminal)
+
+<br>
+
+[`quarto publish gh-pages`]{.blue}
+
+
+## Resources  
+
+</br>
+
+- [Creating a website](https://quarto.org/docs/websites/){preview-link="true"}
+
+- [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
+
+- [Publishing Quarto Sites](https://quarto.org/docs/publishing/github-pages.html#:~:text=There%20are%20three%20ways%20to,publish%20from%20the%20docs%20directory.){preview-link="true"}
+
+
+## Last group activity
+
+</br>
+
+::: {.incremental}
+- Switch to your own `branch`
+- Edit the `_quarto.yml` file to add your Quarto document under the *Group projects* section
+- Commit your changes and we will work together to merge them into the `main` branch 
+:::

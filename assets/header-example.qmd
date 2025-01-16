@@ -1,0 +1,15 @@
+---
+title: "Report template"
+author: Meg Oshima and Nicholas Ducharme-Barth
+format:
+  html:
+    embed-resources: true
+engine: knitr
+params:
+  parameter: "steepness"
+  value: 0.7
+---
+
+# Report text
+
+As an example we changed the `r params$parameter` in the model to `r params$value`.

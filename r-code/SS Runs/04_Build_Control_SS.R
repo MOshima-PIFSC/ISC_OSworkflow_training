@@ -22,6 +22,7 @@ Build_Control <- function(species,
                           MAT_option = "Option1",
                           SR_option = "Option1",
                           EST_option = "Option1",
+                          SEL_option = "Option1",
                           size_selex_types = size_selex_types,
                           age_selex_types = age_selex_types,
                           initF = FALSE,
@@ -206,6 +207,8 @@ ctl.sps    <- ctl.inputs %>%
        rename("LABEL" = "X1") %>% 
        select(c(LO, HI, INIT, PRIOR, PR_SD, PR_type, PHASE, LABEL)) %>% 
        data.table::as.data.table()
+   } else {
+     CTL$init_F=NULL
    }
   
    
@@ -232,7 +235,7 @@ ctl.sps    <- ctl.inputs %>%
   
    ## Selectivity
    size.parms <- ctl.params %>% 
-     filter(str_detect(category, "EST")) %>% 
+     filter(str_detect(category, "SEL")) %>% 
      filter(str_detect(X1, fixed("size", ignore_case = TRUE))) %>% 
      nrow()
    
@@ -241,10 +244,10 @@ ctl.sps    <- ctl.inputs %>%
      CTL$size_selex_types <- size_selex_types
   
      CTL$size_selex_parms <- ctl.params %>%
-       filter(str_detect(category, "EST")) %>% 
+       filter(str_detect(category, "SEL")) %>% 
        filter(str_detect(X1, fixed("SizeSel", ignore_case = TRUE))) %>%
        filter(!str_detect(X1, fixed("TV", ignore_case = TRUE))) %>%
-     #  filter(str_detect(OPTION, EST_option)) %>%
+       filter(str_detect(OPTION, SEL_option)) %>%
        #slice_head(n = 2) %>% 
        select(-c(category, OPTION, "X1")) %>% 
        as.data.frame()
