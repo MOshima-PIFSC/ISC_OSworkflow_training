@@ -17,7 +17,7 @@ library(stringr)
 library(this.path)
 ## base working directory where all files are stored
 
-base.dir<-"C:/Users/Michelle.Sculley/Documents/OpenScienceTraining/ISC_OSworkflow_training_dev"
+base.dir<-this.path::this.proj()
 
 
 fleetnames<-c("FISHERY",
@@ -27,7 +27,7 @@ fleetnames<-c("FISHERY",
 
 
 
-model.info<-list(
+model.info<-list( # nolint
   "Species"="EXM",
   "base.dir"=base.dir,
   "scenario"="base",
