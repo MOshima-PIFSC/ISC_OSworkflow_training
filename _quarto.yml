@@ -56,6 +56,8 @@ website:
         contents:
         - text: "Report template"
           file: assets/day-3-report-template.qmd
+        - text: "Yi-Jay & Riyar's SS reprot"
+          file: assets/test_doc.qmd
         - text: "Report Claudio"
           file: assets/day-3-report-template_CCJ.qmd
         - text: "kai Report template"
