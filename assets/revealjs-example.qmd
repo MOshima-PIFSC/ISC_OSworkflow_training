@@ -1,0 +1,58 @@
+---
+format:
+ revealjs:
+  slide-number: true
+  mermaid-format: svg
+embed-resources: true
+---
+
+# Intro
+
+We can specify the format as `revealjs` to make a presentation.
+
+# Fragments {.smaller}
+
+[Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments){preview-link="true"} can be used to animate elements on a slide. Fragment order can be defined using [`fragment-index`](https://quarto.org/docs/presentations/revealjs/advanced.html#fragment-order){preview-link="true"}.
+
+::: {.fragment}
+- Fade in
+:::
+
+::: {.fragment .fade-out}
+- Fade out
+:::
+
+::: {.fragment .fade-in-then-out}
+- Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+- Slide up while fading in
+:::
+
+# Code-highlighting {.smaller}
+
+If displaying a code block, lines can be highlighted in a sequential fashion using [`code-line-numbers`](https://quarto.org/docs/presentations/revealjs/#line-highlighting){preview-link="true"}.
+
+```{.r code-line-numbers="|1|3|5|4|4-6|"}
+library(ggplot2)
+
+ggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +
+  geom_point(alpha = 0.5, size = 2) +
+  scale_color_viridis_c() +
+  theme_minimal()
+```
+
+# Mermaid charts
+
+[Diagrams](https://quarto.org/docs/authoring/diagrams.html){preview-link="true"} can be embedded using [Mermaid](https://mermaid.js.org/){preview-link="true"} which has a great [live editor](https://mermaid.live/){preview-link="true"}!
+
+```{mermaid}
+
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+
+```

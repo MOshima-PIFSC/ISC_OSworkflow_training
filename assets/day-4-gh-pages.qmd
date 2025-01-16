@@ -1,0 +1,74 @@
+---
+format: 
+ revealjs:
+  theme: [default, customizations/presentation-custom.scss]
+  footer: "ISC Open Science Worflows Workshop 2025"
+  logo: static/noaa-fisheries-logo.png
+  css: customizations/logo.css
+  slide-number: true
+  revealjs-plugins:
+  - codewindow
+  mermaid-format: svg
+embed-resources: true
+
+---
+
+## Setting up GitHub Pages  
+
+![](static/gh-pages.PNG){.absolute left=0% top=15% bottom=20% right=10% style="box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left="10%" top="71%" right="70%" bottom="23%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+::: {.absolute left="57%" top="15%" right="33%" bottom="75%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+::: {.absolute left="35%" top="64%" right="40%" bottom="29%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.fragment .fade-out fragment-index=4}
+::: {.absolute left="5%" bottom="45%" right="12%" style="font-size:0.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, 1); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+Remember, use [`git checkout -b gh-pages`]{.blue} to create the branch 
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=4}
+::: {.absolute left="35%" top="30%" right="15%" bottom="56%" style="border: 4px solid #1D63ED; border-radius: 5px; max-height: unset; max-width: unset;"}
+
+:::
+:::
+
+
+## Publishing to GitHub Pages  
+
+<br>
+
+Once you have turned on the website and created the [`gh-pages`]{.blue} branch in the repository, you can publish your site with the command (in your terminal)
+
+<br>
+
+[`quarto publish gh-pages`]{.blue}
+
+
+## Resources  
+
+[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
+
+[Publishing Quarto Sites](https://quarto.org/docs/publishing/github-pages.html#:~:text=There%20are%20three%20ways%20to,publish%20from%20the%20docs%20directory.)

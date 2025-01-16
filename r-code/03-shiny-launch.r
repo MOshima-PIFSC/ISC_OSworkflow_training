@@ -5,6 +5,9 @@
 
 # Copyright (c) 2025 Nicholas Ducharme-Barth
 
+
+library(shiny)
+
 #_____________________________________________________________________________________________________________________________
 # define paths
 	proj_dir = this.path::this.proj()
