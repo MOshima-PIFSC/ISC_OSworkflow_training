@@ -585,62 +585,135 @@
     ]
   },
   {
-    "objectID": "assets/day-1.html",
-    "href": "assets/day-1.html",
-    "title": "Day 1",
+    "objectID": "assets/day-3-pres-quarto.html#section",
+    "href": "assets/day-3-pres-quarto.html#section",
+    "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "text": "Quarto: Reports and presentations\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
-      "Day 1"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-1.html#presentation-files",
-    "href": "assets/day-1.html#presentation-files",
-    "title": "Day 1",
-    "section": "",
-    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "objectID": "assets/day-3-pres-quarto.html#what-is-quarto",
+    "href": "assets/day-3-pres-quarto.html#what-is-quarto",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\n\n“An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more.”\n\n— In their own words…\n\n\n\nBut really it is fancy LaTeX or expanded R Markdown that can do so much more!",
     "crumbs": [
-      "Day 1"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
-    "objectID": "assets/day-1.html#resources",
-    "href": "assets/day-1.html#resources",
-    "title": "Day 1",
+    "objectID": "assets/day-3-pres-quarto.html#what-can-it-do",
+    "href": "assets/day-3-pres-quarto.html#what-can-it-do",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "What can it do?",
+    "text": "What can it do?\n\n\n\nIncorporate executable code blocks,\nwrite in math notation: \\(\\hat{y} = \\text{exp}(\\mu - \\frac{\\sigma^2}{2})\\),\ninsert figures,\nand output to multiple formats!",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#format-html",
+    "href": "assets/day-3-pres-quarto.html#format-html",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Format: html",
+    "text": "Format: html\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: html\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#format-pdf",
+    "href": "assets/day-3-pres-quarto.html#format-pdf",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Format: pdf",
+    "text": "Format: pdf\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: pdf\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n\n   \n    Unable to display PDF file. Download instead.",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#format-revealjs",
+    "href": "assets/day-3-pres-quarto.html#format-revealjs",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Format: revealjs",
+    "text": "Format: revealjs\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header",
+    "href": "assets/day-3-pres-quarto.html#quarto-basics-header",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Quarto basics: Header",
+    "text": "Quarto basics: Header\n\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\nUse the header to set options for the document, including the format.",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
+    "href": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Quarto basics: Header",
+    "text": "Quarto basics: Header\nThe header can also be used to define re-usable parameters, and these can be used in the body of the report.\n\n\n\nheader-param.qmd\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\nengine: knitr\nparams:\n  parameter: \"steepness\"\n  value: 0.7\n---\n\n# Report text\n\nAs an example we changed the `r params$parameter` in the model to `r params$value`.",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#revealjs-features",
+    "href": "assets/day-3-pres-quarto.html#revealjs-features",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "revealjs features",
+    "text": "revealjs features\n\n\n---\nformat:\n revealjs:\n  slide-number: true\n  mermaid-format: svg\nembed-resources: true\n---\n\n# Intro\n\nWe can specify the format as `revealjs` to make a presentation.\n\n# Fragments {.smaller}\n\n[Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments){preview-link=\"true\"} can be used to animate elements on a slide.\nFragment order can be defined using [`fragment-index`](https://quarto.org/docs/presentations/revealjs/advanced.html#fragment-order){preview-link=\"true\"}.\n\n::: {.fragment}\n- Fade in\n:::\n\n::: {.fragment .fade-out}\n- Fade out\n:::\n\n::: {.fragment .fade-in-then-out}\n- Fade in, then out\n:::\n\n::: {.fragment .fade-up}\n- Slide up while fading in\n:::\n\n# Code-highlighting {.smaller}\n\nIf displaying a code block, lines can be highlighted in a sequential fashion using [`code-line-numbers`](https://quarto.org/docs/presentations/revealjs/#line-highlighting){preview-link=\"true\"}.\n\n```{.r code-line-numbers=\"|1|3|5|4|4-6|\"}\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n# Mermaid charts\n\n[Diagrams](https://quarto.org/docs/authoring/diagrams.html){preview-link=\"true\"} can be embedded \nusing [Mermaid](https://mermaid.js.org/){preview-link=\"true\"} which has \na great [live editor](https://mermaid.live/){preview-link=\"true\"}!\n\n```{mermaid}\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#html-features",
+    "href": "assets/day-3-pres-quarto.html#html-features",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "html features",
+    "text": "html features\n\n\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\n---\n\n# Code-folding\n\nWe can visualize the `mpg` dataset for common cars...\n\n```{r}\n#| code-fold: true\n#| code-summary: \"Show the code to plot the `mpg` dataset.\"\n#| echo: true\n#| eval: false\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n```\n\n# Panel-tabset\n\n... and explore the relationship between highway fuel consumption and the number of cylinders.\n\n::: {.panel-tabset}\n\n## Plot\n\n```{r}\n#| echo: false\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n## Data subset\n\n```{r}\n#| echo: false\nhead(mpg)\n```",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#report-formatting",
+    "href": "assets/day-3-pres-quarto.html#report-formatting",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Report formatting",
+    "text": "Report formatting\nTechnical formatting of pdf’s can be done by modifying the LaTeX template-partials and including them in the header.\n\n\n\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    template-partials:\n      - assets/doc-class.tex\n      - assets/before-title.tex\n      - assets/before-body.tex\n\n\n\n\n% begin title page\n\\thispagestyle{empty}\n\\begin{flushright}\n    % UPDATE: add document number\n    \\textbf{ISC/25/SHARKWG-1/XX}\n\\end{flushright}\n\\vspace{1in}\n\n\\begin{center}\n    % UPDATE: title\n    \\textbf{Updated blue shark CPUE from US Hawai'i longline fisheries; 2002-2023}\n    % UPDATE: footnote with meeting information\n    \\textbf{\\footnote{Working document submitted to the ISC Shark Working Group Workshop, 27 January - 3 February 2025\n    (JST), Yokohama Japan. Document not to be cited without author’s permission.}}\n    \n    \\vspace{0.25in}\n    % UPDATE: authors\n    Nicholas D. Ducharme-Barth\\begin{math}^2\\end{math} % define superscript for affiliation\n\n    \\vspace{0.25in}\n    % UPDATE: affiliations\n    \\begin{math}^2\\end{math}NOAA Fisheries, Pacific Islands Fisheries Science Center, Honolulu, Hawaii USA\n\n    \\vspace{0.25in}\n    % UPDATE: contact information\n    Email: nicholas.ducharme-barth@noaa.gov\n\\end{center}\n\n% include the species image in the 'static' sub-directory\n\\begin{figure}[!hb]\n    \\begin{center}\n        % UPDATE: path to figure, figure name, and alternative text.\n        \\pdftooltip{\\includegraphics[scale=0.8]{static/bsh.jpg}}{A blue shark, \\textit{Prionace glauca}.}\n    \\end{center}\n\\end{figure}\n\n% end of title page\n\\clearpage",
+    "crumbs": [
+      "Day 3",
+      "Quarto: Reports and presentations"
+    ]
+  },
+  {
+    "objectID": "assets/day-3-pres-quarto.html#resources",
+    "href": "assets/day-3-pres-quarto.html#resources",
+    "title": "Open Science Workflow Training for ISC",
     "section": "Resources",
-    "text": "Resources\nExample code for modifying a Stock Synthesis input model file and running the modified model through R using the r4ss package can be found in the r-code/ directory on the course GitHub repo.\nBriefly the r-code/01-modify-stock-synthesis.r file takes you through the steps of:\n\n\nreading in the Stock Synthesis input file (e.g., control.ss) using the r4ss package\nmodifying this file, in this case changing the steepness value \\(h\\) and thus modifying the shape of the stock-recruitment relationship (SRR)\nrunning the newly modified model\n\n\nThere is also code at the end of the file that wraps all three of those steps in a for loop in case multiple alternate model configurations want to be explored.",
+    "text": "Resources\n\nrevealjs slidecraft: check out these examples by Emil Hvitfeldt\nQuarto guide\nGet started with Quarto\n\n\nHow to render?\n\nquarto render &lt;filename&gt;",
     "crumbs": [
-      "Day 1"
-    ]
-  },
-  {
-    "objectID": "assets/day-1-reproducible_environments.html",
-    "href": "assets/day-1-reproducible_environments.html",
-    "title": "Reproducible environments",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "assets/web-about-nd.html",
-    "href": "assets/web-about-nd.html",
-    "title": "Nicholas Ducharme-Barth",
-    "section": "",
-    "text": "Nicholas Ducharme-Barth joined the Pacific Islands Fisheries Science Center in 2021. Previously, Nicholas worked at the Pacific Community (SPC) conducting pelagic stock assessments for the Western and Central Pacific Fisheries Commission (WCPFC). He received his B.S. in Mathematics from the College of William & Mary and his Ph. D. in Fisheries and Aquatic Sciences from the University of Florida.\n\n\n Back to top",
-    "crumbs": [
-      "Contact us",
-      "Nicholas Ducharme-Barth"
-    ]
-  },
-  {
-    "objectID": "assets/web-about-mo.html",
-    "href": "assets/web-about-mo.html",
-    "title": "Megumi Oshima",
-    "section": "",
-    "text": "Megumi Oshima has been working at the Pacific Islands Fisheries Science Center since 2021. She works mostly on domestic and territorial bottomfish stocks and is interested in Openscience and creating reproducible and transparent workflows. Before joining PIFSC, she was a graduate student at University of Southern Mississippi where she got her PhD in Coastal Sciences.\n\n\n Back to top",
-    "crumbs": [
-      "Contact us",
-      "Megumi Oshima"
+      "Day 3",
+      "Quarto: Reports and presentations"
     ]
   },
   {
@@ -809,135 +882,203 @@
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#section",
-    "href": "assets/day-3-pres-quarto.html#section",
+    "objectID": "assets/web-about-mo.html",
+    "href": "assets/web-about-mo.html",
+    "title": "Megumi Oshima",
+    "section": "",
+    "text": "Megumi Oshima has been working at the Pacific Islands Fisheries Science Center since 2021. She works mostly on domestic and territorial bottomfish stocks and is interested in Openscience and creating reproducible and transparent workflows. Before joining PIFSC, she was a graduate student at University of Southern Mississippi where she got her PhD in Coastal Sciences.\n\n\n Back to top",
+    "crumbs": [
+      "Contact us",
+      "Megumi Oshima"
+    ]
+  },
+  {
+    "objectID": "assets/day-4-pres-quarto-website.html#section",
+    "href": "assets/day-4-pres-quarto-website.html#section",
     "title": "Open Science Workflow Training for ISC",
     "section": "",
-    "text": "Quarto: Reports and presentations\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
+    "text": "Quarto: Creating websites\nMegumi Oshima & Nicholas Ducharme-Barth\nJanuary 2025",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#what-is-quarto",
-    "href": "assets/day-3-pres-quarto.html#what-is-quarto",
+    "objectID": "assets/day-4-pres-quarto-website.html#building-a-website",
+    "href": "assets/day-4-pres-quarto-website.html#building-a-website",
     "title": "Open Science Workflow Training for ISC",
-    "section": "What is Quarto?",
-    "text": "What is Quarto?\n\n\n\n“An open source technical publishing system for creating beautiful articles, websites, blogs, books, slides, and more.”\n\n— In their own words…\n\n\n\nBut really it is fancy LaTeX or expanded R Markdown that can do so much more!",
+    "section": "Building a website",
+    "text": "Building a website\n\nIn addition to being able to produce an array of document types, Quarto can also be used to organize multiple html or revealjs documents into a website.",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#what-can-it-do",
-    "href": "assets/day-3-pres-quarto.html#what-can-it-do",
+    "objectID": "assets/day-4-pres-quarto-website.html#configuration",
+    "href": "assets/day-4-pres-quarto-website.html#configuration",
     "title": "Open Science Workflow Training for ISC",
-    "section": "What can it do?",
-    "text": "What can it do?\n\n\n\nIncorporate executable code blocks,\nwrite in math notation: \\(\\hat{y} = \\text{exp}(\\mu - \\frac{\\sigma^2}{2})\\),\ninsert figures,\nand output to multiple formats!",
+    "section": "Configuration",
+    "text": "Configuration\n\nWebsite configuration is controlled by the _quarto.yml file which defines:\n\n\nlayout\nnavigation bar\nsidebar\nsearchbar\ntheme",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#format-html",
-    "href": "assets/day-3-pres-quarto.html#format-html",
+    "objectID": "assets/day-4-pres-quarto-website.html#configuration-1",
+    "href": "assets/day-4-pres-quarto-website.html#configuration-1",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Format: html",
-    "text": "Format: html\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: html\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
+    "section": "Configuration",
+    "text": "Configuration\n\n\nproject:\n  type: website\n  resources:\n   - assets/*\n\nwebsite:\n  title: \"Open Science Workflow Training for ISC\"\n  reader-mode: true\n  site-url: \"https://moshima-pifsc.github.io/ISC_OSworkflow_training\" \n  repo-url: \"https://github.com/MOshima-PIFSC/ISC_OSworkflow_training\"\n  repo-actions: [source, issue]\n  search: true\n  back-to-top-navigation: true\n  bread-crumbs: false\n  sidebar:\n    collapse-level: 1\n    style: \"floating\"\n    search: true\n    tools:\n      - icon: github\n        href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training\n    contents: \n      - text: \"Home\"\n        file: index.qmd\n      - section: \"Day 1\"\n        href: assets/day-1.html\n        contents:\n          - text: \"Github for Collaborative Workflows\"\n            file: assets/day-1-pres-github_basics.qmd\n          - text: \"Codespaces\"\n            file: assets/day-1-pres-codespaces.qmd\n          - text: \"Reproducible environments\"\n            file: assets/day-1-pres-reproducible_environments.qmd\n          - text: \"Modifying Stock Synthesis files\"\n            file: assets/day-1-pres-modify-stock-synthesis.qmd\n          - text: \"Modifying Stock Synthesis files: Part 2\"\n            file: assets/day-1-pres-modify-stock-synthesis_BILLWG.qmd\n      - section: \"Day 2\"\n        href: assets/day-2.html\n        contents:\n          - text: \"Pull requests & code review\"\n            file: assets/day-2-pres-PR-code-review.qmd\n          - text: \"Building a Shiny app\"\n            file: assets/day-2-pres-build-shiny.qmd\n      - section: \"Day 3\"\n        href: assets/day-3.html\n        contents:\n          - text: \"Quarto: Reports and presentations\"\n            file: assets/day-3-pres-quarto.qmd\n      - section: \"Day 4\"\n        href: assets/day-4.html\n        contents:\n          - text: \"Quarto: Creating websites\"\n            file: assets/day-4-pres-quarto-website.qmd\n      - section: \"Group projects\"\n        contents:\n        - text: \"Report template\"\n          file: assets/day-3-report-template.qmd\n      - section: \"Contact us\"\n        contents:\n        - text: \"Nicholas Ducharme-Barth\"\n          file: assets/web-about-nd.qmd\n        - text: \"Megumi Oshima\"\n          file: assets/web-about-mo.qmd\n        - text: \"Michelle Sculley\"\n          file: assets/web-about-ms.qmd\n      - section: \"Support\"\n        contents:\n        - text: \"Submit an issue\"\n          href: https://github.com/MOshima-PIFSC/ISC_OSworkflow_training/issues/new/choose\n\nformat: \n  html:\n    toc: true\n    toc-expand: false\n    theme:\n      - default\n      - assets/customizations/website-custom.scss",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#format-pdf",
-    "href": "assets/day-3-pres-quarto.html#format-pdf",
+    "objectID": "assets/day-4-pres-quarto-website.html#embedding-an-iframe",
+    "href": "assets/day-4-pres-quarto-website.html#embedding-an-iframe",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Format: pdf",
-    "text": "Format: pdf\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: pdf\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n\n   \n    Unable to display PDF file. Download instead.",
+    "section": "Embedding an iframe",
+    "text": "Embedding an iframe\n\nhtml or revealjs content can be embedded in an existing html document using an iframe.\n```{=html}\n&lt;iframe width=100% height=200 src=\"../index.html\" style=\"border: 1px solid #323C46; max-height: unset; max-width: unset; box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); border-radius: 5px;\"&gt;&lt;/iframe&gt;\n```",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#format-revealjs",
-    "href": "assets/day-3-pres-quarto.html#format-revealjs",
+    "objectID": "assets/day-4-pres-quarto-website.html#custom-theming",
+    "href": "assets/day-4-pres-quarto-website.html#custom-theming",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Format: revealjs",
-    "text": "Format: revealjs\n\n\n\nbasic.qmd\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\n\n## Quarto\n\nMake different documents by changing the format! \n\n## Code\n\nIncorporate `code` into your work ...\n\n```{r}\n#| echo: true\nx = 1 + 1\n```\n... and report the computations later $x =$ `r x`.\n\n## Make plots\n\nEven insert figures:\n\n```{r}\n#| label: fig-scatterplot\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| echo: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```",
+    "section": "Custom theming",
+    "text": "Custom theming\n\n\n\nCustom website and html themes can be defined using Sass\n\nThis is a [custom rule]{.blue}\n\nThis is a custom rule\n\n/*-- scss:defaults --*/\n// Check contrast: https://colourcontrast.cc/\n// define colors\n$website-background: #fafafa;\n$theme-whale-gray: #323C46;\n$theme-midnight-sky: #001743;\n$theme-twilight-sky: #002364;\n$theme-noaa-sky: #003087;\n$theme-noaa-sea: #0085CA;\n$theme-pale-sea: #C6E6F0;\n$theme-dove-gray: #A5AAAF;\n\n// Get fonts: https://fonts.google.com/\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');\n\n// define theme colors\n$body-bg: $website-background;\n$body-color: $theme-whale-gray;\n$link-color: $theme-noaa-sea;\n$headings-color: $theme-midnight-sky;\n\n// define theme fonts\n$font-family-sans-serif: 'Montserrat', sans-serif;\n$headings-font-family: 'Roboto Serif', serif;\n$headings-font-weight: 400;\n\n/*-- scss:rules --*/\n\n// add a shortcut for emphasizing text\n.blue {\n  color: $theme-noaa-sky;\n  font-weight: bold;\n}\n\n.hide-text {\n    color: $theme-dove-gray;\n  }\n\n// add underline for hyperlinks\n.reveal .slide a {\n  text-decoration: underline;\n}",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header",
-    "href": "assets/day-3-pres-quarto.html#quarto-basics-header",
+    "objectID": "assets/day-4-pres-quarto-website.html#publishing",
+    "href": "assets/day-4-pres-quarto-website.html#publishing",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Quarto basics: Header",
-    "text": "Quarto basics: Header\n\n---\ntitle: \"Basic document\"\nformat: revealjs\n---\nUse the header to set options for the document, including the format.",
+    "section": "Publishing",
+    "text": "Publishing\n\nWebsites can be published to a number of different locations including:\n\n\nGitHub pages\nQuarto pub\nPosit Connect & Posit Cloud",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
-    "href": "assets/day-3-pres-quarto.html#quarto-basics-header-1",
+    "objectID": "assets/day-4-pres-quarto-website.html#setting-up-github-pages",
+    "href": "assets/day-4-pres-quarto-website.html#setting-up-github-pages",
     "title": "Open Science Workflow Training for ISC",
-    "section": "Quarto basics: Header",
-    "text": "Quarto basics: Header\nThe header can also be used to define re-usable parameters, and these can be used in the body of the report.\n\n\n\nheader-param.qmd\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\nengine: knitr\nparams:\n  parameter: \"steepness\"\n  value: 0.7\n---\n\n# Report text\n\nAs an example we changed the `r params$parameter` in the model to `r params$value`.",
+    "section": "Setting up GitHub Pages",
+    "text": "Setting up GitHub Pages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRemember, use git checkout -b gh-pages to create the branch",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#revealjs-features",
-    "href": "assets/day-3-pres-quarto.html#revealjs-features",
+    "objectID": "assets/day-4-pres-quarto-website.html#publishing-to-github-pages",
+    "href": "assets/day-4-pres-quarto-website.html#publishing-to-github-pages",
     "title": "Open Science Workflow Training for ISC",
-    "section": "revealjs features",
-    "text": "revealjs features\n\n\n---\nformat:\n revealjs:\n  slide-number: true\n  mermaid-format: svg\nembed-resources: true\n---\n\n# Intro\n\nWe can specify the format as `revealjs` to make a presentation.\n\n# Fragments {.smaller}\n\n[Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments){preview-link=\"true\"} can be used to animate elements on a slide.\nFragment order can be defined using [`fragment-index`](https://quarto.org/docs/presentations/revealjs/advanced.html#fragment-order){preview-link=\"true\"}.\n\n::: {.fragment}\n- Fade in\n:::\n\n::: {.fragment .fade-out}\n- Fade out\n:::\n\n::: {.fragment .fade-in-then-out}\n- Fade in, then out\n:::\n\n::: {.fragment .fade-up}\n- Slide up while fading in\n:::\n\n# Code-highlighting {.smaller}\n\nIf displaying a code block, lines can be highlighted in a sequential fashion using [`code-line-numbers`](https://quarto.org/docs/presentations/revealjs/#line-highlighting){preview-link=\"true\"}.\n\n```{.r code-line-numbers=\"|1|3|5|4|4-6|\"}\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n# Mermaid charts\n\n[Diagrams](https://quarto.org/docs/authoring/diagrams.html){preview-link=\"true\"} can be embedded \nusing [Mermaid](https://mermaid.js.org/){preview-link=\"true\"} which has \na great [live editor](https://mermaid.live/){preview-link=\"true\"}!\n\n```{mermaid}\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n```",
+    "section": "Publishing to GitHub Pages",
+    "text": "Publishing to GitHub Pages\n\nOnce you have turned on the website and created the gh-pages branch in the repository, you can publish your site with the command (in your terminal)\n\nquarto publish gh-pages",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
     ]
   },
   {
-    "objectID": "assets/day-3-pres-quarto.html#html-features",
-    "href": "assets/day-3-pres-quarto.html#html-features",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "html features",
-    "text": "html features\n\n\n---\ntitle: \"Report template\"\nauthor: Meg Oshima and Nicholas Ducharme-Barth\nformat:\n  html:\n    embed-resources: true\n---\n\n# Code-folding\n\nWe can visualize the `mpg` dataset for common cars...\n\n```{r}\n#| code-fold: true\n#| code-summary: \"Show the code to plot the `mpg` dataset.\"\n#| echo: true\n#| eval: false\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\n```\n\n# Panel-tabset\n\n... and explore the relationship between highway fuel consumption and the number of cylinders.\n\n::: {.panel-tabset}\n\n## Plot\n\n```{r}\n#| echo: false\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n```\n\n## Data subset\n\n```{r}\n#| echo: false\nhead(mpg)\n```",
-    "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
-    ]
-  },
-  {
-    "objectID": "assets/day-3-pres-quarto.html#report-formatting",
-    "href": "assets/day-3-pres-quarto.html#report-formatting",
-    "title": "Open Science Workflow Training for ISC",
-    "section": "Report formatting",
-    "text": "Report formatting\nTechnical formatting of pdf’s can be done by modifying the LaTeX template-partials and including them in the header.\n\n\n\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    template-partials:\n      - assets/doc-class.tex\n      - assets/before-title.tex\n      - assets/before-body.tex\n\n\n\n\n% begin title page\n\\thispagestyle{empty}\n\\begin{flushright}\n    % UPDATE: add document number\n    \\textbf{ISC/25/SHARKWG-1/XX}\n\\end{flushright}\n\\vspace{1in}\n\n\\begin{center}\n    % UPDATE: title\n    \\textbf{Updated blue shark CPUE from US Hawai'i longline fisheries; 2002-2023}\n    % UPDATE: footnote with meeting information\n    \\textbf{\\footnote{Working document submitted to the ISC Shark Working Group Workshop, 27 January - 3 February 2025\n    (JST), Yokohama Japan. Document not to be cited without author’s permission.}}\n    \n    \\vspace{0.25in}\n    % UPDATE: authors\n    Nicholas D. Ducharme-Barth\\begin{math}^2\\end{math} % define superscript for affiliation\n\n    \\vspace{0.25in}\n    % UPDATE: affiliations\n    \\begin{math}^2\\end{math}NOAA Fisheries, Pacific Islands Fisheries Science Center, Honolulu, Hawaii USA\n\n    \\vspace{0.25in}\n    % UPDATE: contact information\n    Email: nicholas.ducharme-barth@noaa.gov\n\\end{center}\n\n% include the species image in the 'static' sub-directory\n\\begin{figure}[!hb]\n    \\begin{center}\n        % UPDATE: path to figure, figure name, and alternative text.\n        \\pdftooltip{\\includegraphics[scale=0.8]{static/bsh.jpg}}{A blue shark, \\textit{Prionace glauca}.}\n    \\end{center}\n\\end{figure}\n\n% end of title page\n\\clearpage",
-    "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
-    ]
-  },
-  {
-    "objectID": "assets/day-3-pres-quarto.html#resources",
-    "href": "assets/day-3-pres-quarto.html#resources",
+    "objectID": "assets/day-4-pres-quarto-website.html#resources",
+    "href": "assets/day-4-pres-quarto-website.html#resources",
     "title": "Open Science Workflow Training for ISC",
     "section": "Resources",
-    "text": "Resources\n\nrevealjs slidecraft: check out these examples by Emil Hvitfeldt\nQuarto guide\nGet started with Quarto\n\n\nHow to render?\n\nquarto render &lt;filename&gt;",
+    "text": "Resources\n\n\nCreating a website\nGitHub Pages\nPublishing Quarto Sites",
     "crumbs": [
-      "Day 3",
-      "Quarto: Reports and presentations"
+      "Day 4",
+      "Quarto: Creating websites"
+    ]
+  },
+  {
+    "objectID": "assets/web-about-nd.html",
+    "href": "assets/web-about-nd.html",
+    "title": "Nicholas Ducharme-Barth",
+    "section": "",
+    "text": "Nicholas Ducharme-Barth joined the Pacific Islands Fisheries Science Center in 2021. Previously, Nicholas worked at the Pacific Community (SPC) conducting pelagic stock assessments for the Western and Central Pacific Fisheries Commission (WCPFC). He received his B.S. in Mathematics from the College of William & Mary and his Ph. D. in Fisheries and Aquatic Sciences from the University of Florida.\n\n\n Back to top",
+    "crumbs": [
+      "Contact us",
+      "Nicholas Ducharme-Barth"
+    ]
+  },
+  {
+    "objectID": "assets/day-4-gh-pages.html#setting-up-github-pages",
+    "href": "assets/day-4-gh-pages.html#setting-up-github-pages",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Setting up GitHub Pages",
+    "text": "Setting up GitHub Pages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRemember, use git checkout -b gh-pages to create the branch"
+  },
+  {
+    "objectID": "assets/day-4-gh-pages.html#publishing-to-github-pages",
+    "href": "assets/day-4-gh-pages.html#publishing-to-github-pages",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Publishing to GitHub Pages",
+    "text": "Publishing to GitHub Pages\n\nOnce you have turned on the website and created the gh-pages branch in the repository, you can publish your site with the command (in your terminal)\n\nquarto publish gh-pages"
+  },
+  {
+    "objectID": "assets/day-4-gh-pages.html#resources",
+    "href": "assets/day-4-gh-pages.html#resources",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Resources",
+    "text": "Resources\nGitHub Pages\nPublishing Quarto Sites"
+  },
+  {
+    "objectID": "assets/day-1-reproducible_environments.html",
+    "href": "assets/day-1-reproducible_environments.html",
+    "title": "Reproducible environments",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "assets/day-1.html",
+    "href": "assets/day-1.html",
+    "title": "Day 1",
+    "section": "",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "crumbs": [
+      "Day 1"
+    ]
+  },
+  {
+    "objectID": "assets/day-1.html#presentation-files",
+    "href": "assets/day-1.html#presentation-files",
+    "title": "Day 1",
+    "section": "",
+    "text": "Presentation slides for the GitHub for Collaborative Workflows presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Codespaces presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Reproducible Environments presentation.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the presentation on modifying and running stock synthesis models.\n    View slides in full screen\n       \n      \n    \n  \nPresentation slides for the Part 2 presentation on modifying and running stock synthesis models.\n    View slides in full screen",
+    "crumbs": [
+      "Day 1"
+    ]
+  },
+  {
+    "objectID": "assets/day-1.html#resources",
+    "href": "assets/day-1.html#resources",
+    "title": "Day 1",
+    "section": "Resources",
+    "text": "Resources\nExample code for modifying a Stock Synthesis input model file and running the modified model through R using the r4ss package can be found in the r-code/ directory on the course GitHub repo.\nBriefly the r-code/01-modify-stock-synthesis.r file takes you through the steps of:\n\n\nreading in the Stock Synthesis input file (e.g., control.ss) using the r4ss package\nmodifying this file, in this case changing the steepness value \\(h\\) and thus modifying the shape of the stock-recruitment relationship (SRR)\nrunning the newly modified model\n\n\nThere is also code at the end of the file that wraps all three of those steps in a for loop in case multiple alternate model configurations want to be explored.",
+    "crumbs": [
+      "Day 1"
+    ]
+  },
+  {
+    "objectID": "assets/day-4.html",
+    "href": "assets/day-4.html",
+    "title": "Day 4",
+    "section": "",
+    "text": "Presentation slides for Quarto: Reports and presentations.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
+    "crumbs": [
+      "Day 4"
     ]
   },
   {
