@@ -29,8 +29,7 @@ ggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +
 
 ... and explore the relationship between highway fuel consumption and the number of cylinders.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Plot
 
 ```{r}
