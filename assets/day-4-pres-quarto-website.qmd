@@ -307,3 +307,14 @@ Once you have turned on the website and created the [`gh-pages`]{.blue} branch i
 - [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
 
 - [Publishing Quarto Sites](https://quarto.org/docs/publishing/github-pages.html#:~:text=There%20are%20three%20ways%20to,publish%20from%20the%20docs%20directory.){preview-link="true"}
+
+
+## Last group activity
+
+</br>
+
+::: {.incremental}
+- Switch to your own `branch`
+- Edit the `_quarto.yml` file to add your Quarto document under the *Group projects* section
+- Commit your changes and we will work together to merge them into the `main` branch 
+:::

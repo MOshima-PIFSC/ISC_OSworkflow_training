@@ -1003,6 +1003,17 @@
     ]
   },
   {
+    "objectID": "assets/day-4-pres-quarto-website.html#last-group-activity",
+    "href": "assets/day-4-pres-quarto-website.html#last-group-activity",
+    "title": "Open Science Workflow Training for ISC",
+    "section": "Last group activity",
+    "text": "Last group activity\n\n\n\nSwitch to your own branch\nEdit the _quarto.yml file to add your Quarto document under the Group projects section\nCommit your changes and we will work together to merge them into the main branch",
+    "crumbs": [
+      "Day 4",
+      "Quarto: Creating websites"
+    ]
+  },
+  {
     "objectID": "assets/web-about-nd.html",
     "href": "assets/web-about-nd.html",
     "title": "Nicholas Ducharme-Barth",
@@ -1275,7 +1286,7 @@
   {
     "objectID": "assets/day-3.html",
     "href": "assets/day-3.html",
-    "title": "Day 2",
+    "title": "Day 3",
     "section": "",
     "text": "Presentation slides for Quarto: Reports and presentations.\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n Back to top",
     "crumbs": [
