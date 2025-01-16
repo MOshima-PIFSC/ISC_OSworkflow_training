@@ -1,12 +1,12 @@
 ---
 title: "Report template"
-author: Meg Oshima and Nicholas Ducharme-Barth
+author: Claudio C-J
 format:
   html:
     embed-resources: true
 params:
-  parameter: "steepness"
-  model_dir: "steepness-0.5"
+  parameter: "Natural mortality"
+  model_dir: "nat_M"
 ---
 
 ```{r}
@@ -21,8 +21,9 @@ main_dir <- this.path::this.proj()
 
 report <- SS_output(dir = file.path(main_dir, "stock-synthesis-models", params$model_dir), verbose=FALSE, printstats=FALSE)
 new_steep <- report$parameters %>% 
-             filter(str_detect(Label, "SR_BH_steep")) %>% ## Need to change this to match the parameter name in control file
+             filter(str_detect(Label, "NatM_uniform_Mal_GP_1")) %>% ## Need to change this to match the parameter name in control file
              pull(Value)
+
 ```
 
 # Model modification description
