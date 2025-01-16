@@ -1,0 +1,50 @@
+---
+title: "Report template"
+author: Meg Oshima and Nicholas Ducharme-Barth
+format:
+  html:
+    embed-resources: true
+params:
+  parameter: "steepness"
+  model_dir: "steepness-0.7"
+---
+
+```{r}
+#| message: false
+library(r4ss)
+library(dplyr)
+library(stringr)
+library(magrittr)
+library(ggplot2)
+
+main_dir <- this.path::this.proj()
+
+report <- SS_output(dir = file.path(main_dir, "stock-synthesis-models", params$model_dir), verbose=FALSE, printstats=FALSE)
+new_steep <- report$parameters %>% 
+             filter(str_detect(Label, "SR_BH_steep")) %>% ## Need to change this to match the parameter name in control file
+             pull(Value)
+```
+
+# Model modification description  
+I changed the `r params$parameter` to `r new_steep`. 
+
+# Plot of SSB  
+Here is a plot showing the timeseries of SSB for the modified model.  
+
+```{r}
+#| code-fold: true
+ssb_summary <- report$timeseries %>% 
+               select(Yr, SpawnBio) %>%
+               mutate(model_name = params$model_dir)
+
+ssb_summary %>%
+    ggplot() +
+    geom_line(aes(x = Yr, y = SpawnBio)) + 
+    xlab("Year") + 
+    ylab("Spawning Biomass") +
+    theme(panel.background = element_rect(fill = "white", color = "black", linetype = "solid"),
+                panel.grid.major = element_line(color = 'gray70',linetype = "dotted"), 
+                panel.grid.minor = element_line(color = 'gray70',linetype = "dotted"),
+                strip.background =element_rect(fill="white"),
+                legend.key = element_rect(fill = "white"))
+```
