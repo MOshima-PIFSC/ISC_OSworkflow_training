@@ -1,0 +1,7 @@
+---
+title: "Day 4"
+---
+
+Presentation slides for Quarto: Reports and presentations.
+
+{{< revealjs file="day-4-pres-quarto-website.html" height="500px" class="ratio ratio-16x9" >}}

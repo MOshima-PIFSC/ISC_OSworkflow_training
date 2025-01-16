@@ -1,0 +1,80 @@
+---
+title: "Report template"
+author: Meg Oshima and Nicholas Ducharme-Barth
+format:
+  html:
+    embed-resources: true
+params:
+  parameter: "steepness"
+  model1_dir: "steepness-0.5"
+  model2_dir: "steepness-0.7"
+---
+
+```{r}
+#| message: false
+library(r4ss)
+library(dplyr)
+library(stringr)
+library(magrittr)
+library(ggplot2)
+
+main_dir <- this.path::this.proj()
+
+report1 <- SS_output(dir = file.path(main_dir, "stock-synthesis-models", params$model1_dir), verbose=FALSE, printstats=FALSE)
+new_steep1 <- report1$parameters %>% 
+             filter(str_detect(Label, "SR_BH_steep")) %>% ## Need to change this to match the parameter name in control file
+             pull(Value)
+
+report2 <- SS_output(dir = file.path(main_dir, "stock-synthesis-models", params$model2_dir), verbose=FALSE, printstats=FALSE)
+new_steep2 <- report2$parameters %>% 
+             filter(str_detect(Label, "SR_BH_steep")) %>% ## Need to change this to match the parameter name in control file
+             pull(Value)
+```
+
+# Model modifications description
+
+I changed the `r params$parameter` to `r new_steep1` and `r new_steep2`.
+
+# Plot of SSB for Steepness = `r new_steep1`
+
+Here is a plot showing the timeseries of SSB for the modified model with `r params$parameter`=`r new_steep1`.
+
+```{r}
+#| code-fold: true
+ssb_summary <- report1$timeseries %>% 
+               select(Yr, SpawnBio) %>%
+               mutate(model_name = params$model1_dir)
+
+ssb_summary %>%
+    ggplot() +
+    geom_line(aes(x = Yr, y = SpawnBio)) + 
+    xlab("Year") + 
+    ylab("Spawning Biomass") +
+    theme(panel.background = element_rect(fill = "white", color = "black", linetype = "solid"),
+                panel.grid.major = element_line(color = 'gray70',linetype = "dotted"), 
+                panel.grid.minor = element_line(color = 'gray70',linetype = "dotted"),
+                strip.background =element_rect(fill="white"),
+                legend.key = element_rect(fill = "white"))
+```
+
+# Plot of SSB for Steepness = `r new_steep2`
+
+Here is a plot showing the timeseries of SSB for the modified model with `r params$parameter`=`r new_steep2`.
+
+```{r}
+#| code-fold: true
+ssb_summary <- report2$timeseries %>% 
+               select(Yr, SpawnBio) %>%
+               mutate(model_name = params$model2_dir)
+
+ssb_summary %>%
+    ggplot() +
+    geom_line(aes(x = Yr, y = SpawnBio)) + 
+    xlab("Year") + 
+    ylab("Spawning Biomass") +
+    theme(panel.background = element_rect(fill = "white", color = "black", linetype = "solid"),
+                panel.grid.major = element_line(color = 'gray70',linetype = "dotted"), 
+                panel.grid.minor = element_line(color = 'gray70',linetype = "dotted"),
+                strip.background =element_rect(fill="white"),
+                legend.key = element_rect(fill = "white"))
+```
