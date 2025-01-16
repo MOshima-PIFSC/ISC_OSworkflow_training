@@ -6,7 +6,7 @@ format:
     embed-resources: true
 params:
   parameter: "steepness"
-  model_dir: "steepness-0.5"
+  model_dir: "steepness-0.7"
 ---
 
 ```{r}
@@ -25,13 +25,11 @@ new_steep <- report$parameters %>%
              pull(Value)
 ```
 
-# Model modification description
+# Model modification description  
+I changed the `r params$parameter` to `r new_steep`. 
 
-I changed the `r params$parameter` to `r new_steep`.
-
-# Plot of SSB
-
-Here is a plot showing the timeseries of SSB for the modified model.
+# Plot of SSB  
+Here is a plot showing the timeseries of SSB for the modified model.  
 
 ```{r}
 #| code-fold: true

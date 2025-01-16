@@ -58,6 +58,14 @@ website:
           file: assets/day-3-report-template.qmd
         - text: "Yi-Jay & Riyar's SS reprot"
           file: assets/test_doc.qmd
+        - text: "Report Claudio"
+          file: assets/day-3-report-template_CCJ.qmd
+        - text: "kai Report template"
+          file: assets/report-example.qmd
+        - text: "jb Report template"
+          file: assets/day-3-report-template-jb.qmd
+        - text: "Marko's attempt at greatness"
+          file: assets/ISC_24_BILLWG-02_xx.qmd
       - section: "Contact us"
         contents:
         - text: "Nicholas Ducharme-Barth"
