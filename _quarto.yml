@@ -58,6 +58,10 @@ website:
           file: assets/day-3-report-template.qmd
         - text: "Report Claudio"
           file: assets/day-3-report-template_CCJ.qmd
+        - text: "kai Report template"
+          file: assets/report-example.qmd
+        - text: "jb Report template"
+          file: assets/day-3-report-template-jb.qmd
       - section: "Contact us"
         contents:
         - text: "Nicholas Ducharme-Barth"
