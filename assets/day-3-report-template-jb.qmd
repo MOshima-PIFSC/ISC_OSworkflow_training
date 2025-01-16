@@ -1,6 +1,6 @@
 ---
 title: "Report template"
-author: Meg Oshima and Nicholas Ducharme-Barth
+author: Meg Oshima and Nicholas Ducharme-Barth with JB
 format:
   html:
     embed-resources: true
